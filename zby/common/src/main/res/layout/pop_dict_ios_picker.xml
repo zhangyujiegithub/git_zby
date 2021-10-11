@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/transparent"
+    android:gravity="bottom"
+    android:orientation="vertical"
+    android:padding="8dp">
+
+    <View
+        android:id="@+id/top_dict_ios_picker"
+        android:layout_width="match_parent"
+        android:layout_height="1dp" />
+
+    <RelativeLayout
+        android:id="@+id/rl_dict_picker"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/top_dict_ios_picker"
+        android:background="@drawable/shape_info_bg"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <com.biaozhunyuan.tianyi.common.view.ConstraintHeightListView
+            android:id="@+id/lv_dict_ios_picker"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:cacheColorHint="@android:color/transparent"
+            android:divider="@color/pickerview_wheelview_textcolor_divider"
+            android:dividerHeight="0.5dp"
+            app:maxHeight="250dp"
+            android:listSelector="@android:color/transparent"
+            android:scrollbars="none" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rl_dict_picker"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/shape_info_bg"
+        android:padding="1dp">
+
+        <Button
+            android:id="@+id/btn_cancle_dict_picker"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/selector_header_half"
+            android:gravity="center"
+            android:padding="8dp"
+            android:text="取 消"
+            android:textColor="@color/fuzhuselan"
+            android:textSize="22sp" />
+    </RelativeLayout>
+</RelativeLayout>

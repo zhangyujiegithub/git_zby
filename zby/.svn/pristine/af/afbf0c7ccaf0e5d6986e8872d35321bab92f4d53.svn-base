@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <!--<com.zlcloud.control.listview.PullToRefreshAndLoadMoreListView
+            android:id="@+id/lv_communication_list"
+            style="@style/style_listview"/>-->
+        <ListView
+            android:id="@+id/listView_address_worker_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:layout_marginRight="7dp"
+            android:divider="@drawable/list_divider"
+            android:dividerHeight="0.5dp"
+            android:scrollbars="none"
+            android:fadingEdge="none" />
+
+        <com.biaozhunyuan.tianyi.view.IndexBar
+            android:id="@+id/index_bar_inner_communicate_list"
+            android:layout_width="25dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:background="@color/transparent" />
+    </RelativeLayout>
+
+</LinearLayout>

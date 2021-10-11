@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.biaozhunyuan.tianyi.common.view.BoeryunHeaderView
+        android:id="@+id/headerview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:isVisbleBackIco="true"
+        app:isVisbleRightText="true"
+        app:titleRightText="导入"
+        app:titleText="导入客户" />
+
+    <com.biaozhunyuan.tianyi.view.BoeryunSearchView
+        android:id="@+id/search_view"
+        android:layout_width="match_parent"
+        android:layout_height="50dp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <!--<com.zlcloud.control.listview.PullToRefreshAndLoadMoreListView
+            android:id="@+id/lv_communication_list"
+            style="@style/style_listview"/>-->
+        <ListView
+            android:id="@+id/listView_address_worker_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginRight="7dp"
+            android:background="@color/white"
+            android:divider="@drawable/list_divider"
+            android:dividerHeight="0.5dp"
+            android:fadingEdge="none"
+            android:scrollbars="none" />
+
+        <com.biaozhunyuan.tianyi.view.IndexBar
+            android:id="@+id/index_bar_inner_communicate_list"
+            android:layout_width="25dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:background="@color/transparent" />
+    </RelativeLayout>
+
+</LinearLayout>

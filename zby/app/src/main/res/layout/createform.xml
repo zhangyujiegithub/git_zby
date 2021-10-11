@@ -1,0 +1,423 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bg_list"
+        android:orientation="vertical">
+
+        <RelativeLayout style="@style/style_header_layout">
+
+            <ImageView
+                android:id="@+id/imageViewCancel"
+                style="@style/style_header_button"
+                android:src="@drawable/back_default" />
+
+            <TextView
+                android:id="@+id/tv_formName_apply_item"
+                style="@style/title_common"
+                android:text="表单页面" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/iv_add_task_calendar1"
+                    style="@style/style_header_button"
+                    android:src="@drawable/ico_copy_to" />
+
+                <ImageView
+                    android:id="@+id/imageViewSave"
+                    style="@style/style_header_button"
+                    android:src="@drawable/default_check" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+
+                <com.biaozhunyuan.tianyi.view.BoeryunVeticalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fillViewport="true">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingBottom="10dp">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1">
+
+                            <LinearLayout
+                                android:id="@+id/create_root"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginBottom="8dp"
+                                android:layout_marginTop="8dp"
+                                android:background="@color/white"
+                                android:orientation="vertical"
+                                android:visibility="gone" />
+
+                            <LinearLayout
+                                android:id="@+id/ll_webview_root_createform"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical" />
+                        </RelativeLayout>
+
+                        <LinearLayout
+                            android:id="@+id/ll_details_creatform"
+                            style="@style/task_style_ll_info"
+                            android:layout_height="70dp"
+                            android:clickable="true"
+                            android:padding="5dp"
+                            android:visibility="gone">
+                            <!-- 查看明细按钮 -->
+
+                            <TextView
+                                style="@style/style_edit_info_yusheng"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:enabled="false"
+                                android:gravity="center"
+                                android:text="查看表单明细 "
+                                android:textSize="18sp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/ll_root_details_form"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:visibility="gone">
+
+                            <!-- 明细表显示区域 -->
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="vertical">
+
+                                <LinearLayout
+                                    android:id="@+id/ll_delete_details_creat_details_form"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:clickable="true"
+                                    android:orientation="vertical">
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="50dp"
+                                        android:background="@color/white"
+                                        android:gravity="center_vertical"
+                                        android:orientation="horizontal"
+                                        android:padding="8dp">
+                                        <!-- 删除明细 -->
+                                        <ImageView
+                                            style="@style/style_small_ico_sign_info"
+                                            android:src="@drawable/ico_delete_detail_form" />
+
+                                        <TextView
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginLeft="8dp"
+                                            android:text="删除明细"
+                                            android:textColor="@color/color_text_item_content" />
+                                    </LinearLayout>
+
+                                    <View style="@style/small_line" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:id="@+id/ll_root_create_details_form"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:background="@color/white"
+                                    android:orientation="vertical"
+                                    android:visibility="gone" />
+
+                                <LinearLayout
+                                    android:id="@+id/ll_addDetails_creat_details_form"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:clickable="true"
+                                    android:orientation="vertical">
+
+                                    <View style="@style/small_line" />
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="50dp"
+                                        android:background="@color/white"
+                                        android:gravity="center_vertical"
+                                        android:orientation="horizontal"
+                                        android:padding="8dp">
+                                        <!-- 添加明细 -->
+                                        <ImageView
+                                            style="@style/style_small_ico_sign_info"
+                                            android:src="@drawable/ico_add_detail_form" />
+
+                                        <TextView
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginLeft="8dp"
+                                            android:text="添加明细"
+                                            android:textColor="@color/color_text_item_content" />
+                                    </LinearLayout>
+                                </LinearLayout>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+                                <!--TODO 此段代码用PageView中scan替代-->
+                                <LinearLayout
+                                    android:id="@+id/ll_scan_creat_details_form"
+                                    android:layout_width="0dp"
+                                    android:layout_height="60dp"
+                                    android:layout_marginRight="5dp"
+                                    android:layout_weight="1"
+                                    android:clickable="true"
+                                    android:gravity="center"
+                                    android:paddingBottom="10dp"
+                                    android:visibility="invisible">
+
+                                    <!-- 扫描明细 -->
+                                    <ImageView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:src="@drawable/topbar_search_gray" />
+                                </LinearLayout>
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/create_photoroot"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginRight="8dp"
+                            android:orientation="vertical"
+                            android:visibility="gone">
+                            <!-- 上传图片控件 -->
+                            <com.zlcloud.control.MultipleAttachView
+                                android:id="@+id/multipleAttachView_createform"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:numColumns="5"
+                                android:padding="5dp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:id="@+id/ll_leader_signure_createform"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:visibility="gone">
+                                <!-- 领导签名 -->
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+                                <!-- 评论列表-->
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="20dp"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginRight="8dp"
+                            android:layout_marginTop="10dp"
+                            android:orientation="vertical">
+
+                            <Button
+                                android:id="@+id/btn_delete_createform"
+                                android:layout_width="match_parent"
+                                android:layout_height="35dp"
+                                android:background="@drawable/esc"
+                                android:text="删除申请"
+                                android:textColor="@color/white"
+                                android:textSize="16sp"
+                                android:visibility="gone" />
+
+                            <Button
+                                android:id="@+id/btn_cancel_createform"
+                                android:layout_width="match_parent"
+                                android:layout_height="35dp"
+                                android:background="@drawable/esc"
+                                android:text="撤销申请"
+                                android:textColor="@color/white"
+                                android:textSize="16sp"
+                                android:visibility="gone" />
+
+                            <TextView
+                                android:id="@+id/tv_web_mode"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="1"
+                                android:clickable="true"
+                                android:gravity="center"
+                                android:padding="10dp"
+                                android:text="用电脑网页的形式打开"
+                                android:textColor="@color/gray"
+                                android:textSize="12sp" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+                </com.biaozhunyuan.tianyi.view.BoeryunVeticalScrollView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:padding="0dp">
+                <!--底部区域 -->
+
+                <View style="@style/small_line" />
+
+                <LinearLayout
+                    android:id="@+id/create_approval"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:id="@+id/ll_disagree_createform_approval"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            style="@style/style_small_ico_sign_info"
+                            android:src="@drawable/ico_disagree" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="否决"
+                            android:textColor="@color/text_black" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/shape_info_bg"
+                        android:orientation="horizontal"
+                        android:padding="8dp">
+
+                        <EditText
+                            android:id="@+id/editText_approval_opinion"
+                            style="@style/style_text_normal_black"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@null"
+                            android:ellipsize="end"
+                            android:hint="审核意见" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_aggree_createform_approval"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            style="@style/style_small_ico_sign_info"
+                            android:src="@drawable/ico_agree" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="通过"
+                            android:textColor="@color/text_black" />
+                    </LinearLayout>
+
+                    <Button
+                        android:id="@+id/buttonTag_createfrom_commit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal|center"
+                        android:layout_marginTop="20dp"
+                        android:background="@drawable/blue_button_selector"
+                        android:gravity="center"
+                        android:paddingLeft="30dp"
+                        android:paddingRight="30dp"
+                        android:text="保   存 "
+                        android:textColor="@color/white"
+                        android:textSize="16sp"
+                        android:visibility="gone" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <ProgressBar
+            android:id="@+id/progressBar_showupload"
+            style="@style/style_pbar_upload_horizontal"
+            android:visibility="gone" />
+
+        <View style="@style/small_line" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical">
+
+        <View style="@style/small_line" />
+
+        <com.zlcloud.control.VoiceInputView
+            android:id="@+id/voice_input_view_form_add"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:background="@color/bg_list"
+            android:visibility="gone" />
+    </LinearLayout>
+
+</RelativeLayout>

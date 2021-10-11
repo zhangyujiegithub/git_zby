@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/include_history"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#EFEFEF"
+        android:gravity="center_vertical"
+        android:paddingLeft="15dp"
+        android:textSize="14sp"
+        android:text="最近搜索"
+        android:textColor="#FF9FA0A0" />
+
+    <com.biaozhunyuan.tianyi.common.view.NoScrollListView
+        android:id="@+id/lv_history"
+        android:divider="@drawable/list_divider"
+        android:dividerHeight="0.5dp"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"></com.biaozhunyuan.tianyi.common.view.NoScrollListView>
+
+    <View style="@style/small_line" />
+
+    <TextView
+        android:id="@+id/tv_more_history"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:textSize="17sp"
+        android:textColor="@color/text_search_history"
+        android:text="更多搜索记录" />
+
+    <View
+        style="@style/small_line"
+        android:layout_marginLeft="0dp"
+        android:layout_marginRight="0dp" />
+
+    <TextView
+        android:id="@+id/tv_clear_history"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:textSize="17sp"
+        android:textColor="@color/text_search_history"
+        android:gravity="center"
+        android:text="清空搜索记录" />
+</LinearLayout>

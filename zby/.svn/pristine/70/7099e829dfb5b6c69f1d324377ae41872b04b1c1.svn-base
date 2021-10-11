@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+    <com.biaozhunyuan.tianyi.common.view.BoeryunHeaderView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:isVisbleBackIco="true"
+        app:isVisbleRightText="true"
+        app:titleRightText="确定"
+        app:titleText="已选择"
+        android:id="@+id/headerview"></com.biaozhunyuan.tianyi.common.view.BoeryunHeaderView>
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:divider="@drawable/list_divider"
+        android:id="@+id/select_user_lv"></ListView>
+
+
+
+
+
+</LinearLayout>

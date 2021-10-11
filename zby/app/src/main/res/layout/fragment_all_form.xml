@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        style="@style/style_header_layout"
+        android:elevation="3dp">
+
+        <ImageView
+            android:id="@+id/imageViewCancel"
+            style="@style/style_header_button"
+            android:layout_marginLeft="5dp"
+            android:src="@drawable/icon_headerview_left_new" />
+
+        <TextView
+            android:id="@+id/tv_formName_apply_item"
+            style="@style/title_common"
+            android:text="新建申请单" />
+
+    </RelativeLayout>
+
+    <com.biaozhunyuan.tianyi.common.view.BoeryunSearchViewNoButton
+        android:id="@+id/search_view_new_form"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <FrameLayout style="@style/style_listview_root">
+
+        <TextView
+            android:id="@+id/tv_empty"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="数据为空"
+            android:textSize="25sp"
+            android:visibility="gone" />
+
+        <ListView
+            android:id="@+id/lv_all_askform"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:divider="#00000000" />
+
+        <com.biaozhunyuan.tianyi.widget.MyProgressBar
+            android:id="@+id/pbar_askforme"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:visibility="gone" />
+    </FrameLayout>
+
+</LinearLayout>

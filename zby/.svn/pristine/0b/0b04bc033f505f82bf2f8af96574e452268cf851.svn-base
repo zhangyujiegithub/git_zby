@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="text_color_46">#ffffff</color>
+    <color name="bg_colore6">#e6e6eb</color>
+    <color name="appColorBlue">#2980f6</color>
+    <color name="common_title">#F9F9F9</color>
+    <color name="new_common_title">#0559B2</color>
+    <color name="head_bg_color">#5F88EA</color>
+    <color name="fuzhuselan">#2980f6</color>
+    <color name="zl_back">#F3F3F3</color>
+    <color name="simpleIndicator_line">#FF2D7FC7</color>
+    <color name="icon_clue_theme">#76AEFD</color>
+    <color name="weekdar_select">#EEA73C</color>
+    <color name="statusbar_normal">#ffffff</color>
+    <color name="statusbar_mine">#2D7FC7</color>
+    <color name="statusbar_login">#FAFAFA</color>
+    <color name="text_search_history">#FF9FA0A0</color>
+
+    <!--<color name="common_title">#2980f6</color>-->
+    <!--SelectedFragment-->
+    <!--ChatActivity-->
+    <color name="color_text_avatar_name">#4d4d4d</color><!--头像姓名字体颜色-->
+    <color name="theme_half_press">#3300AAFF</color><!-- 主色调上按下半透明效果-->
+    <color name="color_text_date_name">#cccccc</color><!--头像左侧日期字体颜色-->
+    <color name="color_ff87c624">#01C0C8</color>
+    <color name="transparent">#009b9b9b</color>
+    <color name="transparent1">#cccccc</color>
+    <color name="transparent2">#00000000</color>
+    <color name="chat_back">#ecedf1</color>
+    <color name="color_tag_text_activated">#000000</color>
+    <color name="black">#000000</color>
+    <color name="gray">#D6D6D6</color>
+    <color name="grey">#30000000</color>
+    <color name="white">#ffffff</color>
+    <color name="et_bg_color">#B3B4B4</color>
+    <color name="bg_board_grid_color">#6f92a6</color>
+    <color name="bg_board_grid_color_new">#d8d8d8</color>
+    <color name="normar_white">#fff</color>
+    <color name="little_gray">#EEEEEE</color><!--浅灰色 -->
+    <color name="theme_text">#FF0099ff</color>
+    <color name="text_yellow">#eea73c</color>
+    <color name="line_splite">#FAFAFA</color> <!-- 新版分割线 -->
+    <color name="content_list">#616161</color><!-- 列表文字内容颜色 -->
+    <color name="tv_search_grey">#cccccc</color> <!-- 客户列表搜索字体颜色 -->
+    <color name="list_select_grey">#e4e4e4</color> <!-- 空间过滤列表选中颜色 -->
+    <color name="color_text_left_title">#a7a4a4</color><!--客户/审批自动生成页面左侧标题颜色-->
+    <!--wheel-->
+    <color name="province_line_border">#C7C7C7</color>
+    <color name="pickerview_wheelview_textcolor_out">#a8a8a8</color>
+    <color name="pickerview_wheelview_textcolor_center">#2a2a2a</color>
+    <color name="theme_btn_press">#fcf5f5f5</color>
+    <color name="show_bg">#c5c5c5</color>
+    <color name="close_bg">#ffffff</color>
+    <color name="titleColor">#f9f9f9</color>
+    <color name="pickerview_timebtn_nor">#057dff</color>
+    <color name="pickerview_timebtn_pre">#c2daf5</color>
+    <color name="pickerview_bg_topbar">#f5f5f5</color>
+    <color name="pickerview_topbar_title">#000000</color>
+    <color name="pickerview_wheelview_textcolor_divider">#d5d5d5</color>
+    <!--覆盖颜色-->
+    <color name="titlecolor">#333333</color>
+
+    <color name="color_bule">#2F9BFF</color>
+    <color name="color_bule3">#99ddff</color>
+    <!--<color name="hanyaRed">#00E0DF</color>-->
+    <color name="hanyaRed">#2D7FC7</color>
+
+    <!--wheel-->
+    <color name="time_color">#ff5a00</color>
+
+    <!--波尔云OA所需颜色-->
+    <color name="text_info">#FF8c8c8d</color> <!-- 详情页面字体颜色-->
+    <color name="text_tag">#FF9FA0A0</color> <!-- 标签字体颜色-->
+    <color name="text_time">#999999</color> <!-- 提示和时间字体颜色-->
+    <color name="list_content">#555555</color> <!-- 列表和详情页面字体颜色-->
+    <color name="text_title_black">#000000</color> <!-- 详情页面字体颜色-->
+    <color name="text_task_title_select">#FF2D7FC7</color> <!-- 详情页面字体颜色-->
+    <color name="text_apply_title_select">#5cc9ca</color> <!-- 详情页面字体颜色-->
+    <color name="text_name">#333333</color> <!-- 详情页面字体颜色-->
+    <color name="text_title">#01C0C8</color> <!-- 详情页面字体颜色-->
+    <color name="color_message">#BBBBBF</color> <!-- 详情页面字体颜色-->
+    <color name="text_black">#FF3C3C3C</color> <!-- 偏黑字体颜色-->
+    <color name="text_form_black">#333333</color> <!-- 偏黑字体颜色-->
+    <color name="text_mine">#333333</color> <!-- 偏黑字体颜色-->
+    <color name="text_gray">#555555</color> <!-- 偏白字体颜色-->
+    <color name="theme_quarter_press">#1100AAFF</color><!-- 主色调四分之一透明效果-->
+    <color name="color_title_notice">#e17878</color><!-- 通知标题颜色 -->
+    <color name="bg_list">#ffffff</color><!-- 通用背景颜色 -->
+    <color name="bg_deep_gray">#F7F7F7</color><!-- 通用背景颜色 -->
+    <color name="bg_shallow_gray">#FBFBFB</color><!-- 通用背景颜色 -->
+    <color name="crimson">#DC143C</color><!--暗深红色 -->
+    <color name="color_red">#dc1414</color><!--深红色 -->
+    <color name="lightRed">#fe5533</color><!--亮红色 -->
+    <color name="lightYellow">#FF9C01</color><!--亮红色 -->
+    <color name="translate_black">#cb000000</color><!-- 透明黑色 -->
+    <color name="lightgray">#FFD3D3D3</color><!--亮灰色 -->
+    <color name="translate_half_black">#88000000</color><!-- 透明黑色 -->
+    <color name="translate_quarter_black">#44000000</color><!-- 透明黑色 -->
+    <color name="translate_quarter_gray">#44d1d1d1</color><!-- 透明黑色 -->
+    <color name="color_btn_signin">#01C0C8</color><!-- 签到按钮背景颜色 -->
+    <color name="color_tab_text_press">#01C0C8</color><!--TAB中文本选中 鲜绿色-->
+    <color name="color_theme_header_bg">#f7f7f7</color><!--顶部标题栏背景-->
+    <color name="btn_sure_normal">#FF67ba84</color><!-- 确定按钮 -->
+    <color name="btn_sure_pressed">#AA67ba84</color><!-- 确定按钮按下 -->
+    <color name="tv_splint_light_grey">#ebebeb</color> <!-- 日志列表分割线颜色 -->
+    <!--<color name="bg_readonly">#FFE0F0F0</color>&lt;!&ndash;只读背景色 &ndash;&gt;-->
+    <color name="bg_readonly">#33c0c0c0</color><!--只读背景色 -->
+    <color name="tv_share_light_grey">#a1a1a1</color> <!-- 日志列表分享字体颜色 -->
+    <!-- 提示内容或补充信息 -->
+    <color name="text_tittle">#343338</color><!-- 列表标题颜色 -->
+    <color name="text_content">#575757</color><!-- 列表内容颜色 -->
+    <color name="text_content_gary">#FF717171</color><!-- 列表内容颜色 -->
+    <!--<color name="dividerColor">#DDDDDF</color>&lt;!&ndash; 列表分割线颜色 &ndash;&gt;-->
+    <color name="dividerColor">#fafafa</color><!-- 列表分割线颜色 -->
+    <color name="space_divider_Color">#EEEEEE</color><!-- 列表分割线颜色 -->
+    <color name="notice_xingzheng">#1A2B71</color><!-- 通知列表行政颜色 -->
+    <color name="notice_caiwu">#FF943E</color><!-- 通知列表财务颜色 -->
+    <color name="notice_renshi">#5394FF</color><!-- 通知列表人事颜色 -->
+    <color name="color_text_item_content">#888888</color><!--列表中文本颜色-->
+    <color name="color_texthint_item_content">#CACACA</color><!--列表中文本颜色-->
+    <color name="color_bottom_text_normal">#9da0a4</color>
+    <color name="color_bottom_text_press">#4f9ef6</color>
+    <color name="color_theme">#01C0C8</color>
+    <color name="color_theme_bg">#fdf6f6f6</color>
+
+    <color name="color_task_new_complete">#F5F5F5</color>
+
+    <!--日历所需颜色-->
+    <color name="cal_text_normal">#4A4A4A</color>
+    <color name="cal_text_light">#ababab</color>
+    <color name="cal_blue_light">#8EC5EE</color>
+    <color name="cal_blue_dark">#336F9C</color>
+    <color name="cal_line_grey">#9B9B9B</color>
+    <color name="cal_color_white">#FFFFFF</color>
+    <color name="cal_color_red">#FFE54E36</color>
+    <color name="cal_color_green">#FF16A085</color>
+    <color name="cal_color_point_blue">#FF1875D1</color>
+    <color name="text_normal">#626262</color>
+    <color name="text_super_light">#c0c0c0</color>
+    <color name="calendar_date_select">#2D7FC7</color>
+    <color name="calendar_date">#78787C</color>
+    <color name="colorVisited">#F57C00</color>
+    <color name="colorNext">#30FF9800</color>
+    <color name="colorWhite">#ffffff</color>
+
+    <color name="colorPrimary">#ffffff</color>
+    <color name="colorAccent">#01C0C8</color>
+
+    <color name="blue_dark">#00aeef</color>
+    <color name="bg_half_gray">#88c0c0c0</color>
+    <color name="bg_quarter_gray">#33d3d3d3</color>
+    <color name="stroke">#77d4f6</color>
+    <color name="texthintColor">#c9c8ce</color>
+    <color name="color_lucency">#00000000</color>
+    <color name="color_support_text_like">#01E0DF</color>
+    <color name="color_support_text">#999999</color>
+
+    <!--<color name="color_status_qidong">#FFD700</color>-->
+    <color name="color_status_qidong">#F1F7FE</color>
+    <color name="color_text_qidong">#67B5FE</color>
+    <color name="color_status_tijiao">#0000FF</color>
+    <color name="color_status_zanting">#FABD8C</color>
+    <color name="color_status_gezhi">#808080</color>
+    <color name="color_status_chongqi">#FB8D8F</color>
+    <color name="color_status_wancheng">#2aa515</color>
+    <color name="color_status_success">#E9FBFC</color>
+    <color name="color_text_success">#64DDDD</color>
+    <color name="color_status_cancel">#dddddd</color>
+    <color name="color_text_cancel">#aaaaaa</color>
+    <color name="color_status_weiwancheng">#FDF2F0</color>
+    <color name="color_text_weiwancheng">#FF7F66</color>
+    <color name="color_status_chongzhi">#55228c</color>
+    <color name="color_status_chuci">#DD11EE</color>
+    <color name="actionsheet_blue">#037BFF</color>
+    <color name="alertdialog_line">#c6c6c6</color>
+
+    <color name="apply_state_yibaocun">#FF7F66</color>
+    <color name="apply_state_daishenhe">#67B5FE</color>
+    <color name="apply_state_yifoujue">#FFE54E36</color>
+    <color name="apply_state_yiwancheng">#00E0DF</color>
+
+    <color name="task_lane_list_bg">#00E0DF</color>
+
+    <color name="waveview_green">#56ffff</color>
+    <color name="waveview_blue">#2084fb</color>
+    <color name="waveview_pink">#ff4667</color>
+
+    <color name="light_green">#9056ffff</color>
+    <color name="light_blue">#902084fb</color>
+    <color name="light_pink">#90ff4667</color>
+
+    <color name="scan_bg">#7f000000</color>
+
+    <!--new login start-->
+
+    <color name="login_button_enable">#013A8C</color>
+    <color name="login_button_disable">#6f013A8C</color>
+
+    <color name="new_theme_blue">#0559B2</color>
+
+    <color name="new_navigation_text_gray">#999999</color>
+    <color name="new_navigation_text_blue">#0A6DD9</color>
+
+    <color name="new_subject_content_text_color">#666666</color>
+
+
+    <color name="new_dividerColor">#f6f6f6</color><!-- 列表分割线颜色 -->
+
+    <!--new login end -->
+
+
+
+</resources>

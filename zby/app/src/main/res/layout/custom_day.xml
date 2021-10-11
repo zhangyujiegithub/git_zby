@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="51.4dp"
+    android:layout_height="45dp"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tvHoliday"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="2dp"
+        android:layout_marginTop="2dp"
+        android:background="@drawable/bg_day_type_blue"
+        android:paddingBottom="1dp"
+        android:paddingLeft="3dp"
+        android:paddingRight="3dp"
+        android:paddingTop="1dp"
+        android:text="休"
+        android:textColor="@color/white"
+        android:textSize="10sp" />
+
+    <View
+        android:id="@+id/today_background"
+        android:layout_width="33dp"
+        android:layout_height="33dp"
+        android:layout_centerInParent="true"
+        android:background="@drawable/today_background"
+        android:visibility="gone" />
+
+    <View
+        android:id="@+id/selected_background"
+        android:layout_width="23dp"
+        android:layout_height="23dp"
+        android:layout_centerInParent="true"
+        android:background="@drawable/selected_background"
+        android:visibility="visible" />
+
+    <TextView
+        android:id="@+id/date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="5dp"
+        android:text="19"
+        android:textColor="@color/titlecolor" />
+
+    <ImageView
+        android:id="@+id/maker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/view_syllabus_mark_background"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/remark"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:text="国庆节"
+        android:textSize="12sp"
+        android:visibility="gone" />
+</RelativeLayout>

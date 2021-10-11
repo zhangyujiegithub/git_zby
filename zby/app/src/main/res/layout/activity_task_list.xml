@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <!--<LinearLayout-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:orientation="vertical"-->
+    <!--android:elevation="@dimen/title_elevation_hight">-->
+    <com.biaozhunyuan.tianyi.common.view.BoeryunHeaderView
+        android:id="@+id/header_task_list"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        app:isVisbleAddIco="true"
+        app:isVisbleBackIco="true"
+        app:titleText="任务" />
+
+    <!--<View-->
+    <!--style="@style/small_line"/>-->
+    <android.support.v4.widget.DrawerLayout
+        android:id="@+id/mDrawerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.biaozhunyuan.tianyi.view.SimpleIndicator
+                android:id="@+id/indicator_task_view"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                app:item_count="4"></com.biaozhunyuan.tianyi.view.SimpleIndicator>
+            <!--<View-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="1dp"-->
+            <!--android:background="#00000000"></View>-->
+            <!--</LinearLayout>-->
+            <!--<com.biaozhunyuan.tianyi.view.IndicatorTabView-->
+            <!--android:elevation="3dp"-->
+            <!--android:id="@+id/indicator_task_view"-->
+            <!--style="@style/style_tabview_layout" />-->
+
+            <!--<com.biaozhunyuan.tianyi.view.Indicator-->
+            <!--android:id="@+id/incator_title_notice_info"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="40dp"-->
+            <!--android:background="@color/white"-->
+            <!--android:orientation="horizontal"-->
+            <!--android:visibility="gone"-->
+            <!--app:height_indicator_tab="3dp" />-->
+
+            <!--<RelativeLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:visibility="gone">-->
+
+            <!--<LinearLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="40dp"-->
+            <!--android:orientation="horizontal">-->
+
+            <!--<LinearLayout-->
+            <!--android:id="@+id/ll_search_task_list"-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:layout_weight="1"-->
+            <!--android:gravity="center"-->
+            <!--android:orientation="horizontal">-->
+
+            <!--<ImageView-->
+            <!--android:layout_width="20dp"-->
+            <!--android:layout_height="20dp"-->
+            <!--android:src="@drawable/ic_search" />-->
+
+            <!--<TextView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="搜索"-->
+            <!--android:textColor="@color/text_info"-->
+            <!--android:textSize="16sp" />-->
+
+            <!--</LinearLayout>-->
+
+            <!--<LinearLayout-->
+            <!--android:id="@+id/ll_filter_task_list"-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:layout_weight="1"-->
+            <!--android:gravity="center"-->
+            <!--android:orientation="horizontal">-->
+
+            <!--<ImageView-->
+            <!--android:layout_width="20dp"-->
+            <!--android:layout_height="20dp"-->
+            <!--android:src="@drawable/ico_filter" />-->
+
+            <!--<TextView-->
+            <!--android:id="@+id/tv_filter_task_list"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="筛选"-->
+            <!--android:textColor="@color/text_info"-->
+            <!--android:textSize="16sp" />-->
+
+            <!--</LinearLayout>-->
+
+            <!--</LinearLayout>-->
+
+            <!--&lt;!&ndash;<com.biaozhunyuan.tianyi.common.view.BoeryunSearchViewNoButton&ndash;&gt;-->
+            <!--&lt;!&ndash;android:id="@+id/search_view_task_list"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:layout_width="match_parent"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:visibility="gone" />&ndash;&gt;-->
+            <!--</RelativeLayout>-->
+
+            <com.biaozhunyuan.tianyi.widget.BoeryunViewpager
+                android:id="@+id/viewpager_task_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+
+        <!-- 侧拉菜单 过滤列表 -->
+        <include
+            android:id="@+id/menu_right"
+            layout="@layout/include_task_drawerlayout" />
+
+    </android.support.v4.widget.DrawerLayout>
+    <!--<com.biaozhunyuan.tianyi.common.view.PullToRefreshAndLoadMoreListView-->
+    <!--android:id="@+id/lv_task_list"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:divider="@color/dividerColor"-->
+    <!--android:dividerHeight="10dp"-->
+    <!--android:visibility="gone" />-->
+
+    <!--<LinearLayout-->
+    <!--android:id="@+id/ll_comment_share_bottom"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="40dp"-->
+    <!--android:layout_alignParentBottom="true"-->
+    <!--android:background="@color/white"-->
+    <!--android:visibility="gone">-->
+
+    <!--<EditText-->
+    <!--android:id="@+id/et_input_bottom_comment"-->
+    <!--style="@style/style_edittext_info"-->
+    <!--android:layout_width="0dp"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:layout_marginBottom="5dp"-->
+    <!--android:layout_marginLeft="8dp"-->
+    <!--android:layout_marginTop="5dp"-->
+    <!--android:layout_weight="1"-->
+    <!--android:background="@drawable/shape_edittext_bg_yusheng"-->
+    <!--android:hint="我也说两句..."-->
+    <!--android:padding="5dp" />-->
+
+    <!--<Button-->
+    <!--android:id="@+id/btn_share_comment"-->
+    <!--android:layout_width="60dp"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:layout_margin="5dp"-->
+    <!--android:background="@drawable/shape_btn_bg_sign"-->
+    <!--android:text="发表"-->
+    <!--android:textColor="@color/white"-->
+    <!--android:textSize="12sp" />-->
+
+    <!--</LinearLayout>-->
+
+</LinearLayout>

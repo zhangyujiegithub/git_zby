@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/ll_root"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/chat_back"
+    android:orientation="vertical"
+    android:padding="8dp">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <com.biaozhunyuan.tianyi.common.view.AvatarImageView
+            android:id="@+id/ic_user"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/default_head"
+            app:border_color="@color/transparent"
+            app:border_width="0dp" />
+
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp">
+
+            <TextView
+                android:id="@+id/tv_name_chat_activity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:text="哈哈哈"
+                android:textColor="@color/text_gray"
+                android:textSize="14sp" />
+
+
+            <TextView
+                android:id="@+id/tv_time_chat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_toEndOf="@+id/tv_name_chat_activity"
+                android:text="11:20"
+                android:textColor="@color/text_time"
+                android:textSize="12sp" />
+
+            <LinearLayout
+                android:id="@+id/ll_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_name_chat_activity"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="9dp"
+                    android:layout_height="14dp"
+                    android:layout_marginTop="18dp"
+                    android:src="@drawable/qipao_left" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="10dp"
+                    android:background="@drawable/qipao_shape_left"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:duplicateParentState="true"
+                        android:enabled="true"
+                        android:focusable="true"
+                        android:longClickable="true"
+                        android:minWidth="40dp"
+                        android:padding="10dp"
+                        android:text="aaaaaaa"
+                        android:textColor="@color/text_black"
+                        android:textIsSelectable="true"
+                        android:textSize="16sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <com.biaozhunyuan.tianyi.common.view.RoundImageView
+                android:id="@+id/iv_chat_list"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_name_chat_activity"
+                android:layout_marginTop="10dp"
+                android:adjustViewBounds="true"
+                android:gravity="center"
+                android:maxWidth="100dp"
+                android:maxHeight="150dp"
+                android:src="@drawable/default_pictures"
+                android:visibility="gone"
+                app:RoundImageViewRadius="5dp"
+                app:type="round" />
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

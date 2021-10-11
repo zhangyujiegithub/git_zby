@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/ll_grid"
+    android:layout_width="match_parent"
+    android:layout_height="300dp"
+    android:background="@drawable/popup_home_bg"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:gravity="center"
+        android:text="全部"
+        android:textColor="#333333"
+        android:textSize="20sp" />
+
+    <GridView
+        android:id="@+id/popup_gv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:listSelector="@drawable/list_view_gary_selector"
+        android:numColumns="5"
+        android:scrollbars="none"
+        android:verticalSpacing="10dp" />
+
+
+    <!--<ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.biaozhunyuan.tianyi.common.view.NoScrollGridView
+                android:id="@+id/popup_gv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:listSelector="@drawable/list_view_gary_selector"
+                android:numColumns="5"
+                android:scrollbars="none"
+                android:verticalSpacing="10dp" />
+        </LinearLayout>
+    </ScrollView>-->
+</LinearLayout>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.biaozhunyuan.tianyi.common.view.BoeryunHeaderView
+        android:id="@+id/header_space_list"
+        style="@style/style_header_layout"
+        android:focusable="true"
+        app:isVisbleAddIco="true"
+        app:isVisbleBackIco="true"
+        app:isVisbleFilterIco="true"
+        app:isVisbleSaveIco="false"
+        app:titleText="公司空间" />
+
+    <com.biaozhunyuan.tianyi.common.view.PullToRefreshAndLoadMoreListView
+        android:id="@+id/lisview"
+        android:headerDividersEnabled="false"
+        android:footerDividersEnabled="true"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:divider="@drawable/list_divider"
+        android:dividerHeight="0.5dp" />
+
+
+</LinearLayout>

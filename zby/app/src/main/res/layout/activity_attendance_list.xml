@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.biaozhunyuan.tianyi.common.view.BoeryunHeaderView
+        android:id="@+id/header_attendance_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:addImgSrc="@drawable/ic_calendar_filter"
+        app:filterImgSrc="@drawable/ic_attendance_tongji"
+        app:isVisbleAddIco="true"
+        app:isVisbleBackIco="true"
+        app:isVisbleFilterIco="false"
+        app:titleText="考勤列表" />
+
+    <LinearLayout
+        android:id="@+id/ll_attendance_tongji"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/bg_list"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:text="本月"
+            android:textColor="@color/text_black"
+            android:textSize="17sp" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="right|center_vertical"
+            android:text="查看月汇总"
+            android:textColor="@color/color_message"
+            android:textSize="16sp" />
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/ic_right_arrow_gray" />
+    </LinearLayout>
+
+    <com.biaozhunyuan.tianyi.common.view.PullToRefreshAndLoadMoreListView
+        android:id="@+id/lv_attendance_list"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:divider="@color/dividerColor"
+        android:dividerHeight="0.1dp"
+        android:headerDividersEnabled="false" />
+
+    <View style="@style/small_line" />
+
+    <TextView
+        android:id="@+id/attendance_add_attendance"
+        android:layout_margin="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:gravity="center"
+        android:text="补考勤"
+        android:textColor="@color/white"
+        android:background="@color/fuzhuselan"
+        android:textSize="17sp" />
+
+</LinearLayout>

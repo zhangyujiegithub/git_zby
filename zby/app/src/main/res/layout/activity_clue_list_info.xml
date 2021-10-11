@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.tianyi.clue.ClueListInfoActivity">
+
+    <com.biaozhunyuan.tianyi.common.view.BoeryunHeaderView
+        android:id="@+id/boeryun_headerview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:isVisbleBackIco="true"
+        app:isVisbleRightText="true"
+        app:titleRightText="保存"
+        app:titleText="线索"></com.biaozhunyuan.tianyi.common.view.BoeryunHeaderView>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <LinearLayout style="@style/style_ll_client_info">
+
+                <TextView
+                    style="@style/style_left_text"
+                    android:text="来源 :" />
+
+                <TextView
+                    android:id="@+id/tv_come"
+                    style="@style/style_right_text1" />
+            </LinearLayout>
+
+            <View style="@style/fine_line" />
+
+
+            <LinearLayout style="@style/style_ll_client_info">
+
+                <TextView
+                    style="@style/style_left_text"
+                    android:text="分类 :" />
+
+                <TextView
+                    android:id="@+id/tv_classify"
+                    style="@style/style_right_text1" />
+            </LinearLayout>
+
+            <View style="@style/fine_line" />
+
+
+            <LinearLayout style="@style/style_ll_client_info">
+
+                <TextView
+                    style="@style/style_left_text"
+                    android:text="意向产品 :" />
+
+                <TextView
+                    android:id="@+id/tv_product"
+                    style="@style/style_right_text1" />
+            </LinearLayout>
+
+            <View style="@style/fine_line" />
+
+            <LinearLayout style="@style/style_ll_client_info">
+
+
+                <TextView
+                    style="@style/style_left_text"
+                    android:text="联系人 :" />
+
+                <EditText style="@style/style_right_text1"
+                    android:id="@+id/et_people"/>
+            </LinearLayout>
+
+            <View style="@style/fine_line" />
+
+            <LinearLayout style="@style/style_ll_client_info">
+
+
+                <TextView
+                    style="@style/style_left_text"
+                    android:text="联系电话 :" />
+
+                <EditText style="@style/style_right_text1"
+                    android:id="@+id/et_phone"/>
+            </LinearLayout>
+
+            <View style="@style/fine_line" />
+
+            <LinearLayout style="@style/style_ll_client_info">
+
+
+                <TextView
+                    style="@style/style_left_text"
+                    android:text="公司名称 :" />
+
+                <EditText style="@style/style_right_text1"
+                    android:id="@+id/et_companyname"/>
+            </LinearLayout>
+
+            <View style="@style/fine_line" />
+
+            <LinearLayout style="@style/style_ll_client_info">
+
+
+                <TextView
+                    style="@style/style_left_text"
+                    android:text="预计金额 (万元) :" />
+
+                <EditText
+                    style="@style/style_right_text1"
+                    android:inputType="number"
+                    android:id="@+id/et_amount"/>
+            </LinearLayout>
+
+            <View style="@style/fine_line" />
+
+            <LinearLayout style="@style/style_ll_client_info">
+
+                <TextView
+                    style="@style/style_left_text"
+                    android:text="预计采购时间 :" />
+
+                <TextView style="@style/style_right_text1"
+                    android:id="@+id/tv_time"/>
+            </LinearLayout>
+
+            <View style="@style/fine_line" />
+
+            <LinearLayout style="@style/style_ll_client_info">
+
+
+                <TextView
+                    style="@style/style_left_text"
+                    android:text="备注 :" />
+
+                <EditText style="@style/style_right_text1"
+                    android:id="@+id/et_remark"/>
+            </LinearLayout>
+
+            <View style="@style/fine_line" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

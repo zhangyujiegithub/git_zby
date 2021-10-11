@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.biaozhunyuan.tianyi.common.view.BoeryunHeaderView
+            android:id="@+id/header_common_filter_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:addImgSrc="@drawable/ic_calendar_filter"
+            app:isVisbleAddIco="false"
+            app:isVisbleBackIco="true"
+            app:titleText="日志" />
+
+        <TextView
+            android:id="@+id/back_to_today"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/today_background"
+            android:gravity="center"
+            android:text="今天"
+            android:textColor="@color/appColorBlue"
+            android:textSize="14sp" />
+    </RelativeLayout>
+
+    <com.biaozhunyuan.tianyi.view.HorizontalListView
+        android:id="@+id/lv_head_view"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:visibility="gone" />
+
+    <HorizontalScrollView
+        android:id="@+id/horizontalScrollView_filter_activity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:id="@+id/ll_user_root_filter_activity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingBottom="2dp">
+            <!--放置员工的头像-->
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="28dp"
+            android:background="#fff"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/weekIndicatorStyle"
+                android:text="一" />
+
+            <TextView
+                style="@style/weekIndicatorStyle"
+                android:text="二" />
+
+            <TextView
+                style="@style/weekIndicatorStyle"
+                android:text="三" />
+
+            <TextView
+                style="@style/weekIndicatorStyle"
+                android:text="四" />
+
+            <TextView
+                style="@style/weekIndicatorStyle"
+                android:text="五" />
+
+            <TextView
+                style="@style/weekIndicatorStyle_sunday"
+                android:text="六" />
+
+            <TextView
+                style="@style/weekIndicatorStyle_sunday"
+                android:text="日" />
+        </LinearLayout>
+
+        <android.support.design.widget.CoordinatorLayout
+            android:id="@+id/content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <com.ldf.calendar.view.MonthPager
+                android:id="@+id/calendar_view"
+                android:layout_width="match_parent"
+                android:layout_height="270dp"
+                android:background="#fff"></com.ldf.calendar.view.MonthPager>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="bottom"
+                android:layout_marginBottom="45dp"
+                android:background="#ffffff"
+                android:clipChildren="false"
+                android:clipToPadding="false"
+                app:layout_behavior="com.ldf.calendar.behavior.RecyclerViewBehavior" />
+            <!-- paddingBottom或者magin距离必须是MonthPager高度的1/6-->
+            <!-- RecyclerView的高度必须是MatchParent-->
+            <!-- RecyclerView的background必须是非透明-->
+        </android.support.design.widget.CoordinatorLayout>
+    </LinearLayout>
+
+</LinearLayout>

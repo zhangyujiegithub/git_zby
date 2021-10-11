@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:layout_marginTop="15dp"
+    android:layout_marginBottom="16dp"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/iv_item_input_add"
+        android:layout_gravity="center"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/icon_staffview_add" />
+
+    <TextView
+        android:visibility="invisible"
+        android:id="@+id/tv_name_avatar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="林冲"
+        android:layout_marginTop="2dp"
+        android:textColor="#000000"
+        android:textSize="14sp"
+        />
+</LinearLayout>

@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="5dp"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="@dimen/home_elevation"
+            android:layout_height="match_parent"
+            android:layout_weight="8"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/tv_approval_apply"
+                    style="@style/style_task_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_weight="1"
+                    android:text="待我审批"
+                    android:visibility="gone" />
+                <!--android:background="@drawable/ll_bg_task_title"-->
+
+                <LinearLayout
+                    android:id="@+id/ll_approval_apply_select"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:orientation="horizontal"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="6dp"
+                    android:paddingRight="10dp"
+                    android:paddingBottom="6dp">
+
+                    <ImageView
+                        android:layout_width="12dp"
+                        android:layout_height="13dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="5dp"
+                        android:background="@drawable/icon_apply_title_select" />
+
+                    <TextView
+                        style="@style/style_task_title_select"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:text="待我审批" />
+
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/view_askme"
+                    style="@style/view_bottom_indicator"
+                    android:visibility="visible" />
+
+
+                <TextView
+                    android:id="@+id/tv_approval_num"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="20dp"
+                    android:background="@drawable/bg_red_unread"
+                    android:gravity="center"
+                    android:text="0"
+                    android:textColor="@color/white"
+                    android:textSize="12sp"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/tv_copyto_apply"
+                    style="@style/style_task_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_weight="1"
+                    android:text="抄送我的" />
+
+                <!--android:background="@drawable/ll_bg_task_title"-->
+
+                <LinearLayout
+                    android:id="@+id/ll_copyto_apply_select"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:orientation="horizontal"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="6dp"
+                    android:paddingRight="10dp"
+                    android:paddingBottom="6dp"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:layout_width="12dp"
+                        android:layout_height="13dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="5dp"
+                        android:background="@drawable/icon_home_task_copyto" />
+
+                    <TextView
+                        style="@style/style_task_title_select"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:text="抄送我的" />
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/view_copyme"
+                    style="@style/view_bottom_indicator"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/tv_copyto_num"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="20dp"
+                    android:background="@drawable/bg_red_unread"
+                    android:gravity="center"
+                    android:text="0"
+                    android:textColor="@color/white"
+                    android:textSize="12sp"
+                    android:visibility="gone" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/iv_add_apply"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="11dp"
+            android:layout_marginRight="11dp"
+            android:src="@drawable/icon_home_add" />
+
+    </LinearLayout>
+
+    <View
+        style="@style/small_line"
+        android:layout_marginLeft="0dp"
+        android:layout_marginRight="0dp" />
+
+    <com.biaozhunyuan.tianyi.view.RollViewPager
+        android:id="@+id/viewpager_home_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <!--<View-->
+    <!--style="@style/small_line"-->
+    <!--android:layout_marginLeft="35dp"-->
+    <!--android:layout_marginRight="35dp" />-->
+
+    <TextView
+        android:id="@+id/tv_view_more"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/white"
+        android:gravity="center"
+        android:text="查看全部"
+        android:textColor="#FF9FA0A0"
+        android:textSize="15sp" />
+
+</LinearLayout>

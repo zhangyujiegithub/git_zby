@@ -1,0 +1,401 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rl"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fbefefef">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/headerview"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/pickerview_topbar_height"
+            android:background="#01C0C8">
+
+            <TextView
+                style="@style/title_common"
+                android:text="待办" />
+
+            <RelativeLayout
+                android:id="@+id/rl_zxing"
+                android:layout_width="30dp"
+                android:layout_height="match_parent"
+                android:layout_toLeftOf="@id/rl_more">
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_more"
+                android:layout_width="30dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/icon_more" />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="68dp"
+            android:background="#ffffff">
+            <com.biaozhunyuan.tianyi.view.HorizontalListView
+                android:layout_centerVertical="true"
+                android:id="@+id/Menu_ListView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+            </com.biaozhunyuan.tianyi.view.HorizontalListView>
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="#ffffff">
+
+            <TextView
+                android:id="@+id/xinwen"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:padding="5dp"
+                android:text="新闻"
+                android:textColor="#E4B156"
+                android:textSize="17sp" />
+
+            <com.gongwen.marqueen.MarqueeView
+                android:id="@+id/marqueeView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:layout_toRightOf="@id/xinwen"
+                android:background="#ffffff" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginTop="10dp"
+            android:background="#ffffff">
+
+            <ImageView
+                android:id="@+id/iv_notice"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/icon_notice"
+                android:padding="5dp" />
+
+            <TextView
+                android:id="@+id/tv_notice_notice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/iv_notice"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@id/iv_notice"
+                android:text="通知"
+                android:textColor="#ABCAF8"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tv_notice_username"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/iv_notice"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@id/tv_notice_notice"
+                android:text=""
+                android:textColor="#B5B5B7"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tv_notice_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignTop="@id/iv_notice"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="10dp"
+                android:text=""
+                android:textColor="#B5B5B7"
+                android:textSize="13sp" />
+
+            <com.biaozhunyuan.tianyi.common.view.NoScrollListView
+                android:id="@+id/notice_listview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignLeft="@id/tv_notice_notice"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="30dp"
+                android:layout_toEndOf="@id/tv_notice_notice" />
+
+            <TextView
+                android:id="@+id/tv_null_notice"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="35dp"
+                android:gravity="center"
+                android:text="暂无通知"
+                android:textColor="@color/gray"
+                android:textSize="13sp"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginTop="10dp"
+            android:background="#ffffff">
+
+            <ImageView
+                android:id="@+id/iv_apply"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/icon_apply"
+                android:padding="5dp" />
+
+            <TextView
+                android:id="@+id/tv_apply_apply"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/iv_apply"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@id/iv_apply"
+                android:text="申请"
+                android:textColor="#ABCAF8"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tv_apply_username"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/iv_apply"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@id/tv_apply_apply"
+                android:text=""
+                android:textColor="#B5B5B7"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tv_apply_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignTop="@id/iv_apply"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="10dp"
+                android:text=""
+                android:textColor="#B5B5B7"
+                android:textSize="13sp" />
+
+            <com.biaozhunyuan.tianyi.common.view.NoScrollListView
+                android:id="@+id/apply_listview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignLeft="@id/tv_apply_apply"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="30dp"
+                android:layout_toEndOf="@id/tv_apply_apply"></com.biaozhunyuan.tianyi.common.view.NoScrollListView>
+
+            <TextView
+                android:id="@+id/tv_null_apply"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="35dp"
+                android:gravity="center"
+                android:text="暂无需要处理的表单"
+                android:textColor="@color/gray"
+                android:textSize="13sp"
+                android:visibility="gone" />
+
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="#ffffff"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
+                    android:text="今天"
+                    android:textColor="#000000"
+                    android:textSize="18sp" />
+
+                <ImageView
+                    android:id="@+id/add_task"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/icon_addtask"
+                    android:padding="5dp" />
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="1dp"
+                    android:background="#d4e7e7e7"></View>
+
+            </RelativeLayout>
+
+            <ListView
+                android:id="@+id/task_listview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:divider="#f0f0f0"
+                android:dividerHeight="0.2dp"></ListView>
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_back"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" />
+
+    <!--<LinearLayout-->
+        <!--android:id="@+id/ll_home_add_task"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_alignParentBottom="true"-->
+        <!--android:orientation="vertical"-->
+        <!--android:visibility="gone">-->
+
+        <!--<LinearLayout-->
+            <!--android:id="@+id/ll_comment_share_bottom"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="40dp"-->
+            <!--android:layout_alignParentBottom="true"-->
+            <!--android:background="@color/white">-->
+
+            <!--<EditText-->
+                <!--android:id="@+id/et_input_home_add_task"-->
+                <!--android:layout_width="0dp"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:layout_marginBottom="5dp"-->
+                <!--android:layout_marginLeft="8dp"-->
+                <!--android:layout_marginTop="5dp"-->
+                <!--android:layout_weight="1"-->
+                <!--android:background="@drawable/shape_edittext_bg_yusheng"-->
+                <!--android:hint="发布一条任务..."-->
+                <!--android:padding="5dp"-->
+                <!--android:textColor="@color/text_black"-->
+                <!--android:textSize="12sp" />-->
+
+            <!--<Button-->
+                <!--android:id="@+id/btn_home_add_task"-->
+                <!--android:layout_width="60dp"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:layout_margin="5dp"-->
+                <!--android:background="@drawable/shape_btn_bg_sign"-->
+                <!--android:text="发布"-->
+                <!--android:textColor="@color/white"-->
+                <!--android:textSize="12sp" />-->
+
+        <!--</LinearLayout>-->
+
+        <!--<com.biaozhunyuan.tianyi.view.VoiceInputView-->
+            <!--android:id="@+id/voice_input_view_home_add_task"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_gravity="bottom"-->
+            <!--android:background="@color/white" />-->
+
+    <!--</LinearLayout>-->
+
+    <LinearLayout
+        android:id="@+id/ll_home_add_task"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#f7f7f7"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:id="@+id/ll_comment_share_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/white">
+
+            <com.biaozhunyuan.tianyi.view.CircleTextView
+                android:layout_width="37dp"
+                android:layout_height="37dp"
+                android:layout_marginLeft="10dp"
+                android:gravity="center"
+                app:border_width="0.1dp"
+                app:border_color="#dadada"
+                android:layout_gravity="center_vertical"
+                android:text="明"/>
+
+            <com.biaozhunyuan.tianyi.widget.TextEditTextView
+                android:id="@+id/et_input_home_add_task"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/shape_edittext_bg_yusheng"
+                android:hint="发布一条任务..."
+                android:padding="5dp"
+                android:textColor="@color/text_black"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_gravity="center_vertical"
+                android:id="@+id/btn_home_add_task"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginRight="15dp"
+                android:gravity="center"
+                android:text="发送"
+                android:background="@drawable/shape_edittext_bg_yusheng"
+                android:textColor="@color/black"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

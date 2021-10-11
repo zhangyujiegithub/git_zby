@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="5dp"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal">
+
+        <com.biaozhunyuan.tianyi.view.SimpleIndicator
+            android:id="@+id/simpleindicatior"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="4"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:layout_width="@dimen/home_elevation"
+            android:layout_height="match_parent"
+            android:layout_weight="8"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/tv_today_task"
+                    style="@style/style_task_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_weight="1"
+                    android:text="今日任务"
+                    android:visibility="gone" />
+
+                <!--android:background="@drawable/ll_bg_task_title"-->
+
+                <LinearLayout
+                    android:id="@+id/ll_today_task_select"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:orientation="horizontal"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="6dp"
+                    android:paddingRight="10dp"
+                    android:paddingBottom="6dp">
+
+                    <ImageView
+                        android:layout_width="13dp"
+                        android:layout_height="13dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="5dp"
+                        android:background="@drawable/icon_task_title_select" />
+
+                    <TextView
+                        style="@style/style_task_title_select"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:text="今日任务" />
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/view_mytask"
+                    style="@style/view_bottom_indicator"
+                    android:visibility="visible" />
+
+                <TextView
+                    android:id="@+id/tv_today_num"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="20dp"
+                    android:background="@drawable/bg_red_unread"
+                    android:gravity="center"
+                    android:text="0"
+                    android:textColor="@color/white"
+                    android:textSize="12sp"
+                    android:visibility="gone" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/tv_assign_task"
+                    style="@style/style_task_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_weight="1"
+                    android:text="我的指派" />
+
+                <!--android:background="@drawable/ll_bg_task_title"-->
+
+                <LinearLayout
+                    android:id="@+id/ll_assign_task_select"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:orientation="horizontal"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="6dp"
+                    android:paddingRight="10dp"
+                    android:paddingBottom="6dp"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:layout_width="17dp"
+                        android:layout_height="17dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="5dp"
+                        android:background="@drawable/icon_home_task_assign" />
+
+                    <TextView
+                        style="@style/style_task_title_select"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:text="我的指派" />
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/view_assign"
+                    style="@style/view_bottom_indicator"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/tv_assign_num"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="20dp"
+                    android:background="@drawable/bg_red_unread"
+                    android:gravity="center"
+                    android:text="0"
+                    android:textColor="@color/white"
+                    android:textSize="12sp"
+                    android:visibility="gone" />
+
+            </RelativeLayout>
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/iv_add_task"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="11dp"
+            android:layout_marginRight="11dp"
+            android:src="@drawable/icon_home_add" />
+
+    </LinearLayout>
+
+    <View
+        style="@style/small_line"
+        android:layout_marginLeft="0dp"
+        android:layout_marginRight="0dp" />
+
+    <com.biaozhunyuan.tianyi.view.RollViewPager
+        android:id="@+id/viewpager_home_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <!--<View-->
+    <!--style="@style/small_line"-->
+    <!--android:layout_marginLeft="35dp"-->
+    <!--android:layout_marginRight="35dp" />-->
+
+    <TextView
+        android:id="@+id/tv_view_more"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/white"
+        android:gravity="center"
+        android:text="查看全部"
+        android:textColor="#9fa0a0"
+        android:textSize="15sp"
+        android:visibility="gone" />
+
+</LinearLayout>

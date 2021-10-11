@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:boeryun="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="5"
+        android:background="@color/transparent" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="7"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <com.biaozhunyuan.tianyi.common.view.BoeryunHeaderView
+            android:id="@+id/header_pop_signature"
+            style="@style/style_header_layout"
+            boeryun:isVisbleAddIco="true"
+            boeryun:isVisbleBackIco="true"
+            boeryun:isVisbleSaveIco="true"
+            boeryun:titleText="请手写签名" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.biaozhunyuan.tianyi.helper.signaturepad.SignaturePad
+                android:id="@+id/signature_pop_signature"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                boeryun:maxWidth="10dp"
+                boeryun:minWidth="12dp" />
+
+            <ImageView
+                android:id="@+id/iv_clear_pop_signature"
+                android:layout_width="60dp"
+                android:layout_height="50dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:background="@drawable/selector_header_button"
+                android:padding="8dp"
+                android:src="@drawable/cancel_draw" />
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:id="@+id/ll_url"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffffff"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/editUrl1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="3dp"
+                android:layout_weight="1"
+                android:ems="10"
+                android:hint="请输入网址..."
+                android:singleLine="true"
+                android:text="http://"
+                android:textColor="#000000"
+                android:textSize="35px"></EditText>
+
+            <Button
+                android:id="@+id/btnGo1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="1dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="3dp"
+                android:background="#5394FF"
+                android:text="设置基地址"
+                android:textSize="25px" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/editNewUrl1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="3dp"
+                android:layout_weight="1"
+                android:ems="10"
+                android:hint="请输入网址..."
+                android:singleLine="true"
+                android:text="http://"
+                android:textColor="#000000"
+                android:textSize="35px"></EditText>
+
+            <Button
+                android:id="@+id/btnNewGo1"
+                android:layout_width="50dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="1dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="3dp"
+                android:background="#5394FF"
+                android:text="跳转"
+                android:textSize="25px" />
+
+            <Button
+                android:id="@+id/back_home"
+                android:layout_width="50dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="1dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="3dp"
+                android:background="#5394FF"
+                android:text="回到默认"
+                android:textSize="25px" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_current_url"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:minHeight="50dp"
+            android:textColor="#000000"
+            android:textSize="12sp" />
+
+    </LinearLayout>
+
+</LinearLayout>

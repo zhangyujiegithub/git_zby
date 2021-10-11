@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <!--<FrameLayout style="@style/style_listview_root"-->
+        <!--android:layout_weight="1" >-->
+
+        <!--<TextView-->
+            <!--android:id="@+id/tv_empty"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:gravity="center"-->
+            <!--android:textSize="25sp"-->
+            <!--android:text="数据为空"-->
+            <!--android:visibility="gone"/>-->
+        <!--<com.biaozhunyuan.tianyi.view.PullToRefreshListView-->
+            <!--android:id="@+id/lv_all_askform"-->
+            <!--style="@style/style_listview"-->
+            <!--android:visibility="gone" />-->
+        <!--<com.biaozhunyuan.tianyi.widget.MyProgressBar-->
+            <!--android:id="@+id/pbar_askforme"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_gravity="center"-->
+            <!--android:visibility="gone"/>-->
+    <!--</FrameLayout>-->
+
+
+    <!--<LinearLayout-->
+        <!--android:id="@+id/ll_choose_work"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="50dp"-->
+        <!--android:visibility="gone"-->
+        <!--android:background="@color/white"-->
+        <!--android:clickable="true"-->
+        <!--android:orientation="vertical" >-->
+
+        <!--<View-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="0.5dp"-->
+            <!--android:background="@color/lightgray" />-->
+
+        <!--<LinearLayout-->
+            <!--android:id="@+id/ll_form_bottom"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="49dp"-->
+            <!--android:visibility="gone"-->
+            <!--android:orientation="horizontal" >-->
+
+            <!--<RelativeLayout-->
+                <!--android:id="@+id/rl_choose_workloglist"-->
+                <!--android:layout_width="0dp"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:layout_weight="1"-->
+                <!--android:clickable="true"-->
+                <!--android:gravity="center" >-->
+
+                <!--<ImageView-->
+                    <!--android:id="@+id/iv_select_user"-->
+                    <!--android:layout_width="33dp"-->
+                    <!--android:layout_height="33dp"-->
+                    <!--android:background="@mipmap/select_user" />-->
+
+                <!--<TextView-->
+                    <!--android:id="@+id/tv_select_user_workloglist"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="33dp"-->
+
+                    <!--android:layout_toRightOf="@+id/iv_select_user"-->
+                    <!--android:gravity="center"-->
+                    <!--android:text="选择员工"-->
+                    <!--android:textColor="@color/content_list"-->
+                    <!--android:textSize="20dp"-->
+                    <!--android:visibility="gone"/>-->
+            <!--</RelativeLayout>-->
+            <!--<TextView-->
+                <!--android:id="@+id/tv_form_name"-->
+                <!--android:layout_width="0dp"-->
+                <!--android:layout_weight="1.5"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:textColor="@color/black"-->
+                <!--android:textSize="20dp"-->
+                <!--android:text="表单分类"-->
+                <!--android:gravity="center"-->
+                <!--android:visibility="gone"/>-->
+            <!--<LinearLayout-->
+                <!--android:paddingTop="5dp"-->
+                <!--android:gravity="center"-->
+                <!--android:layout_width="0dp"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:orientation="horizontal"-->
+                <!--android:layout_weight="1"-->
+                <!--&gt;-->
+                <!--<ImageView-->
+                    <!--android:id="@+id/iv_left"-->
+                    <!--android:layout_width="30dp"-->
+                    <!--android:layout_height="30dp"-->
+                    <!--android:src="@drawable/select_left_time"-->
+                    <!--/>-->
+                <!--<RelativeLayout-->
+                    <!--android:id="@+id/rl_time"-->
+                    <!--android:gravity="center"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+
+                    <!--&gt;-->
+                    <!--<ImageView-->
+                        <!--android:id="@+id/iv_time"-->
+                        <!--android:layout_width="38dp"-->
+                        <!--android:layout_height="38dp"-->
+                        <!--android:src="@mipmap/time"-->
+                        <!--/>-->
+
+                    <!--<TextView-->
+                        <!--android:id="@+id/tv_mouth"-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_centerHorizontal="true"-->
+                        <!--android:layout_centerVertical="true"-->
+                        <!--android:paddingTop="10dp"-->
+                        <!--android:text="02"-->
+
+                        <!--android:textSize="16dp" />-->
+
+                <!--</RelativeLayout>-->
+
+                <!--<ImageView-->
+                    <!--android:id="@+id/iv_right"-->
+                    <!--android:layout_width="30dp"-->
+                    <!--android:layout_height="30dp"-->
+                    <!--android:src="@drawable/select_right_time"/>-->
+
+                <!--<TextView-->
+                    <!--android:id="@+id/tv_mouth1"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:visibility="invisible"/>-->
+            <!--</LinearLayout>-->
+        <!--</LinearLayout>-->
+    <!--</LinearLayout>-->
+
+</LinearLayout>

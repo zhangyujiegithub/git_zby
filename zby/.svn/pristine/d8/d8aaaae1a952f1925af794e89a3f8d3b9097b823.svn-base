@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal">
+
+    <RelativeLayout
+        android:layout_width="45dp"
+        android:layout_height="match_parent">
+
+        <View
+            style="@style/style_line_vertical"
+            android:layout_width="1dp"
+            android:layout_centerHorizontal="true" />
+
+        <ImageView
+            style="@style/style_small_ico_sign_info"
+            android:layout_centerInParent="true"
+            android:src="@drawable/ico_agree" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/shape_info_bg"
+        android:orientation="vertical"
+        android:padding="8dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="20dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <com.biaozhunyuan.tianyi.common.view.CircleImageView
+                android:id="@+id/circularAvatar_approval_item"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginLeft="0dp"
+                android:src="@drawable/default_head" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_creater_approval_createform"
+                        style="@style/style_tittle_text_list"
+                        android:text="李洁洁" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tv_time_approval_createform"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:text="8月23日 10:30"
+                    android:textColor="@color/text_info"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/iv_status_task"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="55dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="通过"
+                android:textColor="@color/text_black"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tv_opinion_approval_createform"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:textColor="@color/color_text_item_content"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/iv_sigure_approval_createform"
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:layout_gravity="left"
+            android:layout_marginLeft="55dp"
+            android:src="@drawable/default_error" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="5dp"
+    app:cardElevation="@dimen/title_elevation_hight"
+    app:cardBackgroundColor="@color/white"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:id="@+id/ll_home_add_task"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#fcfcfc"
+        android:elevation="4dp"
+        android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/ll_comment_share_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="5dp">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/shape_edittext_bg_yusheng"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_tomorrow"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="2dp"
+                android:background="@drawable/item_circle_gray"
+                android:gravity="center"
+                android:text="今"
+                android:textColor="@color/gray"
+                android:textSize="12sp"
+                android:textStyle="normal" />
+
+            <com.biaozhunyuan.tianyi.widget.TextEditTextView
+                android:id="@+id/et_input_home_add_task"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="12dp"
+                android:layout_weight="1"
+                android:background="@null"
+                android:hint="添加一条任务吧......"
+                android:textColor="@color/text_black"
+                android:textColorHint="#aaaaaa"
+                android:textSize="14sp" />
+
+            <ImageView
+                android:id="@+id/btn_home_add_task"
+                android:layout_width="43dp"
+                android:layout_height="43dp"
+                android:layout_marginBottom="1dp"
+                android:layout_marginRight="-1dp"
+                android:adjustViewBounds="true"
+                android:background="@drawable/icon_home_addtask" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <com.biaozhunyuan.tianyi.common.view.HorizontalRecentlySelectedStaffView
+        android:id="@+id/staff_view"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        ></com.biaozhunyuan.tianyi.common.view.HorizontalRecentlySelectedStaffView>
+
+    <com.biaozhunyuan.tianyi.view.VoiceInputView
+        android:id="@+id/voice_input_view_home_add_task"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="@color/white"
+        />
+    </LinearLayout>
+
+</android.support.v7.widget.CardView>

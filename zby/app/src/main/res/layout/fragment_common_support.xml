@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.biaozhunyuan.tianyi.view.Indicator
+        android:id="@+id/incator_title_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="38dp"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        app:color_indicator="@color/color_tab_text_press"
+        app:height_indicator_tab="1dp" />
+
+    <View style="@style/small_line" />
+
+    <com.biaozhunyuan.tianyi.view.AutoMaxHeightViewpager
+        android:id="@+id/page_comment_info"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</LinearLayout>

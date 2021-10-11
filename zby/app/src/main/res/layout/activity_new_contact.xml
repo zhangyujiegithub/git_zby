@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <com.biaozhunyuan.tianyi.common.view.BoeryunHeaderView
+            android:id="@+id/header_new_contact"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            app:isVisbleBackIco="true"
+            app:isVisbleRightText="true"
+            app:isVisbleSaveIco="false"
+            app:titleRightText="保存"
+            app:titleText="新建跟进记录" />
+
+        <ProgressBar
+            android:id="@+id/progressbar_addconstact1"
+            style="@android:style/Widget.ProgressBar.Horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/ll_content_notice_info"
+                    style="@style/style_ll_info"
+                    android:orientation="vertical">
+
+                    <EditText
+                        android:id="@+id/editTextContent_constact1"
+                        style="@style/style_text_normal_black"
+                        android:layout_marginTop="10dp"
+                        android:background="@null"
+                        android:gravity="top"
+                        android:hint="请输入内容"
+                        android:minHeight="150dp" />
+                </LinearLayout>
+
+                <com.biaozhunyuan.tianyi.view.MultipleAttachView
+                    android:id="@+id/attach_add_constact"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:numColumns="5"
+                    android:padding="5dp" />
+
+                <com.biaozhunyuan.tianyi.view.TagFlowLayout
+                    android:id="@+id/flow_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:visibility="gone" />
+
+                <View style="@style/bold_line" />
+
+                <LinearLayout
+                    android:id="@+id/ll_location_worklog"
+                    style="@style/style_ll_info"
+                    android:paddingTop="0dp">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="15dp"
+                        android:src="@drawable/icon_locate_blue" />
+
+                    <TextView
+                        android:id="@+id/tvLocation_newconstact"
+                        style="@style/style_text_normal_black"
+                        android:layout_marginLeft="10dp"
+                        android:hint="请选择位置" />
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/list_divider" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:layout_marginLeft="10dp"
+                        android:src="@drawable/icon_client_blue" />
+
+                    <EditText
+                        android:id="@+id/etClientName_newconstact1"
+                        style="@style/style_text_normal_hint"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:focusable="false"
+                        android:hint="请选择客户" />
+
+                    <ImageView
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:layout_margin="10dp"
+                        android:src="@drawable/arrow_right" />
+
+                </LinearLayout>
+
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/list_divider" />
+
+                <LinearLayout
+                    android:id="@+id/ll_status"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:layout_marginLeft="10dp"
+                        android:src="@drawable/icon_stage_blue" />
+
+                    <TextView
+                        android:id="@+id/tv_status"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:hint="请选择阶段"
+                        android:textColor="@color/color_text_item_content"
+                        android:textColorHint="@color/color_texthint_item_content"
+                        android:textSize="14sp" />
+
+                    <ImageView
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:layout_margin="10dp"
+                        android:src="@drawable/arrow_right" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:layout_marginLeft="10dp"
+                        android:src="@drawable/icon_time_blue" />
+
+                    <EditText
+                        android:id="@+id/etContactStatus_newconstact1"
+                        style="@style/style_text_normal_hint"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:focusable="false"
+                        android:hint="请选择联系时间" />
+
+                    <ImageView
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:layout_margin="10dp"
+                        android:src="@drawable/arrow_right" />
+
+                </LinearLayout>
+
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/list_divider" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:layout_marginLeft="10dp"
+                        android:src="@drawable/icon_time_blue" />
+
+                    <EditText
+                        android:id="@+id/tv_new_client_contact_project"
+                        style="@style/style_text_normal_hint"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:focusable="false"
+                        android:hint="请选择下次联系时间" />
+
+                    <ImageView
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:layout_margin="10dp"
+                        android:src="@drawable/arrow_right" />
+
+                </LinearLayout>
+
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/list_divider" />
+
+                <LinearLayout
+                    android:id="@+id/ll_next_contact_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:layout_marginLeft="10dp"
+                        android:src="@drawable/icon_stage_blue" />
+
+                    <EditText
+                        android:id="@+id/et_next_contact_content"
+                        style="@style/style_text_normal_hint"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:hint="请输入下次联系内容" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </ScrollView>
+
+    </LinearLayout>
+
+
+</RelativeLayout>

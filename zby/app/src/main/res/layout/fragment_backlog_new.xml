@@ -1,0 +1,414 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <View
+        android:id="@+id/popupshowasdropdown"
+        android:layout_width="match_parent"
+        android:layout_height="0.1dp"
+        android:background="#00000000"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:id="@+id/headerview"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/pickerview_topbar_height"
+        android:background="#FFFFFF"
+        android:elevation="@dimen/title_elevation_hight">
+
+        <TextView
+            style="@style/title_common"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="16dp"
+            android:text="@string/app_name"
+            android:textSize="20sp"
+            android:textStyle="normal" />
+
+        <ImageView
+            android:id="@+id/iv_scan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:layout_toLeftOf="@id/rl_more"
+            android:padding="8dp"
+            android:src="@drawable/icon_home_richscan" />
+
+        <RelativeLayout
+            android:id="@+id/rl_more"
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:background="@drawable/icon_headerview_add" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/rl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#FAFAFA">
+
+        <com.scwang.smartrefresh.layout.SmartRefreshLayout
+            android:id="@+id/refreshLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clickable="true"
+            app:srlEnablePreviewInEditMode="true">
+
+            <com.scwang.smartrefresh.layout.header.ClassicsHeader
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <com.biaozhunyuan.tianyi.view.CrossSlipBanCerticalSlipScrollView
+                android:id="@+id/home_backlog_scrollview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:descendantFocusability="beforeDescendants"
+                android:fillViewport="true"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:focusableInTouchMode="true"
+                    android:orientation="vertical">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="105dp"
+                        android:layout_marginTop="8dp"
+                        android:background="#ffffff"
+                        android:paddingBottom="10dp">
+
+                        <com.biaozhunyuan.tianyi.common.view.NoScrollGridView
+                            android:id="@+id/Menu_ListView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:scrollbars="none"
+                            android:layout_marginTop="10dp"
+                            android:layout_weight="1" />
+
+                        <LinearLayout
+                            android:id="@+id/Menu_ll"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/view_selector"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:id="@+id/menu_icon"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:src="@drawable/icon_home_more_new" />
+
+                            <TextView
+                                android:id="@+id/menu_tv"
+                                style="@style/style_content"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:text="更多" />
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                    <!--<RelativeLayout-->
+                    <!--android:id="@+id/rl_dynamic"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content">-->
+
+                    <!--<TextView-->
+                    <!--android:id="@+id/tv_dynamic"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="166dp"-->
+                    <!--android:gravity="center"-->
+                    <!--android:text="暂无需要处理的事件"-->
+                    <!--android:textColor="#555555"-->
+                    <!--android:textSize="18sp"-->
+                    <!--android:textStyle="normal"-->
+                    <!--android:visibility="gone" />-->
+
+                    <com.chy.srlibrary.slistview.SMListView
+                        android:id="@+id/lv_dynamic"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:background="@color/white"
+                        android:divider="@drawable/list_divider"
+                        android:dividerHeight="0.5dp" />
+                    <!--</RelativeLayout>-->
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="8dp"
+                        android:background="@color/white">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="#ffffff"
+                            android:orientation="vertical">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="50dp">
+
+                                <TextView
+                                    android:id="@+id/tv_task_change"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerVertical="true"
+                                    android:layout_marginLeft="16dp"
+                                    android:text="我的任务"
+                                    android:textColor="#333333"
+                                    android:textSize="16sp"
+                                    android:textStyle="normal" />
+
+
+                                <LinearLayout
+                                    android:id="@+id/ll_change_task"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_alignParentRight="true"
+                                    android:layout_marginRight="16dp"
+                                    android:gravity="center_vertical"
+                                    android:orientation="horizontal">
+
+                                    <com.biaozhunyuan.tianyi.view.SegmentView
+                                        android:id="@+id/switch_view_attendance"
+                                        android:layout_width="160dp"
+                                        android:layout_height="30dp"
+                                        android:layout_gravity="center_vertical"
+                                        android:background="@drawable/attendance_salary_bg" />
+
+                                    <ImageView
+                                        android:id="@+id/iv_change_task"
+                                        android:layout_width="40dp"
+                                        android:layout_height="40dp"
+                                        android:layout_centerVertical="true"
+                                        android:padding="10dp"
+                                        android:src="@drawable/icon_home_zhipai_new"
+                                        android:visibility="gone" />
+
+                                    <ImageView
+                                        android:layout_width="10dp"
+                                        android:layout_height="10dp"
+                                        android:src="@drawable/icon_switch"
+                                        android:visibility="gone" />
+
+                                    <ImageView
+                                        android:id="@+id/iv_change_task_my_publish"
+                                        android:layout_width="40dp"
+                                        android:layout_height="40dp"
+                                        android:layout_centerVertical="true"
+                                        android:padding="10dp"
+                                        android:src="@drawable/icon_task_gray"
+                                        android:visibility="gone" />
+                                </LinearLayout>
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="1dp"
+                                    android:layout_alignParentBottom="true"
+                                    android:layout_marginBottom="1dp"
+                                    android:layout_marginLeft="16dp"
+                                    android:layout_marginRight="16dp"
+                                    android:background="#EEEEEE" />
+
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:id="@+id/rl_home_task"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <LinearLayout
+                                    android:id="@+id/ll_task_area"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical">
+
+                                    <com.biaozhunyuan.tianyi.common.view.NoScrollListView
+                                        android:id="@+id/task_listview"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:divider="#00000000" />
+
+                                    <TextView
+                                        android:id="@+id/tv_count_done_task"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center_horizontal"
+                                        android:layout_marginBottom="10dp"
+                                        android:layout_marginTop="10dp"
+                                        android:background="@drawable/shape_round_5dp"
+                                        android:paddingBottom="5dp"
+                                        android:paddingLeft="10dp"
+                                        android:paddingRight="10dp"
+                                        android:paddingTop="5dp"
+                                        android:text="已完成"
+                                        android:textColor="@color/list_content"
+                                        android:textSize="16sp"
+                                        android:visibility="gone" />
+
+                                    <View
+                                        android:id="@+id/task_view_line"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="1dp"
+                                        android:layout_alignParentBottom="true"
+                                        android:layout_marginBottom="1dp"
+                                        android:layout_marginLeft="16dp"
+                                        android:layout_marginRight="16dp"
+                                        android:background="#EEEEEE" />
+
+                                    <com.biaozhunyuan.tianyi.common.view.NoScrollListView
+                                        android:id="@+id/lv_done"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:divider="#00000000" />
+                                </LinearLayout>
+
+                                <TextView
+                                    android:id="@+id/task_tv"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="200dp"
+                                    android:gravity="center"
+                                    android:text="暂无任务"
+                                    android:textColor="@color/gray"
+                                    android:textSize="20sp"
+                                    android:visibility="gone" />
+                            </RelativeLayout>
+
+                        </LinearLayout>
+                    </RelativeLayout>
+                </LinearLayout>
+
+
+            </com.biaozhunyuan.tianyi.view.CrossSlipBanCerticalSlipScrollView>
+
+            <com.scwang.smartrefresh.layout.footer.ClassicsFooter
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:srlClassicsSpinnerStyle="Translate" />
+
+        </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_back"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/translate_quarter_black"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:id="@+id/ll_home_add_task"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="#fcfcfc"
+            android:elevation="4dp"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:id="@+id/ll_comment_share_bottom"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginTop="5dp"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="45dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/shape_edittext_bg_yusheng"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_tomorrow"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="2dp"
+                        android:background="@drawable/item_circle_gray"
+                        android:gravity="center"
+                        android:text="今"
+                        android:textColor="@color/gray"
+                        android:textSize="12sp"
+                        android:textStyle="normal" />
+
+                    <com.biaozhunyuan.tianyi.widget.TextEditTextView
+                        android:id="@+id/et_input_home_add_task"
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="12dp"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:hint="添加一条任务吧......"
+                        android:textColor="@color/text_black"
+                        android:textColorHint="#aaaaaa"
+                        android:textSize="14sp" />
+
+                    <ImageView
+                        android:id="@+id/btn_home_add_task"
+                        android:layout_width="43dp"
+                        android:layout_height="43dp"
+                        android:layout_marginBottom="1dp"
+                        android:layout_marginRight="-1dp"
+                        android:adjustViewBounds="true"
+                        android:background="@drawable/icon_home_addtask" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <com.biaozhunyuan.tianyi.common.view.HorizontalRecentlySelectedStaffView
+                android:id="@+id/staff_view"
+                android:layout_width="match_parent"
+                android:layout_height="80dp" />
+
+            <com.biaozhunyuan.tianyi.view.VoiceInputView
+                android:id="@+id/voice_input_view_home_add_task"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:background="@color/white" />
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/add_task"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="10dp"
+            android:layout_marginRight="40dp"
+            android:background="@drawable/icon_home_addtask_new" />
+    </RelativeLayout>
+</LinearLayout>

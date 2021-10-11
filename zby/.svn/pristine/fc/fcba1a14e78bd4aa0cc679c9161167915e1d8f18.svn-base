@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent">
+    <com.biaozhunyuan.tianyi.common.view.BoeryunHeaderView
+        android:id="@+id/boeryun_headerview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:isVisbleBackIco="true"
+        app:titleText="扫一扫"
+        app:isVisbleRightText="true"
+        app:titleRightText="确定"></com.biaozhunyuan.tianyi.common.view.BoeryunHeaderView>
+
+    <RelativeLayout
+        android:id="@+id/capture_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white">
+
+    <SurfaceView
+        android:id="@+id/capture_preview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <!-- 扫描框上面的布局 -->
+        <RelativeLayout
+            android:id="@+id/top_mask"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:background="@color/scan_bg">
+
+        </RelativeLayout>
+
+        <!-- 扫描框中间的布局 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="240dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/left_mask"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentLeft="true"
+                android:layout_weight="1"
+                android:background="@color/scan_bg"
+                android:contentDescription="@string/app_name" />
+
+            <RelativeLayout
+                android:id="@+id/capture_crop_view"
+                android:layout_width="240dp"
+                android:layout_height="240dp"
+                android:layout_centerHorizontal="true"
+                android:layout_toLeftOf="@id/right_mask"
+                android:layout_toRightOf="@id/left_mask"
+                android:background="@android:color/transparent">
+
+                <ImageView
+                    android:id="@+id/capture_scan_line"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/scanning_line" />
+
+                <com.biaozhunyuan.tianyi.view.ScanImageView
+                    android:id="@+id/scan_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerInParent="true" />
+            </RelativeLayout>
+
+
+            <ImageView
+                android:id="@+id/right_mask"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentTop="true"
+                android:layout_weight="1"
+                android:background="@color/scan_bg" />
+        </LinearLayout>
+
+        <!-- 扫描框底部的布局 -->
+        <RelativeLayout
+            android:id="@+id/bottom_mask"
+            android:layout_width="match_parent"
+            android:layout_height="115dp"
+            android:background="@color/scan_bg"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/scan_hint"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:paddingBottom="12dp"
+                android:paddingTop="12dp"
+                android:text="@string/scan_allcode_hint"
+                android:textColor="#b4b4b4"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/iv_light"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@id/scan_hint"
+                android:layout_marginRight="30dp"
+                android:background="@drawable/shouquan_qrcode_s_flashgun"
+                android:clickable="true" />
+
+            <TextView
+                android:id="@+id/qrcode_ic_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/scan_hint"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/shouquan_qrcode_ic_back"
+                android:clickable="true" />
+
+            <TextView
+                android:id="@+id/qrcode_g_gallery"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@id/scan_hint"
+                android:layout_marginLeft="30dp"
+                android:background="@drawable/shouquan_qrcode_g_gallery"
+                android:clickable="true"
+
+                android:textSize="20sp" />
+
+            <Button
+                android:id="@+id/service_register_rescan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/qrcode_g_gallery"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/rescan_shape_button"
+                android:padding="10dp"
+                android:text="再次扫描"
+                android:textColor="@android:color/white"
+                android:textSize="18sp"
+                android:visibility="gone" />
+
+        </RelativeLayout>
+
+        <ListView
+            android:id="@+id/list_shop"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:divider="@drawable/list_divider"
+            android:dividerHeight="0.5dp"></ListView>
+    </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>

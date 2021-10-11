@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_name_contact_item"
+                    style="@style/style_tittle_text_list"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text="李洁洁"
+                    android:textColor="@color/text_name"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/tv_time_contact_item"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="17dp"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:text="10:37"
+                    android:textColor="@color/text_time"
+                    android:textSize="11sp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/content_contact_list"
+                style="@style/style_content_text_list"
+                android:layout_marginLeft="12dp"
+                android:layout_marginTop="12dp"
+                android:ellipsize="end"
+                android:maxLines="3"
+                android:paddingBottom="7dp"
+                android:paddingRight="10dp"
+                android:text=""
+                android:textColor="@color/list_content"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

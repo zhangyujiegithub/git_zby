@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:boeryun="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.biaozhunyuan.tianyi.common.view.BoeryunHeaderView
+        android:id="@+id/header_webview"
+        style="@style/style_header_layout"
+        boeryun:isVisbleBackIco="true"
+        boeryun:titleText="产品详情" />
+
+    <ProgressBar
+        android:id="@+id/pbar_calendar_item"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:indeterminate="false"
+        android:indeterminateOnly="false"
+        android:max="10"
+        android:progressDrawable="@drawable/progress_horizontal" />
+
+    <WebView
+        android:id="@+id/webview_webview"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <TextView
+        android:id="@+id/tv_bespoke_info_activity"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/hanyaRed"
+        android:gravity="center"
+        android:text="预   约"
+        android:textColor="@color/white"
+        android:textSize="18sp" />
+</LinearLayout>

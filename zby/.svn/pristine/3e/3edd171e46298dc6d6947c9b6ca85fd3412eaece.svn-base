@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:id="@+id/rl_select_time"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <HorizontalScrollView
+                android:id="@+id/horizontalScrollView_task_day_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="#FAFAFA"
+                android:padding="8dp"
+                android:scrollbars="none"
+                android:visibility="visible">
+
+                <LinearLayout
+                    android:id="@+id/ll_user_root_task_day_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:elevation="-5dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingTop="15dp"
+                    android:paddingBottom="15dp">
+                    <!--放置员工的头像-->
+                </LinearLayout>
+            </HorizontalScrollView>
+
+            <RelativeLayout
+                android:id="@+id/rl_time_header"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:id="@+id/rl_home_calander"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.loonggg.weekcalendar.view.WeekCalendar
+                        android:id="@+id/weekcalendar_task_day_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        app:daysSelectedBackground="@drawable/theme_color_oval_bg"
+                        app:isCornerMark="true"
+                        app:monthBackgroundColor="#ffffff"
+                        app:monthTextColor="#6a6867"
+                        app:todayTextColor="@color/hanyaRed"
+                        app:weekTextColor="#252524" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_home_yearmonth"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/tv_current_time"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:gravity="center"
+                        android:text="2016年11月"
+                        android:textColor="#6a6867"
+                        android:textSize="14sp" />
+
+                    <ImageView
+                        android:id="@+id/iv_home_show_calander"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="10dp"
+                        android:src="@drawable/arrow_down"
+                        android:visibility="gone" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_calendar_month"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp">
+
+                    <ImageView
+                        android:id="@+id/iv_hide_calander"
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="80dp"
+                        android:src="@drawable/arrow_up" />
+
+                </RelativeLayout>
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/iv_hide_head_log_List"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:padding="-10dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/icon_show_head"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+
+    <com.biaozhunyuan.tianyi.view.BoeryunSearchView
+        android:id="@+id/search_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white" />
+
+
+    <LinearLayout
+        android:id="@+id/ll_filter"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/dividerColor"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <RelativeLayout
+            android:id="@+id/rl_filter_client_time"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/tv_filter_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="时间"
+                android:textColor="@color/text_black"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/iv_filter_time"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@+id/tv_filter_time"
+                android:src="@drawable/icon_arrow_down_black" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_filter_client_stage"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/tv_filter_stage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxEms="4"
+                android:maxLines="1"
+                android:text="其他"
+                android:textColor="@color/text_black"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/iv_filter_stage"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@+id/tv_filter_stage"
+                android:src="@drawable/icon_arrow_down_black" />
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

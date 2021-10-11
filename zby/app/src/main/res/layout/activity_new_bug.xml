@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <com.biaozhunyuan.tianyi.common.view.BoeryunHeaderView
+        android:id="@+id/header_new_bug"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:filterImgSrc="@drawable/ic_calendar_filter"
+        app:isVisbleBackIco="true"
+        app:isVisbleRightText="true"
+        app:titleRightText="创建"
+        app:titleText="新增Bug" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <LinearLayout style="@style/style_ll_info">
+
+                <!--<EditText-->
+                <!--android:id="@+id/et_content_new_task"-->
+                <!--style="@style/style_text_normal_black"-->
+                <!--android:background="@null"-->
+                <!--android:gravity="top"-->
+                <!--android:hint="点击输入任务描述(必填)"-->
+                <!--android:minHeight="140dp"-->
+                <!--android:textSize="16sp" />-->
+
+                <EditText
+                    android:id="@+id/et_content_new_bug"
+                    style="@style/style_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:gravity="top"
+                    android:hint="请输入BUG内容..."
+                    android:minHeight="100dp"
+                    android:paddingLeft="15dp"
+                    android:paddingTop="8dp"
+                    android:paddingRight="8dp"
+                    android:paddingBottom="8dp"
+                    android:textColorHint="#999999" />
+            </LinearLayout>
+
+            <View style="@style/small_line" />
+
+            <com.biaozhunyuan.tianyi.view.MultipleAttachView
+                android:id="@+id/attach_add_bug"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:numColumns="5"
+                android:paddingBottom="10dp" />
+
+            <View style="@style/style_line_horizontal_middle" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/ll_choosr_excutors_bug_new"
+                    style="@style/style_ll_new_info"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="10dp">
+
+                    <ImageView
+                        style="@style/style_small_ico_task_new"
+                        android:src="@drawable/icon_client_blue" />
+
+                    <TextView
+                        style="@style/style_ll_left_title_task"
+                        android:text="指派人" />
+
+                    <LinearLayout style="@style/style_ll_right_title_task">
+
+                        <TextView
+                            android:id="@+id/new_bug_excutor"
+                            style="@style/style_right_text_task" />
+
+                        <ImageView
+                            android:id="@+id/iv_bug_excutor"
+                            style="@style/style_small_ico_task_new"
+                            android:src="@drawable/icon_new_right_arrow" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <View style="@style/style_line_horizontal_middle" />
+
+                <LinearLayout
+                    android:id="@+id/ll_choosr_project_new"
+                    style="@style/style_ll_new_info"
+                    android:layout_height="40dp">
+
+                    <ImageView
+                        style="@style/style_small_ico_task_new"
+                        android:layout_marginLeft="10dp"
+                        android:src="@drawable/icon_client_blue" />
+
+                    <TextView
+                        style="@style/style_ll_left_title_task"
+                        android:text="选择项目" />
+
+                    <LinearLayout style="@style/style_ll_right_title_task">
+
+                        <TextView
+                            android:id="@+id/new_bug_project"
+                            style="@style/style_right_text_task" />
+
+                        <ImageView
+                            android:id="@+id/iv_bug_project"
+                            style="@style/style_small_ico_task_new"
+                            android:src="@drawable/icon_new_right_arrow" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <View style="@style/style_line_horizontal_middle" />
+
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <com.biaozhunyuan.tianyi.view.VoiceInputView
+        android:id="@+id/voice_view_new_task"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone" />
+</LinearLayout>

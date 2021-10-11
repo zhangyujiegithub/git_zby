@@ -1,0 +1,36 @@
+<resources>
+    <string name="app_name">标准院OA</string>
+
+
+    <!--MainTabActivity-->
+    <!--ChatActivity-->
+    <!--SelectedFragment-->
+    <!--ActivityListActivity-->
+    <!--ActivityListActivity-->
+    <!--SystemMessageActivity-->
+    <!--ChatListActivity-->
+    <!--CustomerMineFragment-->
+    <!--SetPassword-->
+    <!--fhSihangFuWuReportDetailActivity-->
+
+
+    <!--<string name="pickerview_cancel">取消</string>-->
+    <!--<string name="pickerview_submit">确定</string>-->
+
+    <!--波尔云-->
+    <string name="viewpager_indicator">%1$d/%2$d</string>
+    <string name="select_photo_no">确定(%1$d/%2$d)</string>
+
+    <!--日历-->
+    <string name="time_next">Next</string>
+    <string name="time_prev">Previous</string>
+    <string-array name="weeks">
+        <item>一</item>
+        <item>二</item>
+        <item>三</item>
+        <item>四</item>
+        <item>五</item>
+        <item>六</item>
+        <item>日</item>
+    </string-array>
+</resources>

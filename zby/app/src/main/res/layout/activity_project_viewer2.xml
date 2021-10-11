@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:boeryun="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/tools"
+    android:background="@color/bg_list"
+    android:orientation="vertical"
+    app:ignore="NamespaceTypo">
+
+    <com.biaozhunyuan.tianyi.common.view.BoeryunHeaderView
+        android:id="@+id/headerview"
+        boeryun:isVisbleBackIco="true"
+        boeryun:titleText="项目信息"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"></com.biaozhunyuan.tianyi.common.view.BoeryunHeaderView>
+
+    <com.biaozhunyuan.tianyi.view.IndicatorTabView
+        android:id="@+id/simpleindicator_ch_client_info"
+        android:layout_width="match_parent"
+        android:layout_height="36dp"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        app:height_indicator_tab="3dp" />
+
+
+
+    <View style="@style/small_line" />
+
+    <com.biaozhunyuan.tianyi.widget.BoeryunViewpager
+        android:id="@+id/vp_ch_client_info"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1" />
+
+    <View style="@style/small_line" />
+
+    <Button
+        android:id="@+id/btn_client_info_delete_client"
+        android:layout_width="180dp"
+        android:layout_height="30dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/shape_btn_delete"
+        android:text="删除客户"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/ll_bottom_ch_client"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:id="@+id/ll_contact_list_ch_client_info"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ico_contact" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="联系记录"
+                android:textColor="@color/text_info"
+                android:textSize="12dp"></TextView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_contact_add_ch_client_info"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ico_add_contact" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="新建联系"
+                android:textColor="@color/text_info"
+                android:textSize="12dp"></TextView>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

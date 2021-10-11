@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.biaozhunyuan.tianyi.common.view.BoeryunSearchViewNoButton
+        android:id="@+id/search_view"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_margin="10dp" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_hint"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="可搜索同事、群聊、聊天记录和文档等"
+                android:textColor="@color/text_info"
+                android:textSize="16sp" />
+
+            <LinearLayout
+                android:id="@+id/ll_user"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="@color/space_divider_Color"
+                    android:gravity="center_vertical"
+                    android:paddingStart="15dp"
+                    android:text="人员"
+                    android:textColor="@color/text_info"
+                    android:textSize="17sp" />
+
+                <com.biaozhunyuan.tianyi.common.view.NoScrollListView
+                    android:id="@+id/lv_user"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:divider="@color/dividerColor"
+                    android:dividerHeight="1dp"
+                    android:footerDividersEnabled="true"
+                    android:headerDividersEnabled="false" />
+
+                <LinearLayout
+                    android:id="@+id/ll_user_more"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:background="@color/white"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:layout_weight="1"
+                        android:text="查看更多人员"
+                        android:textColor="@color/actionsheet_blue"
+                        android:textSize="15sp" />
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/arrow_right" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_Group"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="@color/space_divider_Color"
+                    android:gravity="center_vertical"
+                    android:paddingStart="15dp"
+                    android:text="群聊"
+                    android:textColor="@color/text_info"
+                    android:textSize="17sp" />
+
+                <com.biaozhunyuan.tianyi.common.view.NoScrollListView
+                    android:id="@+id/lv_group"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:divider="@color/dividerColor"
+                    android:dividerHeight="1dp"
+                    android:footerDividersEnabled="true"
+                    android:headerDividersEnabled="false" />
+
+                <LinearLayout
+                    android:id="@+id/ll_group_more"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:background="@color/white"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:layout_weight="1"
+                        android:text="查看更多群聊"
+                        android:textColor="@color/actionsheet_blue"
+                        android:textSize="15sp" />
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/arrow_right" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_record"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="@color/space_divider_Color"
+                    android:gravity="center_vertical"
+                    android:paddingStart="15dp"
+                    android:text="聊天记录"
+                    android:textColor="@color/text_info"
+                    android:textSize="17sp" />
+
+                <com.biaozhunyuan.tianyi.common.view.NoScrollListView
+                    android:id="@+id/lv_record"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:divider="@color/dividerColor"
+                    android:dividerHeight="1dp"
+                    android:footerDividersEnabled="true"
+                    android:headerDividersEnabled="false" />
+
+                <LinearLayout
+                    android:id="@+id/ll_record_more"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:background="@color/white"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:layout_weight="1"
+                        android:text="查看更多聊天记录"
+                        android:textColor="@color/actionsheet_blue"
+                        android:textSize="15sp" />
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/arrow_right" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

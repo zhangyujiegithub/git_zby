@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.biaozhunyuan.tianyi.common.view.BoeryunHeaderView
+        android:id="@+id/boeryun_headerview"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:titleText="联系人"></com.biaozhunyuan.tianyi.common.view.BoeryunHeaderView>
+
+    <com.biaozhunyuan.tianyi.view.BoeryunSearchView
+        android:id="@+id/search_view_address_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:hintText="按姓名搜索" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:background="@color/bg_list"
+                    android:scrollbars="none">
+
+                    <LinearLayout
+                        android:id="@+id/ll_dept_names_organize"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tv_back_first_organize"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="10dp"
+                            android:gravity="center_vertical"
+                            android:text="我的组织"
+                            android:textColor="@color/text_info"
+                            android:textSize="18sp" />
+                    </LinearLayout>
+                </HorizontalScrollView>
+
+                <com.biaozhunyuan.tianyi.common.view.NoScrollListView
+                    android:id="@+id/lv_my_dept_organize"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:divider="@drawable/list_divider"
+                    android:dividerHeight="1dp" />
+
+                <TextView
+                    android:id="@+id/tv_other_dept_organize"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:background="@color/bg_list"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10dp"
+                    android:text="其他组织"
+                    android:textColor="@color/text_info"
+                    android:textSize="18sp" />
+
+                <com.biaozhunyuan.tianyi.common.view.NoScrollListView
+                    android:id="@+id/lv_all_dept_organize"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:divider="@drawable/list_divider"
+                    android:dividerHeight="1dp" />
+            </LinearLayout>
+        </ScrollView>
+
+        <RelativeLayout
+            android:id="@+id/rl_search_layout_address"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone">
+
+            <ListView
+                android:id="@+id/lv_searched_user_address_list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:divider="@drawable/list_divider"
+                android:dividerHeight="1dp" />
+
+            <ImageView
+                android:id="@+id/iv_no_result_search_layout_address"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:scaleType="center"
+                android:src="@drawable/ic_no_search_result" />
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+</LinearLayout>

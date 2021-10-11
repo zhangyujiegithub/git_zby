@@ -1,0 +1,555 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FAFAFA"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@color/white"
+        android:elevation="2dp">
+
+        <ImageView
+            android:id="@+id/iv_back_headerview"
+            style="@style/style_header_button"
+            android:layout_marginLeft="5dp"
+            android:src="@drawable/icon_headerview_left_new" />
+
+        <TextView
+            android:id="@+id/tv_title_headerview"
+            style="@style/title_common"
+            android:ellipsize="end"
+            android:maxEms="9"
+            android:singleLine="true"
+            android:text="编辑任务" />
+
+        <TextView
+            android:id="@+id/tv_right_title_headerview"
+            style="@style/title_common"
+            android:layout_alignParentRight="true"
+            android:paddingRight="16dp"
+            android:text="完成"
+            android:textColor="@color/color_theme"
+            android:textSize="16sp"
+            android:textStyle="normal" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="8dp"
+        android:background="#ffffff">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:orientation="vertical">
+
+            <!--<ScrollView
+                android:id="@+id/scrollView_content_share"
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:background="@color/white"
+                android:scrollbarStyle="outsideOverlay">-->
+
+            <EditText
+                android:id="@+id/et_content_share"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:gravity="top"
+                android:hint="描述任务内容..."
+                android:minHeight="100dp"
+                android:paddingBottom="8dp"
+                android:paddingLeft="15dp"
+                android:paddingRight="8dp"
+                android:paddingTop="8dp"
+                android:textColor="#333333"
+                android:textColorHint="#999999"
+                android:textSize="14sp" />
+
+
+            <!--<com.biaozhunyuan.tianyi.space.HorizontalScrollViewAddImage-->
+            <!--android:id="@+id/addImg_share"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginTop="-5dp" />-->
+
+            <com.biaozhunyuan.tianyi.view.MultipleAttachView
+                android:id="@+id/addImg_share"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-5dp"
+                android:numColumns="5" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="签订合同"
+                    style="@style/style_task_new_label"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="项目在开发阶段"
+                    style="@style/style_task_new_label"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="客户签收"
+                    style="@style/style_task_new_label"
+                    />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#FAFAFA" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="18dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="17dp"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/iv_oa"
+                        android:layout_width="13dp"
+                        android:layout_height="12dp"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/icon_task_new_oasystem" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="9dp"
+                        android:layout_toRightOf="@+id/iv_oa"
+                        android:text="波尔云OA系统设计"
+                        android:textColor="#333333"
+                        android:textSize="14sp" />
+
+                    <ImageView
+                        android:layout_width="13dp"
+                        android:layout_height="14dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/icon_task_new_search" />
+                </RelativeLayout>
+
+                <com.biaozhunyuan.tianyi.view.HorizontalListView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                </com.biaozhunyuan.tianyi.view.HorizontalListView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="18dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="17dp"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/iv1"
+                        android:layout_width="13dp"
+                        android:layout_height="12dp"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/icon_status_selected" />
+
+                    <TextView
+                        android:id="@+id/tv_task_status"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="9dp"
+                        android:layout_toRightOf="@+id/iv1"
+                        android:text="已完成"
+                        android:textColor="#333333"
+                        android:textSize="14sp" />
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="16dp"
+                    android:orientation="horizontal">
+
+
+                    <TextView
+                        android:id="@+id/tv_task_complete"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="已完成"
+                        style="@style/style_task_new_label"
+                        />
+
+                    <TextView
+                        android:id="@+id/tv_task_unfinished"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="未完成"
+                        style="@style/style_task_new_label"
+                        />
+
+                    <TextView
+                        android:id="@+id/tv_task_audit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="待审核"
+                        style="@style/style_task_new_label"
+                        />
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_marginTop="15dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/iv2"
+                        android:layout_width="13dp"
+                        android:layout_height="12dp"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/icon_task_new_person" />
+
+                    <TextView
+                        android:id="@+id/tv_task_executor"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="9dp"
+                        android:layout_toRightOf="@+id/iv2"
+                        android:text="李晓云"
+                        android:textColor="#333333"
+                        android:textSize="14sp" />
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:orientation="horizontal">
+
+                    <com.biaozhunyuan.tianyi.view.HorizontalListView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"></com.biaozhunyuan.tianyi.view.HorizontalListView>
+                </LinearLayout>
+
+
+                <RelativeLayout
+                    android:layout_marginTop="15dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/iv3"
+                        android:layout_width="13dp"
+                        android:layout_height="12dp"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/icon_task_new_time" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="9dp"
+                        android:layout_toRightOf="@+id/iv3"
+                        android:text="开始时间"
+                        android:textColor="#333333"
+                        android:textSize="14sp" />
+
+                    <ImageView
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/icon_task_new_right"
+                        />
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="16dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_task_time_today"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="今天"
+                        style="@style/style_task_new_label"
+                        />
+
+                    <TextView
+                        android:id="@+id/tv_task_time_tomorrow"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="明天"
+                        style="@style/style_task_new_label"
+                        />
+
+                    <TextView
+                        android:id="@+id/tv_task_time_aftertomorrow"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="后天"
+                        style="@style/style_task_new_label"
+                        />
+                    <TextView
+                        android:id="@+id/tv_task_time_oneweek"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="一周后"
+                        style="@style/style_task_new_label"
+                        />
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_marginTop="15dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/iv4"
+                        android:layout_width="13dp"
+                        android:layout_height="12dp"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/icon_task_new_time" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="9dp"
+                        android:layout_toRightOf="@+id/iv4"
+                        android:text="结束时间"
+                        android:textColor="#333333"
+                        android:textSize="14sp" />
+
+                    <ImageView
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/icon_task_new_right"
+                        />
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="16dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_task_time_today_end"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="今天"
+                        style="@style/style_task_new_label"
+                        />
+
+                    <TextView
+                        android:id="@+id/tv_task_time_tomorrow_end"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="明天"
+                        style="@style/style_task_new_label"
+                        />
+
+                    <TextView
+                        android:id="@+id/tv_task_time_aftertomorrow_end"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="后天"
+                        style="@style/style_task_new_label"
+                        />
+                    <TextView
+                        android:id="@+id/tv_task_time_oneweek_end"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="一周后"
+                        style="@style/style_task_new_label"
+                        />
+                </LinearLayout>
+
+
+                <RelativeLayout
+                    android:layout_marginTop="15dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/iv5"
+                        android:layout_width="13dp"
+                        android:layout_height="12dp"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/icon_task_new_remind" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="9dp"
+                        android:layout_toRightOf="@+id/iv5"
+                        android:text="提醒"
+                        android:textColor="#333333"
+                        android:textSize="14sp" />
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="16dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_task_remind_3hour"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="三小时前"
+                        style="@style/style_task_new_label"
+                        />
+
+                    <TextView
+                        android:id="@+id/tv_task_remind_1hour"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="一小时前"
+                        style="@style/style_task_new_label"
+                        />
+
+                    <TextView
+                        android:id="@+id/tv_task_remind_after"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="稍后"
+                        style="@style/style_task_new_label"
+                        />
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_marginTop="15dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/iv6"
+                        android:layout_width="13dp"
+                        android:layout_height="12dp"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/icon_task_new_participant" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="9dp"
+                        android:layout_toRightOf="@+id/iv6"
+                        android:text="参与人"
+                        android:textColor="#333333"
+                        android:textSize="14sp" />
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:orientation="horizontal">
+
+                    <com.biaozhunyuan.tianyi.view.HorizontalListView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                    </com.biaozhunyuan.tianyi.view.HorizontalListView>
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_marginTop="15dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/iv7"
+                        android:layout_width="13dp"
+                        android:layout_height="12dp"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/icon_task_new_customer" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="9dp"
+                        android:layout_toRightOf="@+id/iv7"
+                        android:text="关联客户"
+                        android:textColor="#333333"
+                        android:textSize="14sp" />
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:orientation="horizontal">
+
+                    <com.biaozhunyuan.tianyi.view.HorizontalListView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                    </com.biaozhunyuan.tianyi.view.HorizontalListView>
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+
+</LinearLayout>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="horizontal"
+    android:padding="7dp">
+
+    <TextView
+        android:id="@+id/tv_content_task_week_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:bufferType="spannable"
+        android:textColor="@color/white"
+        android:textSize="13sp"
+        android:padding="4dp"
+        android:text="我的\n任务"
+        android:gravity="center"
+        android:background="@color/notice_renshi"/>
+
+    <ImageView
+        android:id="@+id/iv_add_task_week_view"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:background="@drawable/selector_avatar_add_btn"
+        android:text="我的\n任务"
+        android:gravity="center"
+        android:visibility="gone"/>
+
+</LinearLayout>
+
+
+

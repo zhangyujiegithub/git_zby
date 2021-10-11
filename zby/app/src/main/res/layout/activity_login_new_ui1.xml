@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FAFAFA">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+<android.support.constraint.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipChildren="false"
+    android:clipToPadding="false"
+    android:fitsSystemWindows="true">
+
+
+    <ImageView
+        android:id="@+id/new_login_text_easy"
+        android:layout_width="240dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="64dp"
+        android:background="@drawable/new_login_login_logo"
+        android:scaleType="fitXY"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/tv_login_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="统一办公平台"
+        android:textColor="#003B83"
+        android:textSize="28sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/new_login_text_easy" />
+
+    <RelativeLayout
+        android:id="@+id/ll_login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@+id/tv_login_text">
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="35dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginRight="35dp"
+            android:theme="@style/CustomAppTheme_textinputLayout"
+            android:visibility="gone">
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/et_crop_name_login"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#EEEEEE"
+                android:drawableLeft="@drawable/new_login_icon_exprise"
+                android:drawablePadding="10dp"
+                android:hint=""
+                android:imeOptions="actionNext"
+                android:inputType="text"
+                android:nextFocusForward="@id/editTextUserName"
+                android:textColor="#333333"
+                android:textColorHint="#999999"
+                android:textSize="16sp" />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/user_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="35dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginRight="35dp"
+            android:theme="@style/CustomAppTheme_textinputLayout">
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/editTextUserName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#EEEEEE"
+                android:drawableLeft="@drawable/new_login_icon_username"
+                android:drawablePadding="10dp"
+                android:hint=""
+                android:imeOptions="actionNext"
+                android:inputType="text"
+                android:nextFocusForward="@id/editTextPassWord"
+                android:textColor="#333333"
+                android:textColorHint="#999999"
+                android:textSize="16sp" />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/ti_pass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/user_name"
+            android:layout_marginLeft="35dp"
+            android:layout_marginRight="35dp"
+            android:layout_marginTop="10dp"
+            android:theme="@style/CustomAppTheme_textinputLayout"
+            app:passwordToggleDrawable="@drawable/shape_txinpust"
+            app:passwordToggleEnabled="true">
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/editTextPassWord"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#EEEEEE"
+                android:drawableStart="@drawable/new_login_icon_password"
+                android:drawablePadding="10dp"
+                android:hint=""
+                android:imeOptions="actionDone"
+                android:inputType="textPassword"
+                android:textColor="#333333"
+                android:textColorHint="#999999" />
+
+        </android.support.design.widget.TextInputLayout>
+
+
+        <ImageView
+            android:id="@+id/img_clear_pass"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_below="@+id/user_name"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="32dp"
+            android:layout_marginRight="80dp"
+            android:background="@drawable/new_login_icon_del_inp"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/rl_code"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ll_login">
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/ti_code"
+            android:layout_width="180dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="35dp"
+            android:layout_marginTop="10dp"
+            android:theme="@style/CustomAppTheme_textinputLayout"
+            app:passwordToggleDrawable="@drawable/shape_txinpust"
+            app:passwordToggleEnabled="true">
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/editTextCode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#EEEEEE"
+                android:drawableStart="@drawable/new_login_icon_password"
+                android:drawablePadding="10dp"
+                android:hint=""
+                android:imeOptions="actionDone"
+                android:inputType="number"
+                android:textColor="#333333"
+                android:textColorHint="#999999" />
+
+        </android.support.design.widget.TextInputLayout>
+
+
+        <Button
+            android:id="@+id/btn_get_code"
+            android:layout_width="100dp"
+            android:layout_height="36dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="24dp"
+            android:layout_toRightOf="@+id/ti_code"
+            android:background="@drawable/shape_login_btn_disable"
+            android:gravity="center_vertical|center_horizontal"
+            android:text="获取验证码"
+            android:textColor="#ffffff"
+            android:textSize="12sp" />
+
+
+    </RelativeLayout>
+
+
+    <Button
+        android:id="@+id/buttonLogin"
+        android:layout_width="300dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginBottom="40dp"
+        android:background="@drawable/shape_login_btn_disable"
+        android:gravity="center_vertical|center_horizontal"
+        android:text="登录"
+        android:textColor="#ffffff"
+        android:textSize="18sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rl_code"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:layout_below="@id/ll_login"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="40dp"
+        android:orientation="horizontal"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonLogin"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/findpassword"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="忘记密码"
+            android:textColor="#555555"
+            android:textSize="15sp" />
+
+        <View
+            android:layout_width="0.1dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:background="#555555"
+            android:visibility="gone"></View>
+
+        <TextView
+            android:id="@+id/register"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="免费注册"
+            android:textColor="#555555"
+            android:textSize="15sp"
+            android:visibility="gone" />
+
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>
+    </LinearLayout>
+</ScrollView>

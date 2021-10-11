@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.biaozhunyuan.tianyi.common.view.BoeryunHeaderView
+        android:id="@+id/header_product_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:filterImgSrc="@drawable/ic_calendar_filter"
+        app:isVisbleBackIco="true"
+        app:titleText="产品" />
+
+    <com.biaozhunyuan.tianyi.view.BoeryunSearchView
+        android:id="@+id/search_view_product_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <com.biaozhunyuan.tianyi.common.view.PullToRefreshAndLoadMoreListView
+        android:id="@+id/lv_product_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:headerDividersEnabled="true"
+        android:footerDividersEnabled="false"
+        android:divider="@color/dividerColor"
+        android:dividerHeight="10dp" />
+
+</LinearLayout>

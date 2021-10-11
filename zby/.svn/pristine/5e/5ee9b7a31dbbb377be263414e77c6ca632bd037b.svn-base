@@ -1,0 +1,501 @@
+package com.biaozhunyuan.tianyi.newuihome;
+
+import android.app.AlertDialog;
+import android.content.Context;
+import android.content.Intent;
+import android.os.Bundle;
+import android.support.annotation.NonNull;
+import android.support.annotation.Nullable;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentPagerAdapter;
+import android.support.v4.view.ViewPager;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.view.WindowManager;
+import android.widget.LinearLayout;
+import android.widget.TextView;
+
+import com.biaozhunyuan.tianyi.R;
+import com.biaozhunyuan.tianyi.apply.BacklogListActivity;
+import com.biaozhunyuan.tianyi.cnis.BusinessActivity;
+import com.biaozhunyuan.tianyi.cnis.GuideActivity;
+import com.biaozhunyuan.tianyi.cnis.InformationActivity;
+import com.biaozhunyuan.tianyi.cnis.LaoWuActivity;
+import com.biaozhunyuan.tianyi.cnis.LeaveActivity;
+import com.biaozhunyuan.tianyi.cnis.SealUseActivity;
+import com.biaozhunyuan.tianyi.cnis.SendDocManageActivity;
+import com.biaozhunyuan.tianyi.cnis.ShareActivity;
+import com.biaozhunyuan.tianyi.cnis.SignDocManageActivity;
+import com.biaozhunyuan.tianyi.cnis.YiQingActivity;
+import com.biaozhunyuan.tianyi.common.global.Global;
+import com.biaozhunyuan.tianyi.common.global.GlobalMethord;
+import com.biaozhunyuan.tianyi.common.helper.ProgressDialogHelper;
+import com.biaozhunyuan.tianyi.common.http.StringResponseCallBack;
+import com.biaozhunyuan.tianyi.common.model.request.Demand;
+import com.biaozhunyuan.tianyi.common.utils.JsonUtils;
+import com.biaozhunyuan.tianyi.common.utils.LogUtils;
+import com.biaozhunyuan.tianyi.models.OldBacklog;
+import com.biaozhunyuan.tianyi.view.AutoMaxHeightViewpager;
+import com.biaozhunyuan.tianyi.view.SimpleIndicator;
+import com.biaozhunyuan.tianyi.ybkj.SholeActivity;
+import com.scwang.smartrefresh.layout.api.RefreshLayout;
+import com.scwang.smartrefresh.layout.listener.OnRefreshLoadMoreListener;
+
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.Objects;
+
+import okhttp3.Request;
+
+
+/**
+ * 作者： bohr
+ * 日期： 2020-07-03 10:08
+ * 描述：首页页面
+ */
+public class HomeFragment extends Fragment implements View.OnClickListener {
+
+
+    //category
+    private final String CATEGORY = "f4c2c84c0b90418fae46ff5915b63c0x,f4c2c84c0b90418fae46ff5915b63c0m," +
+            "f4c2c84c0b90418fae46ff5915b63c0p,f4c2c84c0b90418fae46ff5915b63c6c," +
+            "sdfsdf98894d8f4s5d4f1e98w1r84d1,33fb40edb10948e6a5442dd4141d1607";
+    //fields
+    private final String FIELDS = "文号";
+    //templateids
+    private final String TEMPLATEIDS = "dbfdf689c48c41e5ab8bc6db2ed4bdd8,e79613f127aa42cdbaa4b38d0d5d6c72";
+
+    private SimpleIndicator indicator;
+    private LinearLayout llNeedDo; //待办
+    private TextView tv_unread_new, tv_unread_old;//待办数量
+    private LinearLayout ll_information, ll_guide, ll_share,
+            ll_send_doc, ll_sign, ll_seal_use, ll_take_break,ll_laowu,
+            ll_zhaopinguanli,ll_renshibiandong,ll_yiqing, ll_business;
+    private String[] titles = new String[]{"我的待办", "我的已办"};//, "通      知"
+    private AutoMaxHeightViewpager pager;
+    private List<Fragment> fragments;
+
+    private RefreshLayout refreshLayout;
+    //    NoticeListFragment noticelistfragment;
+    NewBacklogListFragment newBacklogListFragment;
+    OldBacklogListFragment oldBacklogListFragment;
+//    InformListFragment informListFragment;
+//    GuideLineListFragment guidelinelistfragment;
+//    ShareSubjectListFragment shareSubjectListFragment;//院内共享
+
+
+    private Demand demand, demand_old;
+    private int selectPosition = 0;
+    private HomeFragment mContext;
+
+    @Nullable
+    @Override
+    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+        View view = inflater.inflate(R.layout.fragment_home, null);
+        mContext=this;
+        initView(view);
+        setOnEvent();
+        return view;
+    }
+
+    private void initView(View view) {
+        indicator = view.findViewById(R.id.indicator);
+        llNeedDo = view.findViewById(R.id.ll_need_do);
+        tv_unread_new = view.findViewById(R.id.tv_unread_new);
+        tv_unread_old = view.findViewById(R.id.tv_unread_old);
+        ll_send_doc = view.findViewById(R.id.ll_send_doc);
+        ll_sign = view.findViewById(R.id.ll_sign);
+        ll_seal_use = view.findViewById(R.id.ll_seal_use);
+        ll_take_break = view.findViewById(R.id.ll_take_break);
+        ll_laowu = view.findViewById(R.id.ll_laowu);
+        ll_zhaopinguanli = view.findViewById(R.id.ll_zhaopinguanli);
+        ll_renshibiandong = view.findViewById(R.id.ll_renshibiandong);
+        ll_yiqing = view.findViewById(R.id.ll_yiqing);
+        ll_business = view.findViewById(R.id.ll_business);
+        ll_information = view.findViewById(R.id.ll_information);
+        ll_guide = view.findViewById(R.id.ll_guide);
+        ll_share = view.findViewById(R.id.ll_share);
+        refreshLayout = view.findViewById(R.id.refreshLayout);
+        pager = view.findViewById(R.id.view_pager);
+        ll_send_doc.setOnClickListener(this);
+        ll_sign.setOnClickListener(this);
+        ll_seal_use.setOnClickListener(this);
+        ll_take_break.setOnClickListener(this);
+        ll_laowu.setOnClickListener(this);
+        ll_zhaopinguanli.setOnClickListener(this);
+        ll_renshibiandong.setOnClickListener(this);
+        ll_information.setOnClickListener(this);
+        ll_guide.setOnClickListener(this);
+        ll_share.setOnClickListener(this);
+        llNeedDo.setOnClickListener(this);
+        ll_yiqing.setOnClickListener(this);
+        ll_business.setOnClickListener(this);
+        refreshLayout.setReboundDuration(300);//回弹动画时长（毫秒）
+        refreshLayout.setDragRate(0.5f);//显示下拉高度/手指真实下拉高度=阻尼效果
+        refreshLayout.setEnableAutoLoadMore(false);//是否启用列表惯性滑动到底部时自动加载更多
+        refreshLayout.setEnableScrollContentWhenLoaded(false); //是否在加载完成时滚动列表显示新的内容
+        refreshLayout.setEnableScrollContentWhenRefreshed(false);//是否在刷新完成时滚动列表显示新的内容
+        refreshLayout.setEnableFooterFollowWhenLoadFinished(false);//是否在全部加载结束之后Footer跟随内容1.0.4
+        initFragment();
+    }
+
+    private void initFragment() {
+        fragments = new ArrayList<>();
+        newBacklogListFragment = new NewBacklogListFragment(pager, 0);
+        oldBacklogListFragment = new OldBacklogListFragment(pager, 1);
+//        noticelistfragment = new NoticeListFragment(pager, 2);
+
+//        informListFragment = new InformListFragment(pager,1);
+//        guidelinelistfragment = new GuideLineListFragment(pager, 2);
+//        shareSubjectListFragment = new ShareSubjectListFragment(pager, 3);
+        fragments.add(newBacklogListFragment);
+        fragments.add(oldBacklogListFragment);
+//        fragments.add(noticelistfragment);
+
+
+//        fragments.add(informListFragment);
+//        fragments.add(guidelinelistfragment);
+//        fragments.add(shareSubjectListFragment);
+        pager.setAdapter(new FragmentPagerAdapter(getActivity().getSupportFragmentManager()) {
+            @Override
+            public Fragment getItem(int position) {
+                return fragments.get(position);
+            }
+
+            @Override
+            public int getCount() {
+                return fragments.size();
+            }
+
+            @Override
+            public void destroyItem(ViewGroup container, int position, Object object) {
+                Fragment fragment = ((Fragment) object);
+            }
+
+            @Override
+            public boolean isViewFromObject(View view, Object obj) {
+                return view == ((Fragment) obj).getView();
+            }
+        });
+        indicator.setTabItemTitles(titles);
+        pager.setOffscreenPageLimit(3);
+        indicator.setViewPager(pager, 0);
+
+
+    }
+
+
+    private void initDemand() {
+        String url = Global.BASE_JAVA_URL + GlobalMethord.标准院待办列表;
+        Map<String, String> keyMap = new HashMap<>();
+        keyMap.put("category", CATEGORY);
+//        keyMap.put("fields", FIELDS);
+        keyMap.put("templateIds", TEMPLATEIDS);
+
+
+        demand = new Demand();
+        demand.pageSize = 10;
+        demand.pageIndex = 1;
+        demand.sort = "desc";
+        demand.sortField = "lastUpdateTime";
+        demand.dictionaryNames = "creatorId.base_staff,prevStepAuditorId.base_staff";
+        demand.keyMap = keyMap;
+        demand.src = url;
+    }
+
+    private void initDemand_old() {
+        String url = Global.BASE_JAVA_URL + GlobalMethord.标准院已办列表;
+        demand_old = new Demand();
+        demand_old.src = url;
+        demand_old.pageSize = 10;
+        Map<String, String> map = new HashMap<>();
+        map.put("category", "f4c2c84c0b90418fae46ff5915b63c0x," +
+                "f4c2c84c0b90418fae46ff5915b63c0m,f4c2c84c0b90418fae46ff5915b63c0p," +
+                "f4c2c84c0b90418fae46ff5915b63c6c");
+        map.put("fields", "标题");
+        demand_old.keyMap = map;
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        if (null != refreshLayout) {
+            if (selectPosition == 0) {
+                newBacklogListFragment.refreshData(refreshLayout);
+            }
+        }
+        getBackLogNum_new();
+        getBackLogNum_old();
+    }
+
+    private void setOnEvent() {
+
+        refreshLayout.setOnRefreshLoadMoreListener(new OnRefreshLoadMoreListener() {
+            @Override
+            public void onLoadMore(RefreshLayout refreshLayout) {
+                if (pager.getCurrentItem() == 0) {
+                    newBacklogListFragment.loadMoreData(refreshLayout);
+                } else if (pager.getCurrentItem() == 1) {
+//                    informListFragment.loadMoreData(refreshLayout);
+                    oldBacklogListFragment.loadMoreData(refreshLayout);
+                    refreshLayout.finishLoadMore();
+                }
+//                else if (pager.getCurrentItem() == 2) {
+////                    noticelistfragment.loadMoreData(refreshLayout);
+////                    guidelinelistfragment.loadMoreData(refreshLayout);
+//                }
+//                else if(pager.getCurrentItem() == 3){
+//                    shareSubjectListFragment.loadMoreData(refreshLayout);
+//                }
+//                getBackLogNum();
+            }
+
+            @Override
+            public void onRefresh(RefreshLayout refreshLayout) {
+
+                refreshLayout.setNoMoreData(false);
+                if (pager.getCurrentItem() == 0) {
+                    newBacklogListFragment.refreshData(refreshLayout);
+                    getBackLogNum_new();
+                } else if (pager.getCurrentItem() == 1) {
+                    oldBacklogListFragment.refreshData(refreshLayout);
+                    getBackLogNum_old();
+                }
+                refreshLayout.finishRefresh();
+//                else if (pager.getCurrentItem() == 2) {
+//
+//                    noticelistfragment.refreshData(refreshLayout);
+//                }
+//                else if(pager.getCurrentItem() == 3){
+//                    shareSubjectListFragment.refreshData(refreshLayout);
+//                }
+            }
+        });
+
+        pager.setOnPageChangeListener(new ViewPager.OnPageChangeListener() {
+            @Override
+            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+                pager.resetHeight(position);
+            }
+
+            @Override
+            public void onPageSelected(int position) {
+                refreshLayout.setNoMoreData(false);//恢复没有更多数据的原始状态
+                selectPosition = position;
+                pager.resetHeight(position);
+            }
+
+            @Override
+            public void onPageScrollStateChanged(int state) {
+
+            }
+        });
+    }
+
+
+    /**
+     * 获取待办数目
+     */
+    private void getBackLogNum_new() {
+        initDemand();
+        demand.init(new StringResponseCallBack() {
+            @Override
+            public void onResponse(String response) {
+
+                try {
+                    JSONObject jo = new JSONObject(JsonUtils.getStringValue(response, "Data"));
+                    int backlogNum = jo.getInt("total");
+                    showOrHideUnread_new(backlogNum);
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+            }
+
+            @Override
+            public void onFailure(Request request, Exception ex) {
+                ProgressDialogHelper.dismiss();
+            }
+
+            @Override
+            public void onResponseCodeErro(String result) {
+                ProgressDialogHelper.dismiss();
+            }
+        });
+    }
+
+    /**
+     * 获取原待办数目
+     */
+    private void getBackLogNum_old() {
+
+        initDemand_old();
+        demand_old.init(new StringResponseCallBack() {
+            @Override
+            public void onResponse(String response) {
+                try {
+                    int backlogNum = Integer.valueOf(JsonUtils.getStringValue(JsonUtils.pareseData(response), "total"));
+//                    showOrHideUnread_old(backlogNum);
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                } catch (Exception e) {
+
+                }
+            }
+
+            @Override
+            public void onFailure(Request request, Exception ex) {
+                ProgressDialogHelper.dismiss();
+            }
+
+            @Override
+            public void onResponseCodeErro(String result) {
+                ProgressDialogHelper.dismiss();
+            }
+        });
+
+    }
+
+    private void showOrHideUnread_new(int unReadNum) {
+
+        if (unReadNum > 0) {
+            tv_unread_new.setVisibility(View.VISIBLE);
+            if (unReadNum > 99) {
+                tv_unread_new.setText("99+");
+            } else {
+                tv_unread_new.setText(unReadNum + "");
+            }
+        } else {
+            tv_unread_new.setVisibility(View.GONE);
+        }
+
+    }
+
+
+    private void showOrHideUnread_old(int unReadNum) {
+
+        if (unReadNum > 0) {
+            tv_unread_old.setVisibility(View.VISIBLE);
+            if (unReadNum > 99) {
+                tv_unread_old.setText("99+");
+            } else {
+                tv_unread_old.setText(unReadNum + "");
+            }
+        } else {
+            tv_unread_old.setVisibility(View.GONE);
+        }
+
+    }
+
+
+    @Override
+    public void onClick(View v) {
+        Intent intent;
+
+        switch (v.getId()) {
+            case R.id.ll_send_doc:
+                intent = new Intent(getActivity(), SendDocManageActivity.class);
+                startActivity(intent);
+                break;
+            case R.id.ll_sign:
+                intent = new Intent(getActivity(), SignDocManageActivity.class);
+                startActivity(intent);
+                break;
+
+            case R.id.ll_seal_use:
+                intent = new Intent(getActivity(), SealUseActivity.class);
+                startActivity(intent);
+                break;
+
+            case R.id.ll_take_break: //请假
+                intent = new Intent(getActivity(), LeaveActivity.class);
+                startActivity(intent);
+                break;
+            case R.id.ll_laowu: //临时劳务
+                intent = new Intent(getActivity(), LaoWuActivity.class);
+                startActivity(intent);
+                break;
+            case R.id.ll_zhaopinguanli: //招聘管理
+            case R.id.ll_renshibiandong: //人事变动
+                alertVerifyDialog(v.getId());
+                break;
+            case R.id.ll_information:
+                intent = new Intent(getActivity(), InformationActivity.class);
+                startActivity(intent);
+                break;
+
+            case R.id.ll_business: //出差申请
+                intent = new Intent(getActivity(), BusinessActivity.class);
+                startActivity(intent);
+                break;
+            case R.id.ll_guide:
+                intent = new Intent(getActivity(), GuideActivity.class);
+                startActivity(intent);
+                break;
+            case R.id.ll_share:
+                intent = new Intent(getActivity(), ShareActivity.class);
+                startActivity(intent);
+                break;
+            //疫情报备
+            case R.id.ll_yiqing:
+                intent = new Intent(getActivity(), YiQingActivity.class);
+                startActivity(intent);
+                break;
+
+
+            case R.id.ll_need_do:
+                intent = new Intent(getActivity(), BacklogListActivity.class);
+                startActivity(intent);
+                break;
+
+            default:
+                break;
+
+        }
+    }
+
+    AlertDialog alert;
+    public void alertVerifyDialog(int viewId) {
+        LogUtils.e("TAG","TAG--->>>"+viewId);
+        AlertDialog.Builder builder = new AlertDialog.Builder(mContext.getActivity());
+        builder.setCancelable(true);
+        alert = builder.create();
+        alert.show();
+        alert.setContentView(R.layout.home_pop);
+        LinearLayout ll_111 = alert.findViewById(R.id.ll_111);
+        LinearLayout ll_222 = alert.findViewById(R.id.ll_222);
+        ll_111.setVisibility(View.GONE);
+        ll_222.setVisibility(View.GONE);
+        if(viewId == R.id.ll_zhaopinguanli) {
+            ll_111.setVisibility(View.VISIBLE);
+            LinearLayout ll_renyuanzhaopin = alert.findViewById(R.id.ll_renyuanzhaopin);
+            LinearLayout ll_gangweipinyong = alert.findViewById(R.id.ll_gangweipinyong);
+            LinearLayout ll_qiyebianzhi = alert.findViewById(R.id.ll_qiyebianzhi);
+            ll_renyuanzhaopin.setOnClickListener(dialogCk);
+            ll_gangweipinyong.setOnClickListener(dialogCk);
+            ll_qiyebianzhi.setOnClickListener(dialogCk);
+        }else if(viewId == R.id.ll_renshibiandong){
+            ll_222.setVisibility(View.VISIBLE);
+            LinearLayout ll_zhigong = alert.findViewById(R.id.ll_zhigong);
+            LinearLayout ll_renyuanwaijie = alert.findViewById(R.id.ll_renyuanwaijie);
+            LinearLayout ll_diaochushenpi = alert.findViewById(R.id.ll_diaochushenpi);
+            ll_zhigong.setOnClickListener(dialogCk);
+            ll_renyuanwaijie.setOnClickListener(dialogCk);
+            ll_diaochushenpi.setOnClickListener(dialogCk);
+        }
+        Objects.requireNonNull(alert.getWindow()).clearFlags(
+                WindowManager.LayoutParams.FLAG_NOT_FOCUSABLE | WindowManager.LayoutParams.FLAG_ALT_FOCUSABLE_IM);
+    }
+
+    View.OnClickListener dialogCk= v -> {
+        Intent intent = new Intent(getActivity(), SholeActivity.class);
+        intent.putExtra("type",v.getId());
+        startActivity(intent);
+        alert.dismiss();
+    };
+}

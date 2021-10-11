@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:id="@+id/ll_task_item_parent"
+>
+    <!--android:background="@drawable/item_input_ll_bg"-->
+<RelativeLayout
+    android:layout_width="40dp"
+    android:layout_height="40dp">
+    <com.biaozhunyuan.tianyi.common.view.AvatarImageView
+        android:layout_centerInParent="true"
+        android:id="@+id/circularAvatar_input_user"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        app:aiv_TextSizeRatio="0.3"
+        android:src="@drawable/default_head" />
+
+    <ImageView
+        android:visibility="gone"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/ic_select"
+        android:layout_width="13dp"
+        android:layout_height="13dp"
+        android:id="@+id/item_input_selected"/>
+</RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_name_avatar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="林冲"
+        android:layout_marginTop="2dp"
+        android:textColor="#000000"
+        android:textSize="14sp"
+        />
+</LinearLayout>

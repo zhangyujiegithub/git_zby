@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.tianyi.project.CartogramMapActivity">
+
+    <com.biaozhunyuan.tianyi.common.view.BoeryunHeaderView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/boeryun_headerview"
+        app:isVisbleBackIco="true"
+        app:titleText="统计图">
+    </com.biaozhunyuan.tianyi.common.view.BoeryunHeaderView>
+
+    <WebView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/webview"></WebView>
+
+</LinearLayout>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.tianyi.curriculum.CurriculumlistActivity">
+
+    <com.biaozhunyuan.tianyi.common.view.BoeryunHeaderView
+    android:id="@+id/boeryun_headerview"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:titleText="课程中心"
+    app:isVisbleBackIco="true"
+    ></com.biaozhunyuan.tianyi.common.view.BoeryunHeaderView>
+
+    <com.biaozhunyuan.tianyi.view.BoeryunSearchView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/seach_button"></com.biaozhunyuan.tianyi.view.BoeryunSearchView>
+
+    <com.biaozhunyuan.tianyi.common.view.PullToRefreshAndLoadMoreListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:dividerHeight="0.5dp"
+        android:divider="@drawable/list_divider"
+        android:id="@+id/lv"></com.biaozhunyuan.tianyi.common.view.PullToRefreshAndLoadMoreListView>
+
+
+</LinearLayout>

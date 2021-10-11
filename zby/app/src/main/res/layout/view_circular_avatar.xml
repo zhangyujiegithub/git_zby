@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?><!--圆形头像-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
+
+        <RelativeLayout
+            android:layout_width="50dp"
+            android:layout_height="50dp">
+
+            <com.biaozhunyuan.tianyi.common.view.CircleImageView
+                android:id="@+id/iv_avartar_circularview"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/ico_default_user" />
+
+            <View
+                android:id="@+id/view_read_circularview"
+                style="@style/style_badge_read_dot"
+                android:layout_marginLeft="38.7dp"
+                android:layout_marginTop="3.3dp"
+                android:visibility="gone"/>
+        </RelativeLayout>
+
+
+        <TextView
+            android:id="@+id/tv_name_bottom_circularview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/style_list_text_avatar_name"
+            android:visibility="gone"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:orientation="vertical"
+        android:gravity="center_vertical">
+        <TextView
+            android:id="@+id/tv_name_circularview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="未知员工"
+            style="@style/style_list_text_avatar_name"
+            />
+
+        <TextView
+            android:id="@+id/tv_time_circularview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/style_list_text_date"
+            />
+    </LinearLayout>
+</LinearLayout>

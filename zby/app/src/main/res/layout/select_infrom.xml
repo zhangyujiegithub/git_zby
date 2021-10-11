@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:boeryun="http://schemas.android.com/apk/res-auto"
+    >
+    <com.biaozhunyuan.tianyi.common.view.BoeryunHeaderView
+        android:id="@+id/header_select_user"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/bottom_menu_height"
+        boeryun:isVisbleAddIco="false"
+        boeryun:isVisbleBackIco="true"
+        boeryun:isVisbleFilterIco="false"
+        app:titleRightText="确定"
+        app:isVisbleRightText="true"
+        boeryun:titleText="选择通知人" />
+    <com.biaozhunyuan.tianyi.view.BoeryunSearchView
+        android:id="@+id/search_view_address_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:hintText="按姓名搜索"
+        android:visibility="gone"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@color/bg_list"
+                    android:scrollbars="none">
+
+                    <LinearLayout
+                        android:id="@+id/ll_dept_names_organize"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tv_back_first_organize"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="10dp"
+                            android:gravity="center_vertical"
+                            android:text="我的组织"
+                            android:textColor="#333333"
+                            android:textSize="15sp" />
+
+                    </LinearLayout>
+                </HorizontalScrollView>
+
+                <com.biaozhunyuan.tianyi.common.view.NoScrollListView
+                    android:id="@+id/lv_my_dept_organize"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/tv_other_dept_organize"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@color/bg_list"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10dp"
+                    android:text="其他组织"
+                    android:textColor="#333333"
+                    android:textSize="15sp" />
+
+                <com.biaozhunyuan.tianyi.common.view.NoScrollListView
+                    android:id="@+id/lv_all_dept_organize"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:divider="@color/dividerColor"
+                    android:dividerHeight="0.1dp" />
+
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:gravity="bottom"
+        android:id="@+id/bottom_select"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="20dp"
+            android:gravity="left|center_vertical"
+            android:text="已选择："
+            android:textColor="@color/fuzhuselan"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tv_count_select_user"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="left|center_vertical"
+            android:text="0位同事"
+            android:textColor="@color/fuzhuselan"
+            android:textSize="16sp" />
+
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/tv_sure_select_user"
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:background="@color/fuzhuselan"
+            android:gravity="center"
+            android:text="确定"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/rl_search_layout_address"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <ListView
+            android:id="@+id/lv_searched_user_address_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white" />
+
+        <ImageView
+            android:id="@+id/iv_no_result_search_layout_address"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:scaleType="center"
+            android:src="@drawable/ic_no_search_result" />
+
+    </RelativeLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:descendantFocusability="blocksDescendants"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <com.biaozhunyuan.tianyi.common.view.CircleImageView
+            android:id="@+id/iv_head_item_notice_list"
+            android:layout_width="33dp"
+            android:layout_height="38dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="15dp"
+            android:src="@drawable/default_head" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="15dp">
+
+            <TextView
+                android:id="@+id/tv_creater_notice_item"
+                style="@style/style_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="李晓云"
+                android:textStyle="normal" />
+
+            <TextView
+                android:id="@+id/tv_time_notice_item"
+                style="@style/style_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_creater_notice_item"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="5dp"
+                android:gravity="center"
+                android:text="16:37" />
+
+            <TextView
+                android:id="@+id/tv_post_type_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@+id/tv_creater_notice_item"
+                android:background="@drawable/apply_list_item_status_bg_daishenhe"
+                android:padding="2dp"
+                android:text="公司文化"
+                android:textColor="@color/white"
+                android:textSize="12sp" />
+
+        </RelativeLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_space_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="15dp"
+        android:text="李晓云"
+        android:textColor="@color/list_content"
+        android:textSize="17sp"
+        android:textStyle="bold" />
+
+    <cn.droidlover.xrichtext.XRichText
+        android:id="@+id/tv_content_notice_item"
+        style="@style/style_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:focusable="false"
+        android:padding="5dp" />
+
+    <RelativeLayout
+        android:id="@+id/rl_attach"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:descendantFocusability="blocksDescendants"
+        app:layout_constraintTop_toBottomOf="@+id/tv_content_notice_item">
+
+        <com.biaozhunyuan.tianyi.view.MultipleAttachView
+            android:id="@+id/multi_attach_notice_item"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:numColumns="5"
+            android:paddingTop="5dp"
+            android:paddingRight="5dp"
+            android:paddingBottom="5dp"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="16dp"
+        android:gravity="end"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/nl_item_log_support"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/iv_item_log_support"
+                android:layout_width="14dp"
+                android:layout_height="12dp"
+                android:src="@drawable/icon_support" />
+
+            <TextView
+                android:id="@+id/tv_support_count_log_item"
+                android:layout_width="18dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="18"
+                android:textColor="#999999"
+                android:textSize="13sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/nl_item_log_comment"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:layout_marginLeft="5dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:visibility="visible">
+
+            <ImageView
+                android:id="@+id/iv_item_log_comment"
+                android:layout_width="14dp"
+                android:layout_height="13dp"
+                android:background="@drawable/icon_comment" />
+
+            <TextView
+                android:id="@+id/tv_comment_count_log_item"
+                android:layout_width="18dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="27"
+                android:textColor="#999999"
+                android:textSize="13sp" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

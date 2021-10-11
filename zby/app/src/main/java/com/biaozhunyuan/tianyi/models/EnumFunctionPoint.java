@@ -1,0 +1,38 @@
+package com.biaozhunyuan.tianyi.models;
+
+/**
+ * 手机端枚举功能点
+ *
+ * @author kjx
+ */
+public enum EnumFunctionPoint {
+
+    ATTANCE(0), LOG(1), TASK(2), NOTICE(3), APPLY(4), CLIENT(5), SALECHANCE(6), SALESUMARY(
+            7), CONTACTS(8), PROJECT(9), ORDER(10), ADVERTISEMENT(11), COMMUNICATION(
+            13), APPLY_INBOX(14), APPLY_OUTBOX(15), PRODUCT(16), RANKING(17), CLEW(
+            18), CONPACT(19), RECEIPET(20), EXPENSE(21), RAD_PRODUCTLIST(31), RAD_ORDER(
+            32), RAD_REPORT(33), RAD_CACULATE(34), RAD_SCAN_CODE(35), SLT_PRODUCTLIST(
+            41), SLT_ORDER(42), SLT_REPORT(44), SLT_CACULATE(45), SLT_SHOPCAR_LIST(
+            46), SLT_SCAN_CODE(47), SLT_SALE_TARGET(48), SLT_APPROVE_ORDER(49), CHANGHUI_WORK_PLAN(
+            60), CHANGHUI_PRODUCT_LIST(61), CHANGHUI_CONTACT_LIST(64), CHANGHUI_BESPOKE_LIST(
+            66), CHANGHUI_CLIENT_LIST(68), INCOMING(71), DISPATCH(72), TONGJI(71), MEMBER_LIST(81), MEMBER_CONTACTS_LIST(
+            82), GUIJI(882), INSIDE_COMMUNICATION(880), ZCORDER(121), ZCLIPINORDER(
+            122), WEEK_LOG(222), CLIENT_LANE(1276), NEW_PROJECT(336), SPACE(
+            455), ACTIVITY(466), CHAT(500), CRMPROJECT(511), CRMBUSINESS(
+            512), CURRICULUM(513), EXAMINATION(514), INVOICES(
+            515), WORKORDER(516), APPLYFOR_INVOICE(517), CRMCLUE(518), BUG(
+            519), PROJECT_ATTENDANCE(520), INFORMATION(521),WE_CHAT_RECORD(522);
+    // 私有成员变量，保存名称
+    private int value;
+
+    public int getValue() {
+        return value;
+    }
+
+
+    // 带参构造函数
+    EnumFunctionPoint(int value) {
+        this.value = value;
+    }
+
+}

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.tianyi.attendance.PresentationConditionActivity">
+
+    <com.biaozhunyuan.tianyi.common.view.BoeryunHeaderView
+        android:id="@+id/boeryun_headerview"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        app:isVisbleBackIco="true"
+        app:isVisbleRightText="true"
+        app:titleRightText="确认"
+        app:titleText="迟到原因"></com.biaozhunyuan.tianyi.common.view.BoeryunHeaderView>
+
+    <com.biaozhunyuan.tianyi.view.ClearEditText
+        android:background="@drawable/edittext_frame"
+        android:id="@+id/et_content"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:layout_margin="10dp"
+        android:clickable="true"
+        android:gravity="top|left"
+        android:hint="请说明原因..."
+        android:minHeight="200dp"
+        android:padding="10dp"
+        android:scrollbars="vertical"
+        android:singleLine="false"
+        android:textColor="@color/black"
+        android:textSize="16sp" />
+
+</LinearLayout>

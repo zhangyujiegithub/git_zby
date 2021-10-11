@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.biaozhunyuan.tianyi.common.view.BoeryunHeaderView
+        android:id="@+id/header_daiban_shouwen"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:filterImgSrc="@drawable/ic_calendar_filter"
+        app:isVisbleBackIco="true"
+        app:titleText="收文" />
+
+    <!--<com.biaozhunyuan.tianyiDocument.view.BoeryunSearchViewNoButton-->
+        <!--android:id="@+id/search_notice_list"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content" />-->
+
+    <com.biaozhunyuan.tianyi.common.view.PullToRefreshAndLoadMoreListView
+        android:id="@+id/lv_common_shouwen"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</LinearLayout>

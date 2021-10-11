@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="60dp">
+
+    <com.biaozhunyuan.tianyi.common.view.AvatarImageView
+        android:id="@+id/iv_head"
+        android:layout_width="42dp"
+        android:layout_height="42dp"
+        android:layout_marginLeft="12dp"
+        android:layout_centerVertical="true"
+        android:padding="2dp"
+        android:src="@drawable/default_head"
+        app:aiv_TextSizeRatio="0.3" />
+
+        <TextView
+            android:id="@+id/tv_username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="16dp"
+            android:layout_toRightOf="@id/iv_head"
+            android:text="许雷"
+            android:textColor="#333333"
+            android:textSize="16sp" />
+
+        <ImageView
+            android:id="@+id/iv_close"
+            android:layout_centerVertical="true"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="12dp"
+            android:paddingBottom="5dp"
+            android:paddingTop="5dp"
+            android:src="@drawable/icon_close_black" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_alignLeft="@id/tv_username"
+            android:layout_alignParentBottom="true"
+            android:background="#eeeeee" />
+
+</RelativeLayout>

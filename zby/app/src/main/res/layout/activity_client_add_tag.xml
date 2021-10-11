@@ -1,0 +1,89 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/bg_list"
+    android:orientation="vertical">
+
+    <RelativeLayout style="@style/style_header_layout">
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:padding="10dp"
+            android:id="@+id/iv_back_add_clients"
+            android:src="@drawable/icon_back" />
+
+        <TextView
+            style="@style/title_common"
+            android:text="标签" />
+
+        <ImageView
+            android:layout_height="match_parent"
+            android:layout_width="50dp"
+            android:padding="12dp"
+            android:id="@+id/iv_save_add_client_tags"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/check" />
+
+
+    </RelativeLayout>
+
+    <View style="@style/style_line_horizontal_small" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <com.biaozhunyuan.tianyi.view.FlowLayout
+                android:id="@+id/addtag_layout_client"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white">
+
+                <!--<EditText
+                    android:id="@+id/add_edit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
+                    android:background="@drawable/flag_edit"
+                    android:hint="添加标签"
+                    android:imeOptions="actionDone"
+                    android:inputType="text"
+                    android:textColor="#000000"
+                    android:textSize="14sp" />-->
+
+            </com.biaozhunyuan.tianyi.view.FlowLayout>
+
+            <com.biaozhunyuan.tianyi.view.TagFlowLayout
+                android:id="@+id/tag_layout_client"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"></com.biaozhunyuan.tianyi.view.TagFlowLayout>
+
+
+            <!--<TextView
+                android:id="@+id/tv_client_add_tag"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/shape_btn_bg_sign"
+                android:paddingBottom="2dp"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:paddingTop="2dp"
+                android:text="添加"
+                android:textColor="@color/white"
+                android:textSize="12sp" />-->
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

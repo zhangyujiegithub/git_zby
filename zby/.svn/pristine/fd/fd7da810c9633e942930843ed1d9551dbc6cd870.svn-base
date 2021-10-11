@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.tianyi.clue.ClueListActivity">
+
+    <com.biaozhunyuan.tianyi.common.view.BoeryunHeaderView
+        android:id="@+id/headerview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:isVisbleAddIco="true"
+        app:isVisbleBackIco="true"
+        app:titleText="线索"></com.biaozhunyuan.tianyi.common.view.BoeryunHeaderView>
+
+    <com.biaozhunyuan.tianyi.view.BoeryunSearchView
+        android:id="@+id/seach_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"></com.biaozhunyuan.tianyi.view.BoeryunSearchView>
+
+    <com.biaozhunyuan.tianyi.common.view.PullToRefreshAndLoadMoreListView
+        android:id="@+id/lv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:divider="@drawable/list_divider"
+        android:dividerHeight="0.5dp"></com.biaozhunyuan.tianyi.common.view.PullToRefreshAndLoadMoreListView>
+
+</LinearLayout>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_height="match_parent">
+
+    <com.biaozhunyuan.tianyi.common.view.BoeryunHeaderView
+        android:id="@+id/header_new_task"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:filterImgSrc="@drawable/ic_calendar_filter"
+        app:isVisbleBackIco="true"
+        app:isVisbleRightText="true"
+        app:titleRightText="提交"
+        app:titleText="选择部门" />
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ListView
+            android:id="@+id/lv_select_dept"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            ></ListView>
+
+    </RelativeLayout>
+
+
+
+</LinearLayout>

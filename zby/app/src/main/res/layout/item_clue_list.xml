@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <com.biaozhunyuan.tianyi.common.view.CircleImageView
+        android:id="@+id/circleImageView"
+        android:layout_width="38dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="26dp"
+        android:layout_marginTop="17dp"
+        android:src="@drawable/default_head"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/advisor_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7dp"
+        android:maxWidth="50dp"
+        android:text="欧阳娜娜"
+        android:textColor="@color/text_time"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="@+id/circleImageView"
+        app:layout_constraintStart_toStartOf="@+id/circleImageView"
+        app:layout_constraintTop_toBottomOf="@+id/circleImageView" />
+
+    <TextView
+        android:id="@+id/client_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="12dp"
+        android:maxWidth="180dp"
+        android:gravity="center"
+        android:text="TextView"
+        android:textColor="@color/text_name"
+        android:textSize="15sp"
+        app:layout_constraintStart_toEndOf="@id/circleImageView"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="name" />
+
+    <TextView
+        android:id="@+id/tv_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/text_bg_activity_clue"
+        android:paddingBottom="3dp"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:paddingTop="3dp"
+        android:layout_marginLeft="8dp"
+        android:text="status"
+        android:textColor="@color/white"
+        app:layout_constraintTop_toTopOf="@+id/client_name"
+        app:layout_constraintBottom_toBottomOf="@+id/client_name"
+        app:layout_constraintLeft_toRightOf="@+id/client_name"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="11dp"
+        android:layout_height="12dp"
+        android:layout_marginTop="12dp"
+        android:src="@drawable/icon_clue_money"
+        app:layout_constraintStart_toStartOf="@+id/client_name"
+        app:layout_constraintTop_toBottomOf="@+id/client_name" />
+
+    <TextView
+        android:id="@+id/contact_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="TextView"
+        android:textColor="@color/text_time"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView3"
+        app:layout_constraintStart_toEndOf="@+id/imageView3"
+        app:layout_constraintTop_toTopOf="@+id/imageView3" />
+
+
+    <ImageView
+        android:visibility="gone"
+        android:id="@+id/imageView4"
+        android:layout_width="8dp"
+        android:layout_height="13dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/icon_phone_gary"
+        app:layout_constraintEnd_toEndOf="@+id/imageView3"
+        app:layout_constraintStart_toStartOf="@+id/imageView3"
+        app:layout_constraintTop_toBottomOf="@+id/imageView3" />
+
+    <TextView
+        android:visibility="gone"
+        android:id="@+id/contact_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        android:textColor="@color/text_time"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView4"
+        app:layout_constraintStart_toStartOf="@+id/contact_name"
+        app:layout_constraintTop_toTopOf="@+id/imageView4" />
+
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="11dp"
+        android:layout_height="13dp"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/icon_clue_time"
+        app:layout_constraintBottom_toBottomOf="@+id/contact_location"
+        app:layout_constraintEnd_toEndOf="@+id/imageView3"
+        app:layout_constraintStart_toStartOf="@+id/imageView3"
+        app:layout_constraintTop_toBottomOf="@+id/imageView4" />
+
+    <TextView
+        android:id="@+id/contact_location"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:maxWidth="200dp"
+        android:text="TextView"
+        android:textColor="@color/text_time"
+        android:textSize="12sp"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="@+id/contact_name"
+        app:layout_constraintRight_toRightOf="@id/imageView7"
+        app:layout_constraintTop_toBottomOf="@+id/contact_number" />
+
+
+    <!--<ImageView-->
+    <!--android:visibility="gone"-->
+    <!--android:id="@+id/imageView6"-->
+    <!--android:layout_width="52dp"-->
+    <!--android:layout_height="52dp"-->
+    <!--android:layout_marginEnd="15dp"-->
+    <!--android:src="@drawable/icon_client_more"-->
+    <!--app:layout_constraintEnd_toEndOf="parent"-->
+    <!--app:layout_constraintTop_toBottomOf="@id/client_name" />-->
+
+    <!--<ImageView-->
+    <!--android:visibility="gone"-->
+
+    <!--android:id="@+id/imageView7"-->
+    <!--android:layout_width="52dp"-->
+    <!--android:layout_height="52dp"-->
+    <!--android:src="@drawable/icon_new_record"-->
+    <!--app:layout_constraintEnd_toStartOf="@id/imageView6"-->
+    <!--app:layout_constraintTop_toBottomOf="@id/client_name" />-->
+
+    <!--<ImageView-->
+    <!--android:visibility="gone"-->
+    <!--android:id="@+id/imageView8"-->
+    <!--android:layout_width="52dp"-->
+    <!--android:layout_height="52dp"-->
+    <!--android:src="@drawable/icon_call_phone"-->
+    <!--app:layout_constraintEnd_toStartOf="@id/imageView7"-->
+    <!--app:layout_constraintTop_toBottomOf="@id/client_name" />-->
+
+    <!--<android.support.constraint.Guideline-->
+    <!--android:id="@+id/guideline"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:orientation="vertical"-->
+    <!--app:layout_constraintGuide_begin="20dp" />-->
+
+    <!--<android.support.constraint.Guideline-->
+    <!--android:id="@+id/guideline2"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:orientation="horizontal"-->
+    <!--app:layout_constraintGuide_begin="20dp" />-->
+
+    <!--<android.support.constraint.Guideline-->
+    <!--android:id="@+id/guideline3"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:orientation="vertical"-->
+    <!--app:layout_constraintGuide_begin="20dp" />-->
+
+    <android.support.v7.widget.AppCompatImageView
+        android:id="@+id/imageView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="5dp"
+        android:padding="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageView14"
+        app:layout_constraintTop_toBottomOf="@+id/contact_location"
+        app:srcCompat="@drawable/icon_clue_share" />
+
+    <android.support.v7.widget.AppCompatImageView
+        android:id="@+id/imageView10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="5dp"
+        android:padding="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageView9"
+        app:layout_constraintTop_toBottomOf="@+id/contact_location"
+        app:srcCompat="@drawable/icon_clue_turn" />
+
+    <android.support.v7.widget.AppCompatImageView
+        android:id="@+id/imageView11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="5dp"
+        android:padding="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageView10"
+        app:layout_constraintTop_toBottomOf="@+id/contact_location"
+        app:srcCompat="@drawable/icon_clue_close" />
+
+    <android.support.v7.widget.AppCompatImageView
+        android:visibility="gone"
+        android:id="@+id/imageView14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="2dp"
+        android:padding="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/circleImageView"
+        app:layout_constraintTop_toBottomOf="@+id/contact_location"
+        app:srcCompat="@drawable/icon_client_addrecord" />
+
+    <android.support.v7.widget.AppCompatImageView
+        android:id="@+id/imageView15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:padding="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageView11"
+        app:layout_constraintTop_toTopOf="@+id/imageView11"
+        app:srcCompat="@drawable/icon_clue_delete" />
+
+</android.support.constraint.ConstraintLayout>

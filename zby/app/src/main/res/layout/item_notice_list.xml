@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:descendantFocusability="blocksDescendants"
+    android:paddingBottom="5dp">
+
+    <TextView
+        android:id="@+id/tv_title_notice_item"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:maxEms="10"
+        android:maxLines="1"
+        android:text="通知标题通知标题通知标题通知标题"
+        android:textColor="@color/hanyaRed"
+        android:textSize="17sp"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.biaozhunyuan.tianyi.common.view.CircleImageView
+        android:id="@+id/iv_head_item_notice_list"
+        android:layout_width="38dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/default_head"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_title_notice_item" />
+
+    <TextView
+        android:id="@+id/tv_creater_notice_item"
+        style="@style/style_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="11dp"
+        android:layout_marginTop="10dp"
+        android:text="李晓云"
+        android:textStyle="normal"
+        app:layout_constraintStart_toEndOf="@+id/iv_head_item_notice_list"
+        app:layout_constraintTop_toBottomOf="@+id/tv_title_notice_item" />
+
+    <TextView
+        android:id="@+id/tv_time_notice_item"
+        style="@style/style_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="17dp"
+        android:layout_marginTop="10dp"
+        android:text="16:37"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_title_notice_item" />
+
+    <TextView
+        android:id="@+id/tv_content_notice_item"
+        style="@style/style_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="12dp"
+        android:layout_marginStart="65dp"
+        android:layout_marginTop="9dp"
+        android:ellipsize="end"
+        android:lineSpacingExtra="8dp"
+        android:maxLines="3"
+        android:text="OA是将现代化办公和计算机网络功能结合起来的一种新型的办公方式。"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_creater_notice_item" />
+
+    <RelativeLayout
+        android:id="@+id/rl_attach"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:descendantFocusability="blocksDescendants"
+        android:paddingLeft="20dp"
+        android:paddingRight="10dp"
+        app:layout_constraintTop_toBottomOf="@+id/tv_content_notice_item">
+
+        <com.biaozhunyuan.tianyi.view.MultipleAttachView
+            android:id="@+id/multi_attach_notice_item"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:numColumns="5"
+            android:paddingBottom="5dp"
+            android:paddingRight="5dp"
+            android:paddingTop="5dp" />
+
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:id="@+id/nl_item_log_support"
+        android:layout_width="40dp"
+        android:layout_height="25dp"
+        android:layout_marginEnd="10dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toStartOf="@+id/nl_item_log_comment"
+        app:layout_constraintTop_toBottomOf="@+id/rl_attach">
+
+        <ImageView
+            android:id="@+id/iv_item_log_support"
+            android:layout_width="14dp"
+            android:layout_height="12dp"
+            android:src="@drawable/icon_support" />
+
+        <TextView
+            android:id="@+id/tv_support_count_log_item"
+            android:layout_width="18dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:text="18"
+            android:textColor="#999999"
+            android:textSize="13sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/nl_item_log_comment"
+        android:layout_width="40dp"
+        android:layout_height="25dp"
+        android:layout_marginEnd="10dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rl_attach">
+
+        <ImageView
+            android:id="@+id/iv_item_log_comment"
+            android:layout_width="14dp"
+            android:layout_height="13dp"
+            android:background="@drawable/icon_comment" />
+
+        <TextView
+            android:id="@+id/tv_comment_count_log_item"
+            android:layout_width="18dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:text="27"
+            android:textColor="#999999"
+            android:textSize="13sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_attch_log_list"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="@+id/nl_item_log_support"
+        app:layout_constraintTop_toBottomOf="@+id/nl_item_log_support">
+
+        <TextView
+            android:id="@+id/tv_attch_count_log_list"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="22222" />
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>

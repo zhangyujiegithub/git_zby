@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="my_calendar_button_size">15dp</dimen>
+    <dimen name="my_calendar_day_padding_vertical">0dp</dimen>
+    <dimen name="my_calendar_day_size">35dp</dimen>
+    <dimen name="my_calendar_padding">15dp</dimen>
+    <dimen name="my_calendar_week_padding_vertical">10dp</dimen>
+    <string name="Friday">周五</string>
+    <string name="Monday">周一</string>
+    <string name="Saturday">周六</string>
+    <string name="Sunday">周日</string>
+    <string name="Thursday">周四</string>
+    <string name="Tuesday">周二</string>
+    <string name="Wednesday">周三</string>
+    <string name="app_name">WeekCalendar</string>
+    <string name="today">今天</string>
+    <declare-styleable name="WeekCalendar">
+        <attr format="dimension" name="daysTextSize"/>
+        <attr format="color" name="todayTextColor"/>
+        <attr format="color" name="daysTextColor"/>
+        <attr format="color" name="daysSelectedTextColor"/>
+        <attr format="reference|color" name="daysSelectedBackground"/>
+        <attr format="dimension" name="weekTextSize"/>
+        <attr format="color" name="weekTextColor"/>
+        <attr format="reference|color" name="weekBackgroundColor"/>
+        <attr format="boolean" name="hideTodayName"/>
+        <attr format="boolean" name="isCornerMark"/>
+        <attr format="reference|color" name="cornerMarkBg"/>
+        <attr format="color" name="monthBackgroundColor"/>
+        <attr format="color" name="monthTextColor"/>
+        <attr format="reference|color" name="nextArrowBg"/>
+        <attr format="reference|color" name="preArrowBg"/>
+        <attr format="boolean" name="isShowMonth"/>
+        <attr format="boolean" name="selfmotion_selected"/>
+        <attr format="enum" name="titleDateFormat">
+            <enum name="yyyyMMdd" value="1"/>
+            <enum name="yyyyMM" value="2"/>
+        </attr>
+    </declare-styleable>
+</resources>

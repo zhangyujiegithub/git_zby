@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:slidemenu="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/slideMenu"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/ll_item_tasklist"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="5dp"
+            android:layout_height="match_parent"
+            android:paddingBottom="4dp">
+
+
+        </LinearLayout>
+
+        <!--<LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="50"
+            android:gravity="center" >
+
+            &lt;!&ndash; 已读未读小红点 &ndash;&gt;
+
+            <ImageView
+                android:id="@+id/iv_dot_read_tasklist"
+                android:layout_width="7dp"
+                android:layout_height="7dp"
+                android:src="@drawable/ico_dot_read" />
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/style_list_avatar_root"
+            android:layout_weight="240" >
+
+            <com.zlcloud.control.AvartarView
+                android:id="@+id/control_avatar_tasklist"
+                style="@style/style_list_avatar" />
+        </LinearLayout>-->
+
+        <LinearLayout
+            android:id="@+id/zmy_linear"
+            style="@style/style_list_item"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.biaozhunyuan.tianyi.common.view.CircleImageView
+                    android:id="@+id/head_item_task_list"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginRight="10dp"
+                    android:src="@drawable/default_head" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/name_item_task_list"
+                        style="@style/style_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="name" />
+
+                    <TextView
+                        android:id="@+id/time_item_task_list"
+                        style="@style/style_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="time" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/style_list_item_pading"
+                    android:layout_width="0dp"
+                    android:layout_height="45dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_weight="3"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
+
+                    <TextView
+                        android:visibility="gone"
+                        android:id="@+id/tv_state_tasklist"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/project_stage_bg"
+                        android:ellipsize="end"
+                        android:gravity="center"
+                        android:maxEms="6"
+                        android:maxLines="1"
+                        android:paddingBottom="3dp"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="5dp"
+                        android:paddingTop="3dp"
+                        android:text="初次联系"
+                        android:textColor="@color/white"
+                        android:textSize="11sp" />
+                    <!--<LinearLayout-->
+                        <!--android:id="@+id/ll_task_item_comment"-->
+                        <!--android:layout_width="0dp"-->
+                        <!--android:layout_height="match_parent"-->
+                        <!--android:layout_weight="1"-->
+                        <!--android:gravity="center"-->
+                        <!--android:orientation="horizontal"-->
+                        <!--android:paddingTop="10dp">-->
+
+                        <!--<ImageView-->
+                            <!--android:layout_width="16dp"-->
+                            <!--android:layout_height="16dp"-->
+                            <!--android:src="@drawable/icon_comment" />-->
+
+                        <!--<TextView-->
+                            <!--android:id="@+id/tv_comment_count_task_item"-->
+                            <!--android:layout_width="wrap_content"-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:layout_marginLeft="8dp"-->
+                            <!--android:text="0"-->
+                            <!--android:textColor="@color/tv_share_light_grey"-->
+                            <!--android:textSize="13sp" />-->
+                    <!--</LinearLayout>-->
+
+                    <!--<LinearLayout-->
+                        <!--android:id="@+id/ll_task_item_support"-->
+                        <!--android:layout_width="0dp"-->
+                        <!--android:layout_height="match_parent"-->
+                        <!--android:layout_weight="1"-->
+                        <!--android:gravity="center"-->
+                        <!--android:orientation="horizontal"-->
+                        <!--android:paddingTop="10dp">-->
+
+                        <!--<ImageView-->
+                            <!--android:id="@+id/iv_item_task_support"-->
+                            <!--android:layout_width="16dp"-->
+                            <!--android:layout_height="16dp"-->
+                            <!--android:src="@drawable/icon_support" />-->
+
+                        <!--<TextView-->
+                            <!--android:id="@+id/tv_support_count_task_item"-->
+                            <!--android:layout_width="wrap_content"-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:layout_marginLeft="8dp"-->
+                            <!--android:text="0"-->
+                            <!--android:textColor="@color/tv_share_light_grey"-->
+                            <!--android:textSize="13sp" />-->
+                    <!--</LinearLayout>-->
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginLeft="50dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/textViewStatus_tasklist"
+                        style="@style/style_list_text_content_new"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="状态"
+                        android:textSize="12sp"
+                        android:visibility="gone" />
+
+                    <!--<TextView-->
+                        <!--android:visibility="gone"-->
+                        <!--android:id="@+id/tv_state_tasklist"-->
+                        <!--android:layout_width="40dp"-->
+                        <!--android:layout_height="7dp"-->
+                        <!--android:layout_marginTop="5dp"-->
+                        <!--android:background="@drawable/shape_edittext_bg_yusheng" />-->
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/textViewTitle_tasklist"
+                    style="@style/style_content"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="内容" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_marginBottom="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <View
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_weight="1"></View>
+
+                <LinearLayout
+                    android:id="@+id/ll_task_item_comment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:paddingTop="10dp">
+
+                    <ImageView
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:src="@drawable/icon_comment" />
+
+                    <TextView
+                        android:id="@+id/tv_comment_count_task_item"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:text="0"
+                        android:textColor="@color/tv_share_light_grey"
+                        android:textSize="13sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_marginRight="25dp"
+                    android:id="@+id/ll_task_item_support"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="25dp"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:paddingTop="10dp">
+
+                    <ImageView
+                        android:id="@+id/iv_item_task_support"
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:src="@drawable/icon_support" />
+
+                    <TextView
+                        android:id="@+id/tv_support_count_task_item"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:text="0"
+                        android:textColor="@color/tv_share_light_grey"
+                        android:textSize="13sp" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

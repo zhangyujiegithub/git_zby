@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FAFAFA"
+    android:orientation="vertical">
+
+    <RelativeLayout
+
+        android:id="@+id/rl_header_taglist"
+        android:elevation="3dp"
+        style="@style/style_header_layout">
+
+        <ImageView
+            android:layout_marginLeft="5dp"
+            android:id="@+id/imageViewCancel"
+            style="@style/style_header_button"
+            android:src="@drawable/icon_headerview_left_new" />
+
+        <TextView
+            android:id="@+id/tv_title_tag"
+            style="@style/title_common"
+            android:text="考勤记录"
+            android:visibility="gone" />
+
+        <com.biaozhunyuan.tianyi.view.SegmentView
+            android:background="@drawable/attendance_salary_bg"
+            android:id="@+id/segment_tag_salary"
+            android:layout_width="160dp"
+            android:layout_height="35dp"
+            android:layout_centerInParent="true" />
+
+        <TextView
+            android:id="@+id/position_tag_salary"
+            style="@style/title_common"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:text="定位记录"
+            android:textSize="14sp"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/imageViewNew"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dip"
+            android:padding="5dip"
+            android:src="@drawable/ico_filter"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_marginTop="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/rl_header_taglist"
+        android:orientation="vertical">
+
+        <com.loonggg.weekcalendar.view.WeekCalendar
+            android:id="@+id/weekcalendar_tag_salary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            app:daysSelectedBackground="@drawable/green_oval_bg"
+            app:isCornerMark="true"
+            app:monthBackgroundColor="#ffffff"
+            app:monthTextColor="#6a6867"
+            app:todayTextColor="#addb5a"
+            app:weekTextColor="#252524" />
+
+        <com.biaozhunyuan.tianyi.common.view.PullToRefreshAndLoadMoreListView
+            android:layout_marginTop="8dp"
+            android:id="@+id/listView_tagsalarylist_show"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/bg_list"
+            android:divider="@null"
+            android:dividerHeight="6dp"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp" />
+    </LinearLayout>
+</RelativeLayout>

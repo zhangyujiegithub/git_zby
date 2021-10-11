@@ -1,0 +1,95 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <LinearLayout
+                android:id="@+id/rl_publish_task_day_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_gravity="bottom"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/ll_add_task_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_gravity="bottom"
+                    android:orientation="horizontal"
+                    android:padding="8dp"
+                    android:visibility="gone">
+
+                    <EditText
+                        android:id="@+id/et_content_task_day_view"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="8dp"
+                        android:layout_weight="5"
+                        android:background="@drawable/shape_edittext_bg_yusheng"
+                        android:hint="添加一条任务吧"
+                        android:padding="5dp"
+                        android:textColor="@color/text_info"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/tv_publish_task_day_view"
+                        android:layout_width="80dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:background="@drawable/shape_btn_bg_hanya"
+                        android:focusable="false"
+                        android:gravity="center"
+                        android:text="发送"
+                        android:textColor="@color/white"
+                        android:textSize="15sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@id/rl_publish_task_day_view"
+                android:orientation="vertical"
+                tools:context="com.zlcloud.fragment.task.TaskDayViewFragment">
+
+                <LinearLayout
+                    android:id="@+id/ll_list_task_day_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="8dp"
+                    android:orientation="vertical"
+                    android:visibility="gone" />
+
+                <com.biaozhunyuan.tianyi.common.view.PullToRefreshAndLoadMoreListView
+                    android:id="@+id/lv_task_day_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:divider="@drawable/list_divider"
+                    android:dividerHeight="1dp"
+                    android:footerDividersEnabled="true"
+                    android:headerDividersEnabled="false" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/bg_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone"
+                android:background="@color/transparent"/>
+        </RelativeLayout>
+    </LinearLayout>
+</RelativeLayout>

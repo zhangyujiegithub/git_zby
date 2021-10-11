@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#eeeeee" />
+
+    <Button
+        android:id="@+id/tv_lookAll"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_gravity="bottom"
+        android:background="@drawable/btn_task_pop_all_bg"
+        android:gravity="center"
+        android:text="查看全部"
+        android:textColor="#FF9FA0A0"
+        android:textSize="17sp" />
+</LinearLayout>

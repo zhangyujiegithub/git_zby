@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <com.biaozhunyuan.tianyi.common.view.BoeryunHeaderView
+        android:fitsSystemWindows="true"
+        android:id="@+id/header_address_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:filterImgSrc="@drawable/ic_calendar_filter"
+        app:isVisbleAddIco="false"
+        app:isVisbleBackIco="true"
+        android:visibility="gone"
+        app:isVisbleFilterIco="false"
+        app:titleText="通讯录" />
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="match_parent"
+        android:textSize="18sp"
+        android:textColor="@color/titlecolor"
+        android:gravity="center"
+        android:text="通讯录"
+        android:layout_height="45dp" />
+
+    <com.biaozhunyuan.tianyi.view.BoeryunSearchView
+        android:id="@+id/search_view_address_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:hintText="按姓名搜索" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <com.biaozhunyuan.tianyi.view.SimpleIndicator
+                android:id="@+id/incator_title_address_list"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@color/white"
+                app:item_count="3"
+                android:orientation="horizontal"
+                app:height_indicator_tab="3dp" />
+
+            <com.biaozhunyuan.tianyi.view.CustomViewPager
+                android:id="@+id/viewPager_address_list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:background="@color/white" />
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_search_layout_address"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone">
+
+            <ListView
+                android:id="@+id/lv_searched_user_address_list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:divider="@drawable/list_divider"
+                android:dividerHeight="1dp"
+                android:background="@color/white" />
+
+            <ImageView
+                android:id="@+id/iv_no_result_search_layout_address"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:scaleType="center"
+                android:src="@drawable/ic_no_search_result" />
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+
+</LinearLayout>

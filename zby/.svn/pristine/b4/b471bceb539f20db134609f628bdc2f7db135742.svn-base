@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:scrollbars="none">
+
+
+        <LinearLayout
+            android:id="@+id/ll_root_lane_contact"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="150dp"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="150dp"
+                    android:layout_height="20dp"
+                    android:background="@drawable/shape_header_status2"
+                    android:gravity="center"
+                    android:text="首次拜访"
+                    android:textColor="@color/white"
+                    android:textSize="14sp" />
+
+                <ListView
+                    android:id="@+id/lv_task_lane_delay"
+                    android:layout_width="150dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/bg_list"
+                    android:padding="5dp"
+                    android:scrollbars="none" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="150dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="150dp"
+                    android:layout_height="20dp"
+                    android:background="@drawable/shape_header_status5"
+                    android:gravity="center"
+                    android:text="成功邀约"
+                    android:textColor="@color/white"
+                    android:textSize="14sp" />
+
+                <ListView
+                    android:id="@+id/lv_task_lane_doing"
+                    android:layout_width="150dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/bg_list"
+                    android:padding="5dp"
+                    android:scrollbars="none" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="150dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="150dp"
+                    android:layout_height="20dp"
+                    android:background="@drawable/shape_header_status6"
+                    android:gravity="center"
+                    android:text="方案制定评估"
+                    android:textColor="@color/white"
+                    android:textSize="14sp" />
+
+                <ListView
+                    android:id="@+id/lv_task_lane_plan"
+                    android:layout_width="150dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/bg_list"
+                    android:padding="5dp"
+                    android:scrollbars="none" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="150dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="150dp"
+                    android:layout_height="20dp"
+                    android:background="@drawable/shape_header_status7"
+                    android:gravity="center"
+                    android:text="成交"
+                    android:textColor="@color/white"
+                    android:textSize="14sp" />
+
+                <ListView
+                    android:id="@+id/lv_contact_chenjiao"
+                    android:layout_width="150dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/bg_list"
+                    android:padding="5dp"
+                    android:scrollbars="none" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="150dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="150dp"
+                    android:layout_height="20dp"
+                    android:background="@drawable/shape_header_status8"
+                    android:gravity="center"
+                    android:text="商务谈判促成"
+                    android:textColor="@color/white"
+                    android:textSize="14sp" />
+
+                <ListView
+                    android:id="@+id/lv_contact_cucheng"
+                    android:layout_width="150dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/bg_list"
+                    android:padding="5dp"
+                    android:scrollbars="none" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </HorizontalScrollView>
+
+</LinearLayout>

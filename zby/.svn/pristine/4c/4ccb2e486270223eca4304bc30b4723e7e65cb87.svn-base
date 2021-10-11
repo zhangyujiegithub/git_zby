@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="60dp"
+    android:gravity="center_vertical"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="8dp"
+        android:gravity="center"
+        android:orientation="vertical">
+        <com.biaozhunyuan.tianyi.common.view.CircleImageView
+            android:id="@+id/iv_head"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:src="@drawable/default_head"
+            />
+        <TextView
+            android:id="@+id/tv_excutor"
+            android:layout_width="wrap_content"
+            android:textSize="13sp"
+            android:textColor="@color/text_gray"
+            android:layout_height="wrap_content"
+            android:text="执行人"/>
+    </LinearLayout>
+    <TextView
+        android:id="@+id/task_content"
+        style="@style/style_content"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="16dp"
+        android:layout_weight="1"
+        android:textColor="@color/black"
+        android:textSize="17sp" />
+
+</LinearLayout>

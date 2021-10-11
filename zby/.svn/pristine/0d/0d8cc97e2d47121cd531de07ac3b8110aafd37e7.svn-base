@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:boeryun="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.biaozhunyuan.tianyi.common.view.BoeryunHeaderView
+        android:id="@+id/header_webview"
+        style="@style/style_header_layout"
+        boeryun:isVisbleBackIco="true"
+        boeryun:titleText="" />
+
+    <com.biaozhunyuan.tianyi.view.CustomerDrawerLayout
+        android:id="@+id/mDrawerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ProgressBar
+            android:id="@+id/pbar_calendar_item"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:indeterminate="false"
+            android:indeterminateOnly="false"
+            android:max="10"
+            android:progressDrawable="@drawable/progress_horizontal" />
+
+        <WebView
+            android:id="@+id/webview_webview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+
+        <LinearLayout
+            android:id="@+id/menu_right_rl"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="end"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_menu_contact"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center"
+                android:text="客户的联系记录"
+                android:textColor="#333333"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tv_contactlist"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="没有联系记录"
+                android:textColor="#333333"
+                android:textSize="18sp"
+                android:visibility="gone" />
+
+            <com.biaozhunyuan.tianyi.common.view.PullToRefreshAndLoadMoreListView
+                android:id="@+id/menu_lv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:choiceMode="singleChoice"></com.biaozhunyuan.tianyi.common.view.PullToRefreshAndLoadMoreListView>
+        </LinearLayout>
+
+    </com.biaozhunyuan.tianyi.view.CustomerDrawerLayout>
+</LinearLayout>

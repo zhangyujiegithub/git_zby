@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical" >
+
+        <!-- android:background="@color/zl_back" -->
+
+        <com.biaozhunyuan.tianyi.common.view.BoeryunHeaderView
+            app:isVisbleRightText="true"
+            app:titleRightText="发布"
+            app:isVisbleBackIco="true"
+            app:titleText="问题反馈"
+            android:id="@+id/boeryun_headerview"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"></com.biaozhunyuan.tianyi.common.view.BoeryunHeaderView>
+
+        <View style="@style/style_line_horizontal" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:padding="10dp" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@+id/view_line1_suggestion"
+                android:orientation="horizontal" >
+
+                <EditText
+                    android:id="@+id/et_content_suggestion"
+                    style="@style/style_text_left_info"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:gravity="top"
+                    android:hint="请您在这里填写对波尔云的意见，我们将不断改进，感谢支持。"
+                    android:textColor="@color/text_black"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/view_line1_suggestion"
+                style="@style/style_line_horizontal"
+                android:layout_above="@+id/ll_contact_suggesstion" />
+
+            <LinearLayout
+                android:id="@+id/ll_contact_suggesstion"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_above="@+id/view_line2_suggestion"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="联系方式:"
+                    android:textColor="@color/text_black"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/et_contact_suggestions"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    style="@style/style_text_left_info"
+                    android:gravity="center_vertical"
+                    android:hint="手机或QQ(选填)"
+                    android:textColor="@color/text_black"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/view_line2_suggestion"
+                style="@style/style_line_horizontal"
+                android:layout_above="@+id/ll_tips_suggestions" />
+
+            <LinearLayout
+                android:id="@+id/ll_tips_suggestions"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/style_text_left_info"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:gravity="center_vertical"
+                    android:hint="小贴士：\n如果不能正常使用波尔云，可重启波尔云或手机试试。"
+                    android:textColor="@color/text_black" />
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+
+</FrameLayout>

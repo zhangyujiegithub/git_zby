@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+
+    <!--<HorizontalScrollView-->
+    <!--android:id="@+id/horizontalScrollView_task_day_view"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:background="#fafafa"-->
+    <!--android:scrollbars="none"-->
+    <!--android:visibility="visible">-->
+
+    <!--<LinearLayout-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:orientation="horizontal">-->
+
+    <!--<com.biaozhunyuan.tianyi.view.HorizontalListView-->
+    <!--android:id="@+id/horizontal_list"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="70dp"-->
+    <!--android:layout_marginBottom="5dp"-->
+    <!--android:layout_marginLeft="8dp"-->
+    <!--android:layout_marginRight="8dp"-->
+    <!--android:layout_marginTop="5dp"-->
+    <!--android:padding="10dp"></com.biaozhunyuan.tianyi.view.HorizontalListView>-->
+
+    <!--<ImageView-->
+    <!--android:paddingTop="3dp"-->
+    <!--android:layout_gravity="center_vertical"-->
+    <!--android:id="@+id/iv_item_input_add"-->
+    <!--android:layout_width="50dp"-->
+    <!--android:layout_height="50dp"-->
+    <!--android:src="@drawable/icon_home_addtask_new" />-->
+
+    <!--</LinearLayout>-->
+    <!--<LinearLayout-->
+    <!--android:layout_marginTop="5dp"-->
+    <!--android:layout_marginBottom="5dp"-->
+    <!--android:layout_marginLeft="8dp"-->
+    <!--android:layout_marginRight="8dp"-->
+    <!--android:id="@+id/ll_user_root_task_day_view"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:orientation="horizontal">-->
+    <!--&lt;!&ndash;放置员工的头像&ndash;&gt;-->
+    <!--</LinearLayout>-->
+    <!--</HorizontalScrollView>-->
+
+
+    <View style="@style/small_line" />
+
+    <LinearLayout
+        android:id="@+id/ll_voice_keboard"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/bg_deep_gray"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:visibility="visible">
+
+        <RelativeLayout
+            android:id="@+id/rl_speech_view_keybord"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/iv_speech_view_keybord"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_centerInParent="true"
+                android:src="@drawable/ico_speech_keybord_unselected" />
+        </RelativeLayout>
+
+        <View style="@style/style_line_vertical" />
+
+        <RelativeLayout
+            android:id="@+id/rl_speech_view_mac"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/iv_speech_view_mac"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_centerInParent="true"
+                android:src="@drawable/ico_speech_mac_selected" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <!--<View style="@style/small_line" />-->
+
+    <RelativeLayout
+        android:id="@+id/ll_speek_voice"
+        android:layout_width="match_parent"
+        android:layout_height="200dp">
+
+        <ImageView
+            android:id="@+id/iv_voice_value"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/ico_voice_value_default" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="135dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/iv_delete_remove_voice"
+                style="@style/voice_input_btn"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/ico_voice_delete_bg" />
+
+            <Button
+                android:id="@+id/iv_left_remove_voice"
+                style="@style/voice_input_btn"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                android:background="@drawable/icon_keybord_left_bg" />
+
+
+            <Button
+                android:id="@+id/iv_right_remove_voice"
+                style="@style/voice_input_btn"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                android:background="@drawable/icon_keybord_right_bg" />
+
+            <Button
+                android:id="@+id/iv_back_press"
+                style="@style/voice_input_btn"
+                android:layout_marginLeft="15dp"
+                android:background="@drawable/icon_back_press_bg" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_content_value"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/iv_voice_value"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:hint="按下录音"
+            android:visibility="gone" />
+
+
+    </RelativeLayout>
+
+</LinearLayout>

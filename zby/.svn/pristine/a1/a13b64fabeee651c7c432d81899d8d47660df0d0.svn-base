@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.biaozhunyuan.tianyi.common.view.BoeryunHeaderView
+        android:id="@+id/header_change_head"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/pickerview_topbar_height"
+        app:isVisbleBackIco="true"
+        app:isVisbleSaveIco="true"
+        app:titleText="上传头像" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="0dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/bg_tag_normal"
+            android:orientation="vertical"
+            android:padding="4dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textViewTime"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_margin="20dp"
+                    android:text="头像"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/lightgray" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="10dp">
+
+            <FrameLayout
+                android:layout_width="138dp"
+                android:layout_height="138dp">
+
+                <com.biaozhunyuan.tianyi.common.view.CircleImageView
+                    android:id="@+id/imageViewCamera"
+                    android:layout_width="138dp"
+                    android:layout_height="138dp"
+                    android:maxHeight="50dp"
+                    android:maxWidth="50dp"
+                    android:src="@drawable/default_head" />
+            </FrameLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_userinfo_setting_company"
+            style="@style/task_style_ll_info"
+            android:layout_height="50dp"
+            android:clickable="true"
+            android:paddingRight="10dp">
+
+            <TextView
+                style="@style/style_left_text"
+                android:layout_weight="1"
+                android:text="部门"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/tv_userinfo_setting_company"
+                style="@style/style_right_text"
+                android:layout_weight="3"
+                android:text="企业名"
+                android:textSize="18sp" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/lightgray" />
+
+        <LinearLayout
+            android:id="@+id/ll_useinfo_setting_user"
+            style="@style/task_style_ll_info"
+            android:layout_height="50dp"
+            android:paddingRight="10dp">
+
+            <TextView
+                style="@style/style_left_text"
+                android:layout_weight="1"
+                android:text="用户名"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/tv_useinfo_setting_user"
+                style="@style/style_right_text"
+                android:layout_weight="3"
+                android:text="用户名"
+                android:textSize="18sp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

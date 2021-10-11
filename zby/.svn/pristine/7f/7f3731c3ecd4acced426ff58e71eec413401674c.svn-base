@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="right"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:choiceMode="singleChoice"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true">
+
+        <!--<ExpandableListView-->
+        <!--android:id="@+id/lv_expandable"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="0dp"-->
+        <!--android:layout_weight="1"-->
+        <!--android:divider="@null"-->
+        <!--android:listSelector="#00000000"-->
+        <!--/>-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:visibility="gone"
+                android:id="@+id/ll_drawer_type"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/style_drawerlayout_task_title"
+                    android:text="任务类型" />
+
+                <TextView
+                    android:id="@+id/tv_drawer_customer"
+                    style="@style/style_drawerlayout_task_info" />
+
+                <ImageView
+                    android:id="@+id/iv_type"
+                    android:layout_width="14dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="5dp"
+                    android:src="@drawable/arrow_right" />
+
+            </LinearLayout>
+
+            <!--<RelativeLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:gravity="center"-->
+            <!--android:paddingBottom="5dp">-->
+
+            <com.biaozhunyuan.tianyi.view.TagFlowLayout
+                android:id="@+id/tgf_task_type"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:visibility="gone" />
+            <!--</RelativeLayout>-->
+
+            <View style="@style/small_line"/>
+            <LinearLayout
+                android:id="@+id/ll_drawer_dept"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/style_drawerlayout_task_title"
+                    android:text="任务状态" />
+
+                <TextView
+                    android:id="@+id/tv_drawer_dept"
+                    style="@style/style_drawerlayout_task_info" />
+
+                <ImageView
+                    android:id="@+id/iv_dept"
+                    android:layout_width="14dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="5dp"
+                    android:src="@drawable/arrow_right" />
+
+            </LinearLayout>
+
+            <!--<RelativeLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:gravity="center"-->
+            <!--android:paddingBottom="5dp">-->
+
+            <com.biaozhunyuan.tianyi.view.TagFlowLayout
+                android:id="@+id/tgf_task_dept"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:visibility="gone" />
+            <!--</RelativeLayout>-->
+            <View style="@style/small_line"/>
+
+            <LinearLayout
+                android:id="@+id/ll_drawer_mytask"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/style_drawerlayout_task_title"
+                    android:text="我的任务" />
+
+                <TextView
+                    android:id="@+id/tv_drawer_mytask"
+                    style="@style/style_drawerlayout_task_info" />
+
+                <ImageView
+                    android:id="@+id/iv_mytask"
+                    android:layout_width="14dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="5dp"
+                    android:src="@drawable/arrow_right" />
+
+            </LinearLayout>
+
+            <!--<RelativeLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:gravity="center"-->
+            <!--android:paddingBottom="5dp">-->
+
+            <com.biaozhunyuan.tianyi.view.TagFlowLayout
+                android:id="@+id/tgf_task_mytask"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:visibility="gone" />
+            <!--</RelativeLayout>-->
+
+            <View style="@style/small_line"/>
+
+            <LinearLayout
+                android:id="@+id/ll_drawer_project"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/style_drawerlayout_task_title"
+                    android:text="项目" />
+
+                <TextView
+                    android:id="@+id/tv_drawer_project"
+                    style="@style/style_drawerlayout_task_info" />
+
+                <ImageView
+                    android:id="@+id/iv_project"
+                    android:layout_width="14dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="5dp"
+                    android:src="@drawable/arrow_right" />
+
+            </LinearLayout>
+
+            <!--<RelativeLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:gravity="center"-->
+            <!--android:paddingBottom="5dp">-->
+
+            <com.biaozhunyuan.tianyi.view.TagFlowLayout
+                android:id="@+id/tgf_task_project"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:visibility="gone" />
+            <!--</RelativeLayout>-->
+
+        </LinearLayout>
+    </ScrollView>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#eeeeee"
+        ></View>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_drawer_reset"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:textColor="#7a7a7a"
+            android:textSize="18sp"
+            android:gravity="center"
+            android:background="@color/white"
+            android:text="重置"
+            />
+
+        <TextView
+            android:id="@+id/tv_drawer_confirm"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:gravity="center"
+            android:background="#2D7FC7"
+            android:text="确定"
+            />
+
+    </LinearLayout>
+</LinearLayout>

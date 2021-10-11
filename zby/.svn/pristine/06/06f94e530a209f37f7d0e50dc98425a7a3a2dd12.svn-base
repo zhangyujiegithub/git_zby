@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.biaozhunyuan.tianyi.common.view.BoeryunHeaderView
+        android:id="@+id/boeryun_headerview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:isVisbleBackIco="true"
+        app:titleText="选择报销类型" />
+
+    <LinearLayout
+        android:id="@+id/ll_parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_expensesclaimsheet"
+            style="@style/style_textview_r_frame"
+            android:layout_marginTop="20dp"
+            android:text="费用报销单" />
+
+        <TextView
+            android:id="@+id/tv_travelexpenseclaim"
+            style="@style/style_textview_r_frame"
+            android:layout_marginTop="50dp"
+            android:text="差旅费报销单" />
+
+        <TextView
+            android:id="@+id/tv_businessentertainmentexpenseaccount"
+            style="@style/style_textview_r_frame"
+            android:layout_marginTop="50dp"
+            android:text="业务招待报销单" />
+
+    </LinearLayout>
+</LinearLayout>

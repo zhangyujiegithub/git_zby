@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <stroke
+        android:width="0.5dp"
+        android:color="#5b9efa" />
+    <solid android:color="@color/icon_clue_theme" />
+    <corners
+        android:bottomRightRadius="@dimen/apply_btn_radius"
+        android:topRightRadius="@dimen/apply_btn_radius" />
+
+</shape>

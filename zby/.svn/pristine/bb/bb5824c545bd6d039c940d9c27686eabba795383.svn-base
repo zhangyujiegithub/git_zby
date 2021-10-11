@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <com.biaozhunyuan.tianyi.common.view.BoeryunHeaderView
+            android:id="@+id/header_notice_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:elevation="4dp"
+            app:isVisbleBackIco="true"
+            app:titleText="帖子详情" />
+
+        <!--<View-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="8dp"-->
+        <!--android:background="#FAFAFA"></View>-->
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="8dp"
+            android:layout_weight="5">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <!--<View style="@style/style_line_horizontal_middle" />-->
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+                    <com.biaozhunyuan.tianyi.common.view.AvatarImageView
+                        android:id="@+id/iv_head_item_notice_info"
+                        android:layout_width="42dp"
+                        android:layout_height="42dp"
+                        android:layout_marginLeft="16dp"
+                        android:src="@drawable/default_head" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/tv_creater_notice_info"
+                                style="@style/style_name"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:text="李洁洁" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/time_notice_info"
+                            style="@style/style_time"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="10dp"
+                            android:text="8月23日 10:30" />
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/content_notice_info"
+                    style="@style/style_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="11dp"
+                    android:lineSpacingExtra="10dp"
+                    android:text="OA是将现代化办公和计算机网络功能结合起来的一种新型的办公方式。" />
+
+                <RelativeLayout
+                    android:id="@+id/rl_attach"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@+id/content_notice_info">
+
+                    <com.biaozhunyuan.tianyi.view.MultipleAttachView
+                        android:id="@+id/multi_attach_notice_item"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:numColumns="5"
+                        android:padding="5dp" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_viewcount"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_viewcount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="15dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="16dp"
+                        android:text="浏览8次"
+                        android:textColor="#999999"
+                        android:textSize="12sp" />
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
+
+                    <ImageView
+                        android:visibility="gone"
+                        android:id="@+id/iv_support"
+                        android:layout_width="14dp"
+                        android:layout_height="14dp"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/icon_support" />
+
+                    <TextView
+                        android:visibility="gone"
+                        android:id="@+id/tv_support"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="6dp"
+                        android:gravity="center"
+                        android:text="18"
+                        android:textColor="#999999"
+                        android:textSize="14sp" />
+
+                    <ImageView
+                        android:id="@+id/iv_comment"
+                        android:layout_width="14dp"
+                        android:layout_height="14dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="30dp"
+                        android:src="@drawable/icon_comment" />
+
+                    <TextView
+                        android:id="@+id/tv_comment"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="6dp"
+                        android:layout_marginRight="11dp"
+                        android:gravity="center"
+                        android:text="18"
+                        android:textColor="#999999"
+                        android:textSize="14sp" />
+
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:background="#FAFAFA"></View>
+
+                <LinearLayout
+                    android:id="@+id/ll_support_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:visibility="visible">
+
+                    <ImageView
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:layout_marginLeft="16dp"
+                        android:src="@drawable/icon_support_full" />
+
+                    <TextView
+                        android:id="@+id/tv_support_user"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="6dp"
+                        android:text="赵某儒、李晓云"
+                        android:textColor="#555555"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="8dp"
+                    android:background="#FAFAFA"></View>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/white"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="16dp"
+                        android:layout_marginLeft="17dp"
+                        android:layout_marginTop="16dp"
+                        android:text="全部评论"
+                        android:textColor="#333333"
+                        android:textSize="15sp"
+                        android:textStyle="normal" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.1dp"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginRight="16dp"
+                        android:background="#EEEEEE"></View>
+
+                    <com.biaozhunyuan.tianyi.common.view.NoScrollListView
+                        android:id="@+id/spaceinfo_listview"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:divider="@drawable/list_divider"
+                        android:listSelector="@drawable/list_view_gary_selector"
+                        android:visibility="gone"></com.biaozhunyuan.tianyi.common.view.NoScrollListView>
+
+                    <TextView
+                        android:id="@+id/tv_nocomment"
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        android:gravity="center"
+                        android:text="暂无评论"
+                        android:textColor="#555555"
+                        android:textSize="15sp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+
+    </LinearLayout>
+
+    <com.biaozhunyuan.tianyi.view.BottomCommentView
+        android:id="@+id/comment_log_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="8dp"
+        android:visibility="gone" />
+</RelativeLayout>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.tianyi.business.BusinessListActivity">
+
+    <com.biaozhunyuan.tianyi.common.view.BoeryunHeaderView
+        android:id="@+id/boeryun_headerview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:titleText="商机"
+        app:isVisbleAddIco="true"
+        app:isVisbleBackIco="true"
+        ></com.biaozhunyuan.tianyi.common.view.BoeryunHeaderView>
+
+    <com.biaozhunyuan.tianyi.view.BoeryunSearchView
+        android:visibility="visible"
+        android:id="@+id/seach_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </com.biaozhunyuan.tianyi.view.BoeryunSearchView>
+
+    <com.biaozhunyuan.tianyi.common.view.PullToRefreshAndLoadMoreListView
+        android:id="@+id/lv"
+        android:divider="@drawable/list_divider"
+        android:listSelector="@drawable/list_view_gary_selector"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </com.biaozhunyuan.tianyi.common.view.PullToRefreshAndLoadMoreListView>
+
+</LinearLayout>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:gravity="center_vertical"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:padding="10dp"
+                android:src="@drawable/icon_back" />
+
+            <EditText
+                style="@style/style_edit_info_yusheng"
+                android:layout_width="100dp"
+                android:layout_height="30dp"
+                android:enabled="false"
+                android:gravity="center"
+                android:text="本日"
+                android:textColor="@color/text_info"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:padding="10dp"
+                android:src="@drawable/arrow_right" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <!--<com.biaozhunyuan.tianyiDocument.view.HeaderFilter-->
+        <!--android:id="@+id/header_filter_shouwen_fragment"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content" />-->
+
+    <com.biaozhunyuan.tianyi.common.view.BoeryunHeaderView
+        android:id="@+id/boeryun_headerview"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:titleText="收文"
+        app:isVisbleBackIco="true"
+        />
+
+    <com.biaozhunyuan.tianyi.view.Indicator
+        android:id="@+id/indicator_shouwen_list"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        app:height_indicator_tab="2dp" />
+
+    <com.biaozhunyuan.tianyi.widget.BoeryunViewpager
+        android:id="@+id/pager_shouwen_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</LinearLayout>

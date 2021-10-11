@@ -1,0 +1,76 @@
+package com.biaozhunyuan.tianyi.common.global;
+
+
+import com.biaozhunyuan.tianyi.common.model.user.User;
+
+/**
+ * Created by 王安民 on 2017/8/4.
+ * <p>
+ * 全局文件
+ */
+
+public class Global {
+
+    /**
+     * 小米推送的id和key
+     */
+    public static final String xmAppId = "2882303761518958572";
+    public static final String xmAppKey = "5531895877572";
+
+    /**
+     * oppo推送的id和key
+     */
+    public static final String oppoAppKey = "d773136efda34886ac910aeb3b136372";
+    public static final String oppoAppSecret = "9a9090ad0e1449b58772ee0fe92a3f0c";
+
+
+    /**
+     * 聊天的ip和端口
+     */
+    public static final String CHAT_IP = "39.105.96.34"; //正式
+    //    public static final String CHAT_IP = "39.106.166.59"; //测试
+//    public static final String CHAT_IP = "192.168.1.67"; //测试
+    public static final int CHAT_PORT = 8026;
+
+    /**
+     * 企业的资源文件配置
+     */
+    public static String CONTACT_TIME = "联系时间";
+    public static String CONTACT_TITLE = "联系记录";
+    public static String CONTACT_CONTENT = "联系内容";
+    public static String CONTACT_STAGE = "阶段";
+    public static String CONTACT_NEXTCONTENT = "下次联系内容";
+    public static String CONTACT_NEXTCONTACTTIME = "下次联系时间";
+    public static String FORM_PAPER = "套打";
+
+    /**
+     * 个人电脑ip
+     */
+//    public static final String JAVA_IP = "192.168.2.106";
+//    public static String BASE_JAVA_URL = "http://" + JAVA_IP + ":8081/";
+
+    /**
+     * 当前登录的企业名
+     */
+    public static String CURRENT_CROP_NAME = "新起点";
+
+    /**
+     * 外网ip
+     */
+//    public static String BASE_JAVA_URL = "http://zhyw.cnis.ac.cn/"; //正式地址
+    //public static String BASE_JAVA_URL = "http://39.96.78.45:8082/"; //测试地址
+    public static String BASE_JAVA_URL = "http://192.168.1.118:8094/"; //本地测试地址
+//
+//    public static String BASE_JAVA_URL = "http://111.204.220.230:12081/";//发布地址
+//    public static String BASE_JAVA_URL = "http://ngrok.tysoft.com:45643/";//测试地址
+//    public static String BASE_JAVA_URL = "http://10.2.1.31/";//测试地址
+
+//    public static String BASE_JAVA_URL = "http://myth.ngrok.tysoft.com:8123/";//测试地址
+
+
+    public static final String IP = "www.boeryun.com";
+    public static final String BASE_URL = "http://" + IP + ":8076/";
+    public static final String BASE_URL_PROCESS = "http://" + IP + ":8076/";
+    public static final String EXTENSION = "";
+    public static User mUser = new User();
+}

@@ -1,0 +1,207 @@
+tasks.whenTaskAdded { task ->
+    if (task.name.equals("lint")) {
+        task.enabled = false
+    }
+}
+apply plugin: 'com.android.application'
+apply plugin: 'com.mob.sdk'
+
+android {
+    compileSdkVersion rootProject.ext.compileSdkVersion
+    defaultConfig {
+        applicationId "com.biaozhunyuan.tianyi"
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        versionCode 26
+        versionName "1.2.6"
+        multiDexEnabled true
+        ndk {
+            //根据需要 自行选择添加的对应cpu类型的.so库。
+            abiFilters 'armeabi', "x86_64", 'x86'
+            // 还可以添加 , 'armeabi-v7a', 'arm64-v8a', 'x86', 'x86_64'，'x86', 'x86_64', 'mips', 'mips64'
+        }
+        manifestPlaceholders = [
+                XG_ACCESS_ID : "2100281758",
+                XG_ACCESS_KEY: "AEG2PUB9337R",
+//                HW_APPID     : "100288469",
+        ]
+
+    }
+    buildTypes {
+        release {
+            shrinkResources false
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    sourceSets {
+        main {
+            java.srcDirs = ['src/main/java']
+//            jniLibs.srcDirs = ['libs']
+        }
+    }
+    dexOptions {
+        javaMaxHeapSize "2g"
+
+//        incremental true//使用增量模式构建
+
+        jumboMode = true//是否支持大工程模式
+
+        preDexLibraries = true//预编译
+
+        threadCount = 8//线程数
+    }
+    lintOptions {
+        checkReleaseBuilds false
+        abortOnError false
+    }
+    compileOptions {
+        targetCompatibility JavaVersion.VERSION_1_8
+        sourceCompatibility JavaVersion.VERSION_1_8
+    }
+    packagingOptions {
+        exclude 'META-INF/NOTICE' // will not include NOTICE file
+        exclude 'META-INF/LICENSE' // will not include LICENSE file
+        exclude 'META-INF/notice'
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/notice.txt'
+        exclude 'META-INF/license'
+        exclude 'META-INF/license.txt'
+    }
+}
+allprojects {
+    repositories {
+        mavenCentral()
+        maven { url 'https://www.jitpack.io' }
+    }
+}
+
+MobSDK {
+    appKey "29c7b917ec81f"
+    appSecret "ce62e7dda59df4831f2c2b4b573d88b8"
+
+    configurations.all {
+        resolutionStrategy.force 'cn.sharesdk:OneKeyShare:3.7.3'
+    }
+
+    ShareSDK {
+        //平台配置信息
+        devInfo {
+            Wechat {
+                sortId 1
+                appId "wx18d3eaf8a8a34d33"
+                appSecret "bbec8f163adb7d18ab35980ed956211e"
+                bypassApproval false
+                enable true
+            }
+            QQ {
+                sortId 2
+                appId "1108859590"
+                appKey "0R8vrDyaWurEc2QR"
+                shareByAppClient true
+                bypassApproval false
+                enable true
+            }
+            QZone {
+                sortId 3
+                appId "1108859590"
+                appKey "0R8vrDyaWurEc2QR"
+                shareByAppClient true
+                bypassApproval false
+                enable true
+            }
+            SinaWeibo {
+                sortId 4
+                appKey "2846672974"
+                appSecret "d1b9a193b1f60fc4970582c5cfdc07d3"
+                shareByAppClient true
+                bypassApproval true
+                enable true
+            }
+        }
+    }
+}
+
+
+dependencies {
+
+    compileOnly fileTree(dir: 'libs', include: ['*.aar', '*.jar'], exclude: [])
+    implementation 'com.android.support:design:28.0.0'
+    implementation 'com.github.bumptech.glide:glide:3.7.0'
+    implementation 'com.android.support:recyclerview-v7:26.0.2'
+    implementation 'com.android.support:appcompat-v7:28.0.0'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+    implementation 'com.squareup.okhttp3:okhttp:3.8.1'
+    implementation 'com.squareup.okio:okio:1.13.0'
+    implementation 'com.j256.ormlite:ormlite-android:4.48'
+    //数据库
+    implementation 'com.j256.ormlite:ormlite-core:4.48'
+    implementation 'com.github.MagicMashRoom:SuperCalendar:v1.4'
+    //日历
+    implementation 'com.google.code.gson:gson:2.8.2'
+    //管理cookie的依赖库
+    implementation 'com.github.franmontiel:PersistentCookieJar:v1.0.1'
+    implementation files('libs/Msc.jar')
+    implementation files('libs/joda-time-2.3.jar')
+    implementation files('libs/pinyin4j-2.5.0.jar')
+    implementation project(':SlidingMenu')
+    implementation project(':weekcalendarlib')
+    implementation project(':common')
+    implementation files('libs/parsii.jar')
+    implementation files('libs/zxing.jar')
+    implementation files('libs/commons-beanutils-1.9.2.jar')
+    implementation files('libs/commons-collections-3.2.1.jar')
+    implementation files('libs/commons-lang-2.6.jar')
+    implementation files('libs/ezmorph-1.0.6.jar')
+    implementation files('libs/json-lib-2.4-jdk15.jar')
+    implementation files('libs/MiPush_SDK_Client_3_6_9.jar')
+    implementation files('libs/pushsdk_v2.3.1.jar')
+    implementation files('libs/com.coloros.mcssdk.jar')
+    implementation files('libs/HMS_SDK_2.6.1.301.jar')
+    implementation 'com.gongwen:marqueelibrary:1.0.4'
+//    annotationProcessor 'com.zhy:mpermission-compiler:1.0.0'
+//    implementation 'com.zhy:mpermission-api:1.0.0'
+    implementation 'com.github.dfqin:grantor:2.5'
+    implementation 'org.greenrobot:eventbus:3.0.0'
+    implementation 'com.gyf.barlibrary:barlibrary:2.3.0'
+    implementation 'com.android.support:cardview-v7:26.0.2'
+    implementation 'com.github.crosswall:Android-Coverflow:release-v1.0.5'
+    implementation 'com.alibaba:fastjson:1.2.51'
+    implementation 'com.nostra13.universalimageloader:universal-image-loader:1.9.5'
+    implementation 'com.github.barteksc:android-pdf-viewer:2.6.1'
+    implementation('com.contrarywind:Android-PickerView:4.1.6', { //滚轮选择库
+        exclude group: 'com.android.support'
+    })
+    //安卓角标设置库
+    implementation "me.leolin:ShortcutBadger:1.1.22@aar"
+    //信鸽稳定版//信鸽jar
+    implementation 'com.tencent.xinge:xinge:3.2.3-release'
+    //华为推送
+//    implementation 'com.huawei.android.hms:push:2.6.3.301'
+    //蒲公英自动更新
+    implementation 'com.pgyersdk:sdk:3.0.10'
+    //wup包 如果和其他腾讯系的sdk 发生wup冲突，这个依赖可不添加
+    implementation 'com.tencent.wup:wup:1.0.0.E-alpha'
+    //mid包
+    implementation 'com.tencent.mid:mid:3.72.4-alpha'
+    implementation 'com.android.support:multidex:1.0.3'
+    //刷新加载
+    implementation 'com.scwang.smartrefresh:SmartRefreshLayout:1.0.5.1'
+    //文件选择器
+    implementation 'com.leon:lfilepickerlibrary:1.6.0'
+    implementation files('libs/ocr-sdk.jar')
+    //侧滑删除的listview
+    implementation 'com.github.heynchy:SwipeMenuAndPullToRefresh:v0.2.0'
+    //聊天长按弹窗
+    implementation 'com.github.AndyAls:QPopuWindow:v2.0.0'
+    //富文本编辑器
+    implementation 'com.github.limedroid:XRichText:v1.0.0'
+    implementation files('libs/BaiduLBS_Android.jar')
+    //Android引入J2V8框架解决 java与js通信
+    implementation 'com.eclipsesource.j2v8:j2v8:4.8.0@aar'
+    implementation project(path: ':chat')
+    //RecyclerView快捷adapter
+    implementation 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.47'
+    // 抽屉组件
+    implementation 'com.yinglan.scrolllayout:scrolllayout:1.0.2'
+}

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FAFAFA"
+    android:orientation="vertical">
+
+    <com.biaozhunyuan.tianyi.common.view.BoeryunHeaderView
+        android:id="@+id/header_sign_doc_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:isVisbleAddIco="false"
+        app:isVisbleBackIco="true"
+        app:titleText="签报管理" />
+
+    <com.biaozhunyuan.tianyi.view.SimpleIndicator
+        android:id="@+id/incator_title_sign_doc_list"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        app:item_count="3" />
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/pager_sign_doc_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</LinearLayout>

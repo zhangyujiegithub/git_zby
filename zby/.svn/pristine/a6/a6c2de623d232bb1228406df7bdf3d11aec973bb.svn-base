@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="50dp">
+
+    <ImageView
+        android:id="@+id/task_status"
+        android:layout_width="37dp"
+        android:layout_height="37dp"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="5dp"
+        android:layout_marginLeft="9dp"
+        android:padding="10dp"
+        android:src="@drawable/icon_status_finish" />
+
+    <TextView
+        android:id="@+id/task_content"
+        style="@style/style_content"
+        android:textSize="15sp"
+        android:layout_toRightOf="@id/task_status"
+        android:textColor="@color/black"
+        android:layout_marginRight="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:ellipsize="end"
+        android:maxLines="1" />
+
+</RelativeLayout>
+

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.biaozhunyuan.tianyi.common.view.PullToRefreshAndLoadMoreListView
+        android:id="@+id/lv_send_doc_backlog_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:footerDividersEnabled="true"
+        android:headerDividersEnabled="true" />
+
+    <RelativeLayout
+        android:visibility="gone"
+        android:id="@+id/rl_nodata"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="50dp">
+
+        <ImageView
+            android:id="@+id/img_nodata"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/subject_img_nodata" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/img_nodata"
+            android:layout_centerHorizontal="true"
+            android:text="暂无内容"
+            android:textColor="#818CA0"
+            android:textSize="14sp" />
+
+    </RelativeLayout>
+
+    <!--android:listSelector="@drawable/list_view_gary_selector"-->
+</LinearLayout>

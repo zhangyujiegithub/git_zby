@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.biaozhunyuan.tianyi.common.view.BoeryunHeaderView
+        android:id="@+id/header_attendance_total"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:addImgSrc="@drawable/ic_calendar_filter"
+        app:filterImgSrc="@drawable/ic_attendance_tongji"
+        app:isVisbleAddIco="false"
+        app:isVisbleBackIco="true"
+        app:isVisbleFilterIco="false"
+        app:titleText="考勤统计" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="20dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <com.biaozhunyuan.tianyi.common.view.CircleImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="20dp"
+            android:src="@drawable/default_head" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_name_attendance_total"
+                style="@style/style_tittle_text_list"
+                android:text="李洁洁" />
+
+            <TextView
+                android:id="@+id/tv_dept_name_attendance_total"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:text="北京分公司--销售部门"
+                android:textColor="@color/text_info"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <View style="@style/small_line" />
+
+    <LinearLayout
+        android:id="@+id/ll_select_time_attendance_total"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="月度考勤统计"
+            android:textColor="@color/text_black"
+            android:textSize="17sp" />
+
+        <TextView
+            android:id="@+id/tv_time_attendance_total"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical|right"
+            android:text=""
+            android:textColor="@color/fuzhuselan"
+            android:textSize="17sp" />
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/ic_down_arrow_blue" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:orientation="horizontal"
+        android:weightSum="3">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_attendance_total_count_late"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:background="@drawable/ic_attendance_count_late"
+                android:gravity="center"
+                android:text="0"
+                android:textColor="@color/appColorBlue"
+                android:textSize="17sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="迟到次数"
+                android:textColor="@color/text_black"
+                android:textSize="17sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_attendance_total_count_early_back"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:background="@drawable/ic_attendance_count_early_back"
+                android:gravity="center"
+                android:text="0"
+                android:textColor="@color/appColorBlue"
+                android:textSize="17sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="早退次数"
+                android:textColor="@color/text_black"
+                android:textSize="17sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_attendance_total_count_not_work"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:background="@drawable/ic_attendance_count_not_work"
+                android:gravity="center"
+                android:text="0"
+                android:textColor="@color/appColorBlue"
+                android:textSize="17sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="旷工次数"
+                android:textColor="@color/text_black"
+                android:textSize="17sp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:orientation="horizontal"
+        android:weightSum="3">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_attendance_total_count_jiaban"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:background="@drawable/ic_attendance_count_work_late"
+                android:gravity="center"
+                android:text="0"
+                android:textColor="@color/appColorBlue"
+                android:textSize="17sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="加班小时数"
+                android:textColor="@color/text_black"
+                android:textSize="17sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_attendance_total_count_chucha"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:background="@drawable/ic_attendance_day_out"
+                android:gravity="center"
+                android:text="0"
+                android:textColor="@color/appColorBlue"
+                android:textSize="17sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="出差天数"
+                android:textColor="@color/text_black"
+                android:textSize="17sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_attendance_total_count_qingjia"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:background="@drawable/ic_attendance_day_leave"
+                android:gravity="center"
+                android:text="0"
+                android:textColor="@color/appColorBlue"
+                android:textSize="17sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="请假天数"
+                android:textColor="@color/text_black"
+                android:textSize="17sp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:orientation="horizontal"
+        android:weightSum="3">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_attendance_total_count_tiaoxiu"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:background="@drawable/ic_attendance_count_not_work"
+                android:gravity="center"
+                android:text="0"
+                android:textColor="@color/appColorBlue"
+                android:textSize="17sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="调休天数"
+                android:textColor="@color/text_black"
+                android:textSize="17sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_attendance_total_count_nianjia"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:background="@drawable/ic_attendance_count_late"
+                android:gravity="center"
+                android:text="0"
+                android:textColor="@color/appColorBlue"
+                android:textSize="17sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="年假天数"
+                android:textColor="@color/text_black"
+                android:textSize="17sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_attendance_total_count_waichu"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:background="@drawable/ic_attendance_day_out"
+                android:gravity="center"
+                android:text="0"
+                android:textColor="@color/appColorBlue"
+                android:textSize="17sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="外出小时数"
+                android:textColor="@color/text_black"
+                android:textSize="17sp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>

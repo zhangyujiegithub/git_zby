@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EFEFEF"
+    android:orientation="vertical"
+    tools:context="com.tianyi.task.TaskSearchListActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_margin="15dp"
+            android:background="@drawable/et_jiaokuang"
+            android:orientation="horizontal">
+
+            z<EditText
+                android:id="@+id/et_search"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="8dp"
+                android:layout_weight="1"
+                android:background="@null"
+                android:imeOptions="actionSearch"
+                android:hint="搜索任务关键字"
+                android:textSize="14sp" />
+
+            <ImageView
+                android:id="@+id/iv_clear"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:padding="5dp"
+                android:src="@drawable/icon_clear_et" />
+
+            <View
+                android:layout_width="0.5dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="7dp"
+                android:layout_marginLeft="9dp"
+                android:layout_marginRight="14dp"
+                android:layout_marginTop="7dp"
+                android:background="#9FA0A0" />
+
+            <TextView
+                android:id="@+id/tv_cancle"
+                android:padding="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="9dp"
+                android:text="取消"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <include
+        android:visibility="gone"
+        layout="@layout/include_search_history" />
+
+    <include
+        layout="@layout/include_search_result"
+        android:visibility="gone" />
+
+    <!--<com.scwang.smartrefresh.layout.SmartRefreshLayout-->
+    <!--android:id="@+id/refreshLayout"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:clickable="true"-->
+    <!--app:srlEnablePreviewInEditMode="true">-->
+
+    <!--<com.scwang.smartrefresh.layout.header.ClassicsHeader-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content" />-->
+
+    <!--<ScrollView-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content">-->
+
+    <!--<LinearLayout-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:layout_above="@id/rl_publish_task_day_view"-->
+    <!--android:orientation="vertical">-->
+
+    <!--<com.biaozhunyuan.tianyi.common.view.NoScrollListView-->
+    <!--android:id="@+id/lv_my"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:divider="@drawable/list_divider"-->
+    <!--android:dividerHeight="0.5dp"-->
+    <!--android:footerDividersEnabled="true"-->
+    <!--android:headerDividersEnabled="false" />-->
+
+    <!--<LinearLayout-->
+    <!--android:id="@+id/ll_assign"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:orientation="vertical"-->
+    <!--android:visibility="gone">-->
+
+    <!--<View-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="0.5dp"-->
+    <!--android:layout_marginLeft="16dp"-->
+    <!--android:layout_marginRight="16dp"-->
+    <!--android:background="#e6e6e6" />-->
+
+    <!--<TextView-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginBottom="8dp"-->
+    <!--android:layout_marginLeft="16dp"-->
+    <!--android:layout_marginTop="8dp"-->
+    <!--android:text="我指派的"-->
+    <!--android:textColor="@color/text_name"-->
+    <!--android:textSize="18sp"-->
+    <!--android:textStyle="bold" />-->
+
+    <!--<com.biaozhunyuan.tianyi.common.view.NoScrollListView-->
+    <!--android:id="@+id/lv_assign"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:divider="#00000000" />-->
+
+    <!--</LinearLayout>-->
+    <!--</LinearLayout>-->
+    <!--</ScrollView>-->
+
+    <!--<com.scwang.smartrefresh.layout.footer.ClassicsFooter-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--app:srlClassicsSpinnerStyle="Translate" />-->
+
+    <!--</com.scwang.smartrefresh.layout.SmartRefreshLayout>-->
+</LinearLayout>

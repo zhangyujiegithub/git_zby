@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/shape_bg_tag_item"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <com.biaozhunyuan.tianyi.common.view.CircleImageView
+            android:id="@+id/circularAvatar_tag_item"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_centerInParent="true"
+            android:layout_margin="5dp"
+            android:src="@drawable/default_head" />
+
+        <TextView
+            android:id="@+id/name_attentdace_list"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@+id/circularAvatar_tag_item"
+            android:textColor="@color/text_black"
+            android:textSize="16sp" />
+    </RelativeLayout>
+
+    <View style="@style/small_line" />
+
+
+    <LinearLayout
+        style="@style/style_list_item"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@null"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+
+            <TextView
+                android:id="@+id/tv_item_qiandao"
+                style="@style/style_list_title_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:text="签到：" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/iv_clock1"
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
+                        android:gravity="center_vertical"
+                        android:src="@drawable/ico_clock" />
+
+                    <TextView
+                        android:id="@+id/tv_signIn_time"
+                        style="@style/text_style_info"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:text="111111" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/iv_postion1"
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
+                        android:gravity="center_vertical"
+                        android:src="@drawable/ico_location" />
+
+                    <TextView
+                        android:id="@+id/tv_signIn_address"
+                        style="@style/text_style_info"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:gravity="center_vertical"
+                        android:text="地址" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <com.biaozhunyuan.tianyi.view.MultipleAttachView
+            android:id="@+id/attach_signIn_attendance_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:numColumns="5"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:visibility="gone"
+            android:id="@+id/ll_becauselate"
+            android:layout_marginTop="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:padding="3dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:text="迟到原因:"/>
+
+            <TextView
+                android:padding="3dp"
+                android:id="@+id/becauselate"
+                style="@style/text_style_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_item_qiantu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/style_list_title_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:text="签退：" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/iv_clock2"
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
+                        android:gravity="center_vertical"
+                        android:src="@drawable/ico_clock" />
+
+                    <TextView
+                        android:id="@+id/tv_signOut_time"
+                        style="@style/text_style_info"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:text="111111" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/iv_postion2"
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
+                        android:gravity="center_vertical"
+                        android:src="@drawable/ico_location" />
+
+                    <TextView
+                        android:id="@+id/tv_signOut_address"
+                        style="@style/text_style_info"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:gravity="center_vertical"
+                        android:text="地址" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <com.biaozhunyuan.tianyi.view.MultipleAttachView
+            android:id="@+id/attach_signOut_attendance_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:numColumns="5"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:visibility="gone"
+            android:id="@+id/ll_becauseearly"
+            android:layout_marginTop="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:padding="3dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:text="早退原因:"/>
+
+            <TextView
+                android:padding="3dp"
+                android:id="@+id/because_early"
+                style="@style/text_style_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</LinearLayout>

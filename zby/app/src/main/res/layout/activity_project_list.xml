@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.tianyi.project.ProjectListActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <com.biaozhunyuan.tianyi.common.view.BoeryunHeaderView
+            android:id="@+id/boeryun_headerview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:elevation="@dimen/title_elevation_hight"
+            app:isVisbleBackIco="true"
+            app:titleText="项目" />
+
+        <com.biaozhunyuan.tianyi.view.BoeryunSearchView
+            android:id="@+id/seach_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:background="#eeeeee" />
+
+        <LinearLayout
+            android:id="@+id/ll_filter"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@color/dividerColor"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:id="@+id/rl_filter_client_time"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/tv_filter_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="时间"
+                    android:textColor="@color/text_black"
+                    android:textSize="16sp" />
+
+                <ImageView
+                    android:id="@+id/iv_filter_time"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@+id/tv_filter_time"
+                    android:src="@drawable/icon_arrow_down_black" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_filter_client_stage"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/tv_filter_stage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:maxEms="4"
+                    android:maxLines="1"
+                    android:text="其他"
+                    android:textColor="@color/text_black"
+                    android:textSize="16sp" />
+
+                <ImageView
+                    android:id="@+id/iv_filter_stage"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@+id/tv_filter_stage"
+                    android:src="@drawable/icon_arrow_down_black" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <com.biaozhunyuan.tianyi.common.view.PullToRefreshAndLoadMoreListView
+            android:id="@+id/lv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="5dp"
+            android:divider="@drawable/list_divider"
+            android:headerDividersEnabled="true" />
+
+    </LinearLayout>
+
+
+    <ImageView
+        android:id="@+id/iv_add_relate"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp"
+        android:padding="3dp"
+        android:src="@drawable/icon_home_addtask_new"
+        android:visibility="gone" />
+
+</RelativeLayout>

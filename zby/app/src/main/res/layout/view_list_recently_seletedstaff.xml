@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_parent"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <View
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="8dp"
+        android:background="#fafafa" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="15dp"
+        android:text="查看成员任务"
+        android:textColor="@color/black"
+        android:textSize="15sp" />
+
+    <com.biaozhunyuan.tianyi.common.view.BoeryunSearchViewNoButton
+        android:visibility="gone"
+        android:id="@+id/seach_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:layout_marginTop="15dp"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp" />
+
+    <EditText
+        android:id="@+id/et_search"
+        android:background="@drawable/et_jiaokuang"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:hint="输入姓名"
+        android:textColor="@color/black"
+        android:textColorHint="#FF9FA0A0"
+        android:textSize="14sp"
+        android:paddingRight="8dp"
+        android:paddingLeft="8dp"
+        android:layout_margin="15dp"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="8dp"
+        android:background="#fafafa" />
+
+    <!--<ScrollView-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:background="@color/white">-->
+
+        <!--<LinearLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:layout_above="@id/rl_publish_task_day_view"-->
+            <!--android:orientation="vertical">-->
+
+            <ListView
+                android:id="@+id/staff_listview"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:divider="#00000000" />
+
+        <!--</LinearLayout>-->
+    <!--</ScrollView>-->
+
+</LinearLayout>

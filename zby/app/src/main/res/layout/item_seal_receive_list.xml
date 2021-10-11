@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:descendantFocusability="blocksDescendants"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_marginBottom="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+
+        <com.biaozhunyuan.tianyi.common.view.CircleImageView
+            android:id="@+id/head_item_seal_receive_list"
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            android:layout_marginLeft="20dp"
+            android:src="@drawable/default_head" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_creator_seal_receive_item"
+                    style="@style/style_tittle_text_list"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text="李洁洁"
+                    android:textColor="@color/text_name"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/tv_item_seal_receive_type"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:background="@drawable/project_stage_bg"
+                    android:maxLines="1"
+                    android:paddingBottom="3dp"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:paddingTop="3dp"
+                    android:text=""
+                    android:textColor="@color/white"
+                    android:textSize="11sp" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_creatTime_seal_receive_text_item"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:gravity="right"
+                android:text="拟稿时间"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/tv_creatTime_seal_receive_item"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="16dp"
+                android:gravity="right"
+                android:text="10:37"
+                android:textColor="@color/text_time"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_handleTime"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_handleTime_text_item"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:gravity="right"
+                    android:text="拟稿时间"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/tv_handleTime_seal_receive_item"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="16dp"
+                    android:gravity="right"
+                    android:text="10:37"
+                    android:textColor="@color/text_time"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_no_seal_receive_item"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:layout_marginLeft="16dp"
+                android:gravity="right"
+                android:visibility="gone"
+                android:text="标院科管函号"
+                android:textSize="13sp" />
+
+
+            <TextView
+                android:id="@+id/content_seal_receive_list"
+                style="@style/style_content_text_list"
+                android:layout_marginBottom="8dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="8dp"
+                android:paddingRight="10dp"
+                android:text="联系内容"
+                android:textColor="#333333"
+                android:textSize="15sp"
+                android:singleLine="true"
+                android:ellipsize="end"/>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="18dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_status_item_seal_receive"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="等待111审核"
+                    android:textSize="13sp"
+                    android:textColor="@color/colorVisited"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

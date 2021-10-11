@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.tianyi.buglist.BugListActivity">
+
+    <com.biaozhunyuan.tianyi.common.view.BoeryunHeaderView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/boeryun_headerview"
+        app:isVisbleFilterIco="true"
+        app:isVisbleBackIco="true"
+        app:isVisbleAddIco="true"
+        app:titleText="BUG管理">
+    </com.biaozhunyuan.tianyi.common.view.BoeryunHeaderView>
+
+
+    <com.biaozhunyuan.tianyi.view.BoeryunSearchView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/seach_button"></com.biaozhunyuan.tianyi.view.BoeryunSearchView>
+
+    <!--<com.biaozhunyuan.tianyi.view.SimpleIndicator-->
+        <!--android:id="@+id/simpleindicatior"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="35dp"-->
+        <!--app:item_count="4">-->
+    <!--</com.biaozhunyuan.tianyi.view.SimpleIndicator>-->
+
+    <!--<com.biaozhunyuan.tianyi.widget.BoeryunViewpager-->
+        <!--android:id="@+id/boeryun_viewpager"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="0dp"-->
+        <!--android:layout_weight="1"></com.biaozhunyuan.tianyi.widget.BoeryunViewpager>-->
+
+    <com.biaozhunyuan.tianyi.common.view.PullToRefreshAndLoadMoreListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:divider="@drawable/list_divider"
+        android:dividerHeight="0.5dp"
+        android:id="@+id/lv"></com.biaozhunyuan.tianyi.common.view.PullToRefreshAndLoadMoreListView>
+</LinearLayout>

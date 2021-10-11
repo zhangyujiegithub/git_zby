@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.biaozhunyuan.tianyi.common.view.BoeryunHeaderView
+        android:id="@+id/header_contact_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:filterImgSrc="@drawable/ic_calendar_filter"
+        app:isVisbleBackIco="true"
+        app:isVisbleFilterIco="false"
+        app:isVisbleRightText="false"
+        app:titleRightText="查看项目"
+        app:titleText="联系记录" />
+
+    <com.biaozhunyuan.tianyi.view.Indicator
+        android:id="@+id/incator_title_notice_info"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        app:height_indicator_tab="3dp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/ll_search_contact_list"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/ic_search" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="搜索"
+                    android:textColor="@color/text_info"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_filter_contact_list"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/ico_filter" />
+
+                <TextView
+                    android:id="@+id/tv_filter_contact_list"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="筛选"
+                    android:textColor="@color/text_info"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <com.biaozhunyuan.tianyi.view.BoeryunSearchView
+            android:id="@+id/search_view_contact_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <com.biaozhunyuan.tianyi.view.SimpleIndicator
+        android:id="@+id/indicator_contact_view"
+        app:item_count="3"
+        android:layout_width="match_parent"
+        android:layout_height="35dp">
+    </com.biaozhunyuan.tianyi.view.SimpleIndicator>
+
+    <!--<com.biaozhunyuan.tianyi.view.IndicatorTabView-->
+        <!--android:id="@+id/indicator_contact_view"-->
+        <!--style="@style/style_tabview_layout" />-->
+
+    <View style="@style/small_line" />
+
+
+
+    <com.biaozhunyuan.tianyi.widget.BoeryunViewpager
+        android:id="@+id/viewpager_contact_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <com.biaozhunyuan.tianyi.common.view.PullToRefreshAndLoadMoreListView
+        android:id="@+id/lv_contact_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:divider="@color/dividerColor"
+        android:dividerHeight="10dp"
+        android:visibility="gone" />
+
+</LinearLayout>

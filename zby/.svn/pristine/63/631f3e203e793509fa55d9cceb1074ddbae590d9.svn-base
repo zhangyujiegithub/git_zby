@@ -1,0 +1,505 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.biaozhunyuan.tianyi.view.FitsSystemWindowsLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FAFAFA"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    tools:context="com.tianyi.task.TaskInfoActivityNew">
+
+    <com.biaozhunyuan.tianyi.common.view.BoeryunHeaderView
+        android:id="@+id/boeryun_headerview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:isVisbleBackIco="true"
+        app:isVisbleRightText="false"
+        app:titleRightText="保存"
+        app:titleText="编辑任务" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:background="@color/white"
+                    android:orientation="horizontal">
+
+                    <com.biaozhunyuan.tianyi.common.view.AvatarImageView
+                        android:id="@+id/iv_header"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="10dp"
+                        android:src="@drawable/default_head" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="15dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tv_creatorId"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="蔡伦"
+                            android:textColor="@color/black"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/tv_create_time"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:text="2019-05-21 创建"
+                            android:textColor="#FF9FA0A0"
+                            android:textSize="14sp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/style_ll_new_info"
+                    android:layout_marginTop="6dp">
+
+                    <ImageView
+                        android:id="@+id/task_status"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_margin="10dp"
+                        android:padding="7dp"
+                        android:src="@drawable/icon_status_finish" />
+
+                    <EditText
+                        android:id="@+id/et_content"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:background="@null"
+                        android:hint="任务内容"
+                        android:padding="5dp"
+                        android:text=""
+                        android:textColor="@color/black"
+                        android:textSize="15sp" />
+
+                </LinearLayout>
+
+                <View style="@style/small_line" />
+
+                <LinearLayout
+                    android:id="@+id/ll_choosr_excutors_task_new"
+                    style="@style/style_ll_new_info">
+
+                    <ImageView
+                        style="@style/style_small_ico_task_new"
+                        android:layout_marginLeft="15dp"
+                        android:src="@drawable/icon_task_info_participant" />
+
+                    <TextView
+                        style="@style/style_ll_left_title_task"
+                        android:layout_marginLeft="2dp"
+                        android:text="执行人"
+                        android:textColor="#FF9FA0A0"
+                        android:textSize="15sp" />
+
+                    <LinearLayout style="@style/style_ll_right_title_task">
+
+                        <TextView
+                            android:id="@+id/new_task_excutor"
+                            style="@style/style_right_text_task"
+                            android:textColor="@color/black"
+                            android:textColorHint="#FFDCDCDC" />
+
+                        <ImageView
+                            android:id="@+id/view1"
+                            style="@style/style_small_ico_task_new"
+                            android:src="@drawable/ico_right_arrow" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <View style="@style/small_line" />
+
+                <LinearLayout
+                    android:id="@+id/ll_choosr_type_task_new"
+                    style="@style/style_ll_new_info">
+
+                    <ImageView
+                        style="@style/style_small_ico_task_new"
+                        android:layout_marginLeft="15dp"
+                        android:src="@drawable/icon_stage_gray" />
+
+                    <TextView
+                        style="@style/style_ll_left_title_task"
+                        android:text="任务类型"
+                        android:textColor="#FF9FA0A0"
+                        android:textSize="15sp" />
+
+                    <LinearLayout style="@style/style_ll_right_title_task">
+
+                        <TextView
+                            android:id="@+id/new_task_type"
+                            style="@style/style_right_text_task"
+                            android:text="普通任务"
+                            android:textColor="@color/black"
+                            android:textColorHint="#FFDCDCDC" />
+
+                        <ImageView
+                            android:id="@+id/view2"
+                            style="@style/style_small_ico_task_new"
+                            android:src="@drawable/ico_right_arrow" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <View style="@style/small_line" />
+
+                <LinearLayout
+                    android:id="@+id/ll_choosr_period_type_task_new"
+                    style="@style/style_ll_new_info">
+
+                    <ImageView
+                        style="@style/style_small_ico_task_new"
+                        android:layout_marginLeft="15dp"
+                        android:src="@drawable/icon_stage_gray" />
+
+                    <TextView
+                        style="@style/style_ll_left_title_task"
+                        android:text="周期类型"
+                        android:textColor="#FF9FA0A0"
+                        android:textSize="15sp" />
+
+                    <LinearLayout style="@style/style_ll_right_title_task">
+
+                        <TextView
+                            android:id="@+id/new_task_period_type"
+                            style="@style/style_right_text_task"
+                            android:text=""
+                            android:textColor="@color/black"
+                            android:textColorHint="#FFDCDCDC" />
+
+                        <ImageView
+                            android:id="@+id/view3"
+                            style="@style/style_small_ico_task_new"
+                            android:src="@drawable/ico_right_arrow" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/line1"
+                    style="@style/small_line"
+                    android:visibility="gone" />
+
+                <LinearLayout
+                    android:id="@+id/ll_choosr_period_date_task_new"
+                    style="@style/style_ll_new_info"
+                    android:visibility="gone">
+
+                    <ImageView
+                        style="@style/style_small_ico_task_new"
+                        android:layout_marginLeft="15dp"
+                        android:src="@drawable/icon_stage_gray" />
+
+                    <TextView
+                        style="@style/style_ll_left_title_task"
+                        android:text="周期日"
+                        android:textColor="#FF9FA0A0"
+                        android:textSize="15sp" />
+
+                    <LinearLayout style="@style/style_ll_right_title_task">
+
+                        <TextView
+                            android:id="@+id/new_task_period_date"
+                            style="@style/style_right_text_task"
+                            android:text=""
+                            android:textColor="@color/black"
+                            android:textColorHint="#FFDCDCDC" />
+
+                        <ImageView
+                            android:id="@+id/view4"
+                            style="@style/style_small_ico_task_new"
+                            android:src="@drawable/ico_right_arrow" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/line2"
+                    style="@style/small_line"
+                    android:visibility="gone" />
+
+                <LinearLayout
+                    android:id="@+id/ll_starttime_task_add"
+                    style="@style/style_ll_new_info">
+
+                    <ImageView
+                        style="@style/style_small_ico_task_new"
+                        android:layout_marginLeft="15dp"
+                        android:src="@drawable/icon_task_time" />
+
+                    <TextView
+                        android:id="@+id/tv_time_start_title"
+                        style="@style/style_ll_left_title_task"
+                        android:layout_marginLeft="2dp"
+                        android:text="开始时间"
+                        android:textColor="#FF9FA0A0"
+                        android:textSize="15sp" />
+
+                    <LinearLayout style="@style/style_ll_right_title_task">
+
+                        <TextView
+                            android:id="@+id/tv_task_time_start"
+                            style="@style/style_right_text_task"
+                            android:textColor="@color/black"
+                            android:textColorHint="#FFDCDCDC" />
+
+                        <ImageView
+                            android:id="@+id/view8"
+                            style="@style/style_small_ico_task_new"
+                            android:src="@drawable/ico_right_arrow" />
+                    </LinearLayout>
+                </LinearLayout>
+
+
+                <View style="@style/small_line" />
+
+                <LinearLayout
+                    android:id="@+id/ll_endtime_task_add"
+                    style="@style/style_ll_new_info">
+
+                    <ImageView
+                        style="@style/style_small_ico_task_new"
+                        android:layout_marginLeft="15dp"
+                        android:src="@drawable/icon_task_time" />
+
+                    <TextView
+                        android:id="@+id/tv_time_end_title"
+                        style="@style/style_ll_left_title_task"
+                        android:layout_marginLeft="2dp"
+                        android:text="结束时间"
+                        android:textColor="#FF9FA0A0"
+                        android:textSize="15sp" />
+
+                    <LinearLayout style="@style/style_ll_right_title_task">
+
+                        <TextView
+                            android:id="@+id/tv_task_time_end"
+                            style="@style/style_right_text_task"
+                            android:textColor="@color/black"
+                            android:textColorHint="#FFDCDCDC" />
+
+                        <ImageView
+                            android:id="@+id/view5"
+                            style="@style/style_small_ico_task_new"
+                            android:src="@drawable/ico_right_arrow" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <View style="@style/small_line" />
+
+                <LinearLayout
+                    android:id="@+id/ll_choosr_participant_task_new"
+                    style="@style/style_ll_new_info">
+
+                    <ImageView
+                        style="@style/style_small_ico_task_new"
+                        android:layout_marginLeft="11dp"
+                        android:src="@drawable/icon_task_participant" />
+
+                    <TextView
+                        style="@style/style_ll_left_title_task"
+                        android:text="参与人"
+                        android:textColor="#FF9FA0A0"
+                        android:textSize="15sp" />
+
+                    <LinearLayout style="@style/style_ll_right_title_task">
+
+                        <TextView
+                            android:id="@+id/new_task_participant"
+                            style="@style/style_right_text_task"
+                            android:textColor="@color/black"
+                            android:textColorHint="#FFDCDCDC" />
+
+                        <ImageView
+                            android:id="@+id/view6"
+                            style="@style/style_small_ico_task_new"
+                            android:src="@drawable/ico_right_arrow" />
+                    </LinearLayout>
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/ll_choosr_project_task_new"
+                    style="@style/style_ll_new_info"
+                    android:layout_marginTop="5dp">
+
+                    <ImageView
+                        style="@style/style_small_ico_task_new"
+                        android:layout_marginLeft="13dp"
+                        android:src="@drawable/icon_task_project" />
+
+                    <TextView
+                        style="@style/style_ll_left_title_task"
+                        android:layout_marginLeft="3dp"
+                        android:text="项目"
+                        android:textColor="#FF9FA0A0"
+                        android:textSize="15sp" />
+
+                    <LinearLayout style="@style/style_ll_right_title_task">
+
+                        <TextView
+                            android:id="@+id/new_task_project"
+                            style="@style/style_right_text_task"
+                            android:textColor="@color/black"
+                            android:textColorHint="#FFDCDCDC" />
+
+                        <ImageView
+                            android:id="@+id/view7"
+                            style="@style/style_small_ico_task_new"
+                            android:src="@drawable/ico_right_arrow" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:background="@color/white"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="22dp"
+                            android:layout_marginRight="8dp"
+                            android:src="@drawable/icon_task_attach" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="3dp"
+                            android:layout_weight="1"
+                            android:text="附件"
+                            android:textColor="#FF9FA0A0"
+                            android:textSize="15sp" />
+                    </LinearLayout>
+                    <!--<LinearLayout-->
+                    <!--style="@style/style_ll_right_title_task">-->
+
+
+                    <com.biaozhunyuan.tianyi.view.MultipleAttachView
+                        android:id="@+id/attach_add_task"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginTop="5dp"
+                        android:numColumns="5" />
+                    <!--</LinearLayout>-->
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_command"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="5dp"
+                    android:background="@color/white"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginBottom="5dp"
+                        android:text="留言"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        android:textStyle="normal" />
+
+                    <com.biaozhunyuan.tianyi.common.view.NoScrollListView
+                        android:id="@+id/taskinfo_listview"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:divider="@drawable/list_divider"
+                        android:listSelector="@drawable/list_view_gary_selector"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/tv_nocomment"
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        android:gravity="center"
+                        android:text="暂无留言"
+                        android:textColor="#555555"
+                        android:textSize="15sp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_bottom_comment"
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:background="@color/white"
+        android:elevation="20dp"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/et_comment"
+            android:layout_width="0dp"
+            android:layout_height="35dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="15dp"
+            android:layout_weight="1"
+            android:background="@drawable/et_jiaokuang_gray"
+            android:hint="留言"
+            android:imeOptions="actionDone"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:singleLine="true"
+            android:textSize="14sp" />
+
+        <com.biaozhunyuan.tianyi.view.NumImageView
+            android:id="@+id/like_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="13dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="4dp"
+            android:paddingTop="8dp"
+            android:paddingRight="8dp" />
+
+    </LinearLayout>
+
+
+</com.biaozhunyuan.tianyi.view.FitsSystemWindowsLinearLayout>

@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:baselineAligned="false"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/ll_111"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_gravity="center"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/ll_renyuanzhaopin"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <com.biaozhunyuan.tianyi.view.NumImageView
+                android:layout_width="63dp"
+                android:layout_height="63dp"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/new_icon_information" />
+            <TextView
+                style="@style/style_content_all"
+                android:text="人员招聘" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_gangweipinyong"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <com.biaozhunyuan.tianyi.view.NumImageView
+                android:layout_width="63dp"
+                android:layout_height="63dp"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/new_icon_guide" />
+            <TextView
+                style="@style/style_content_all"
+                android:text="岗位聘用" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_qiyebianzhi"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <com.biaozhunyuan.tianyi.view.NumImageView
+                android:layout_width="63dp"
+                android:layout_height="63dp"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/new_icon_guide" />
+            <TextView
+                style="@style/style_content_all"
+                android:text="企业编制" />
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/ll_222"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_gravity="center"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/ll_zhigong"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <com.biaozhunyuan.tianyi.view.NumImageView
+                android:layout_width="63dp"
+                android:layout_height="63dp"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/new_icon_information" />
+            <TextView
+                style="@style/style_content_all"
+                android:text="内部调动" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_renyuanwaijie"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+
+
+            <com.biaozhunyuan.tianyi.view.NumImageView
+                android:layout_width="63dp"
+                android:layout_height="63dp"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/new_icon_guide" />
+            <TextView
+                style="@style/style_content_all"
+                android:text="人员外借" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_diaochushenpi"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+            <com.biaozhunyuan.tianyi.view.NumImageView
+                android:layout_width="63dp"
+                android:layout_height="63dp"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/new_icon_guide" />
+            <TextView
+                style="@style/style_content_all"
+                android:text="调出审核" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

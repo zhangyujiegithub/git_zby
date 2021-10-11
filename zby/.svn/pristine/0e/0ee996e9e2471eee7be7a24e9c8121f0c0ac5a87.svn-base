@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.tianyi.client.SelectedCustomerActivity">
+
+    <com.biaozhunyuan.tianyi.common.view.BoeryunHeaderView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:titleText="选择客户"
+        app:isVisbleBackIco="true"
+        app:titleRightText="预约"
+        app:isVisbleRightText="true"
+        android:id="@+id/boeryun_headview"></com.biaozhunyuan.tianyi.common.view.BoeryunHeaderView>
+
+
+    <com.biaozhunyuan.tianyi.common.view.PullToRefreshAndLoadMoreListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:divider="@drawable/list_divider"
+        android:dividerHeight="0.5dp"
+        android:id="@+id/lv"></com.biaozhunyuan.tianyi.common.view.PullToRefreshAndLoadMoreListView>
+
+</LinearLayout>

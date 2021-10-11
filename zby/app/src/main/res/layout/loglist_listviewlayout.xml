@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/style_list_item_no_paddingbottom"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:descendantFocusability="blocksDescendants"
+    android:orientation="vertical">
+    <!--
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingBottom="20dp"
+            android:weightSum="1000">-->
+
+    <!--<LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="48"
+        android:gravity="center" >
+
+        &lt;!&ndash; 已读未读小红点 &ndash;&gt;
+
+        <ImageView
+            android:id="@+id/iv_dot_read_loglist"
+            android:layout_width="7dp"
+            android:layout_height="7dp"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/ico_dot_read" />
+    </LinearLayout>
+
+    <RelativeLayout
+        style="@style/style_list_avatar_root"
+        android:layout_weight="200" >
+
+        <com.zlcloud.control.AvartarView
+            android:id="@+id/worklog_avatar"
+            style="@style/style_list_avatar"
+            android:layout_marginTop="15dp" />
+    </RelativeLayout>-->
+
+    <com.biaozhunyuan.tianyi.space.CircularAvatarView
+        android:id="@+id/circularAvatar_log_item"
+        style="@style/style_list_item_pading"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_avatar_root" />
+
+    <LinearLayout
+        style="@style/style_list_item_pading"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="@dimen/height_margin_top_avatar"
+        android:layout_marginTop="@dimen/height_margin_top_avatar"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textViewContent"
+            style="@style/style_list_text_content_new"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:ellipsize="none"
+            android:minLines="3" />
+    </LinearLayout>
+
+    <com.biaozhunyuan.tianyi.view.MultipleAttachView
+        android:id="@+id/multi_attach_worklog_item"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:numColumns="3" />
+
+    <View style="@style/style_line_horizontal_small" />
+
+    <LinearLayout
+        style="@style/style_list_item_pading"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_gravity="center_horizontal"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/ll_item_log_comment"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/iv_item_log_comment"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:src="@drawable/ico_list_comment_new" />
+
+            <TextView
+                android:id="@+id/tv_comment_count_log_item"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:text="0"
+                android:textColor="@color/tv_share_light_grey"
+                android:textSize="13sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_item_log_support"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/iv_item_log_support"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:src="@drawable/ico_list_support_new" />
+
+            <TextView
+                android:id="@+id/tv_support_count_log_item"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:text="0"
+                android:textColor="@color/tv_share_light_grey"
+                android:textSize="13sp" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/ll_item_log_dimmon"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/iv_item_log_diammon"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:src="@drawable/ico_zs" />
+
+            <TextView
+                android:id="@+id/tv_diamond_count_log_item"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:text="0"
+                android:textColor="@color/tv_share_light_grey"
+                android:textSize="13sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

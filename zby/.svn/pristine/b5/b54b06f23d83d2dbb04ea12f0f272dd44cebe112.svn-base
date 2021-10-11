@@ -1,0 +1,205 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rl_parent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <LinearLayout
+                android:id="@+id/rl_publish_task_day_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_gravity="bottom"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/ll_add_task_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_gravity="bottom"
+                    android:orientation="horizontal"
+                    android:padding="8dp"
+                    android:visibility="gone">
+
+                    <EditText
+                        android:id="@+id/et_content_task_day_view"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="8dp"
+                        android:layout_weight="5"
+                        android:background="@drawable/shape_edittext_bg_yusheng"
+                        android:hint="添加一条任务吧"
+                        android:padding="5dp"
+                        android:textColor="@color/text_info"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/tv_publish_task_day_view"
+                        android:layout_width="80dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:background="@drawable/shape_btn_bg_hanya"
+                        android:focusable="false"
+                        android:gravity="center"
+                        android:text="发送"
+                        android:textColor="@color/white"
+                        android:textSize="15sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/ll_list_task_day_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="8dp"
+                android:orientation="vertical"
+                android:visibility="gone" />
+
+            <com.scwang.smartrefresh.layout.SmartRefreshLayout
+                android:id="@+id/refreshLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clickable="true"
+                app:srlEnablePreviewInEditMode="true">
+
+                <com.scwang.smartrefresh.layout.header.ClassicsHeader
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_above="@id/rl_publish_task_day_view"
+                        android:orientation="vertical"
+                        tools:context="com.zlcloud.fragment.task.TaskDayViewFragment">
+
+                        <com.biaozhunyuan.tianyi.view.SMNOScrollListView
+                            android:id="@+id/lv_task_day_list"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:divider="@drawable/list_divider"
+                            android:dividerHeight="0.5dp"
+                            android:footerDividersEnabled="true"
+                            android:headerDividersEnabled="false" />
+
+                        <View
+                            android:id="@+id/task_view_line"
+                            android:layout_width="match_parent"
+                            android:layout_height="0.5dp"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginLeft="16dp"
+                            android:layout_marginRight="16dp"
+                            android:layout_marginBottom="1dp"
+                            android:background="#e6e6e6"
+                            android:visibility="gone" />
+
+                        <com.biaozhunyuan.tianyi.view.SMNOScrollListView
+                            android:id="@+id/lv_done"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:divider="#00000000" />
+                    </LinearLayout>
+                </ScrollView>
+
+                <com.scwang.smartrefresh.layout.footer.ClassicsFooter
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:srlClassicsSpinnerStyle="Translate" />
+
+            </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+
+            <View
+                android:id="@+id/bg_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/transparent"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_home_add_task"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="#fcfcfc"
+            android:elevation="4dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/ll_comment_share_bottom"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginTop="5dp">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="45dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/shape_edittext_bg_yusheng"
+                    android:orientation="horizontal">
+
+                    <com.biaozhunyuan.tianyi.widget.TextEditTextView
+                        android:id="@+id/et_input_home_add_task"
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="12dp"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:hint="添加一条任务吧......"
+                        android:textColor="@color/text_black"
+                        android:textColorHint="#aaaaaa"
+                        android:textSize="14sp" />
+
+                    <ImageView
+                        android:id="@+id/btn_home_add_task"
+                        android:layout_width="43dp"
+                        android:layout_height="43dp"
+                        android:layout_marginRight="-1dp"
+                        android:layout_marginBottom="1dp"
+                        android:adjustViewBounds="true"
+                        android:background="@drawable/icon_home_addtask" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <com.biaozhunyuan.tianyi.common.view.HorizontalRecentlySelectedStaffView
+                android:id="@+id/staff_view"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:visibility="gone"></com.biaozhunyuan.tianyi.common.view.HorizontalRecentlySelectedStaffView>
+
+            <com.biaozhunyuan.tianyi.view.VoiceInputView
+                android:id="@+id/voice_input_view_home_add_task"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:background="@color/white"
+                android:visibility="gone" />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

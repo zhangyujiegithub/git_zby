@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.biaozhunyuan.tianyi.common.view.BoeryunHeaderView
+        android:id="@+id/headerview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:isVisbleBackIco="true"
+        app:titleText="看板设置" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@color/line_splite"
+                android:gravity="center_vertical"
+                android:paddingLeft="16dp"
+                android:text="已有功能"
+                android:textColor="@color/text_black"
+                android:textSize="16sp" />
+
+
+            <com.biaozhunyuan.tianyi.widget.dragSortListView.DragSortListView
+                android:id="@+id/drag_list_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:divider="@drawable/list_divider"
+                android:dividerHeight="0.5dp"
+                app:drag_start_mode="onLongPress"
+                app:float_background_color="@color/translate_quarter_gray"
+                app:remove_mode="flingRemove" />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@color/line_splite"
+                android:gravity="center_vertical"
+                android:paddingLeft="16dp"
+                android:text="可添加的功能"
+                android:textColor="@color/text_black"
+                android:textSize="16sp" />
+
+            <com.biaozhunyuan.tianyi.common.view.NoScrollListView
+                android:id="@+id/hiddenListView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:divider="@drawable/list_divider"
+                android:dividerHeight="0.5dp" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

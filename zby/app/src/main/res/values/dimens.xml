@@ -1,0 +1,54 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <!--CalendarMainActivity-->
+    <dimen name="bottom_menu_height">45dp</dimen>
+    <dimen name="header_height">45dp</dimen>
+    <!--SelectedFragment-->
+    <!--MessageSendView-->
+    <!--ImageFinder-->
+    <dimen name="status_bar_height">0dp</dimen>
+
+    <!-- 顶部按钮栏高度 -->
+    <dimen name="pickerview_topbar_height">48dp</dimen>
+    <!-- 顶部按钮paddingLeft -->
+    <dimen name="pickerview_topbar_paddingleft">10dp</dimen>
+    <!-- 顶部按钮paddingRight -->
+    <dimen name="pickerview_topbar_paddingright">30dp</dimen>
+    <!-- 顶部按钮文字大小 -->
+    <dimen name="pickerview_topbar_btn_textsize">16sp</dimen>
+    <dimen name="pickerview_topbar_title_textsize">21sp</dimen>
+
+    <dimen name="list_item_paddingleft">12dp</dimen><!--列表页面左边距-->
+    <dimen name="list_item_paddingRight">12dp</dimen><!--列表页面右边距-->
+    <dimen name="list_item_paddingTop">13dp</dimen><!--列表页面左边距-->
+    <dimen name="height_margin_top_avatar">10dp</dimen><!--内容到顶部头像的间距-->
+    <dimen name="height_avatar_root">50dp</dimen><!--内容到顶部头像的间距-->
+    <!-- 列表为空时的数据页面 -->
+    <!-- CirclePageIndicator  -->
+    <dimen name="home_task_tv_corners">150dp</dimen><!--内容到顶部头像的间距-->
+
+
+    <dimen name="slidingmenu_offset">150dp</dimen>
+    <dimen name="slidingmenu_shadowwidth">100dp</dimen>
+    <dimen name="task_new_label_padding">14dp</dimen>
+    <dimen name="task_new_label">30dp</dimen>
+    <dimen name="pager_margin">-60dp</dimen>
+    <dimen name="apply_list_item_tv">5dp</dimen>
+    <dimen name="home_elevation">0.5dp</dimen>
+    <dimen name="forminfo_edittext_size">13sp</dimen>
+
+    <dimen name="title_elevation_hight">4dp</dimen>
+
+    <dimen name="iv_customer_list_icon_weight_hight">40dp</dimen>
+
+    <dimen name="size_dot_border">1dp</dimen>
+    <dimen name="height_separator">1dp</dimen>
+    <dimen name="radius_dot">5dp</dimen>
+    <dimen name="text_order_size">16sp</dimen>
+
+    <!--头像大小-->
+    <dimen name="head_portrait_size">45dp</dimen>
+
+    <dimen name="apply_btn_radius">3dp</dimen>
+</resources>

@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingTop="15dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <com.biaozhunyuan.tianyi.common.view.AvatarImageView
+            android:id="@+id/iv_head_item_apply_list"
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            android:layout_marginStart="16dp"
+            android:src="@drawable/default_head" />
+
+        <TextView
+            android:id="@+id/tv_creater_apply_item"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="11dp"
+            android:text="李晓云"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            app:layout_constraintStart_toEndOf="@+id/iv_head_item_apply_list"
+            app:layout_constraintTop_toTopOf="@+id/iv_head_item_apply_list" />
+
+        <TextView
+            android:id="@+id/tv_state_apply_list"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/ll_bg_apply_title"
+            android:paddingLeft="9dp"
+            android:paddingTop="1dp"
+            android:paddingRight="9dp"
+            android:paddingBottom="1dp"
+            android:text="请假申请"
+            android:textColor="@color/text_tag"
+            android:textSize="11sp" />
+
+        <TextView
+            android:id="@+id/tv_time_apply_item"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="17dp"
+            android:layout_weight="1"
+            android:gravity="right"
+            android:text="16:37"
+            android:textColor="@color/text_tag"
+            android:textSize="13sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_mark_home_apply"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="65dp"
+        android:layout_marginEnd="17dp"
+        android:orientation="vertical">
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="65dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_status_item_apply"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="等待111审核"
+            android:textSize="13sp" />
+
+
+        <LinearLayout
+            android:id="@+id/linearLayout2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:orientation="horizontal"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp">
+
+            <TextView
+                android:id="@+id/tv_reject"
+                style="@style/style_apply_audit"
+                android:layout_marginRight="-1dp"
+                android:background="@drawable/shape_bg_btn_corner_press"
+                android:text=" 驳回 "
+                android:textColor="@color/appColorBlue" />
+
+            <TextView
+                android:id="@+id/tv_agree"
+                style="@style/style_apply_audit"
+                android:background="@drawable/shape_bg_btn_corner_bule_press"
+                android:text=" 同意 "
+                android:textColor="@color/white" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <View
+        android:id="@+id/divider_line"
+        style="@style/small_line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="2dp" />
+
+</LinearLayout>

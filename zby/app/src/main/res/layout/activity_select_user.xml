@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:boeryun="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.biaozhunyuan.tianyi.common.view.BoeryunHeaderView
+        android:id="@+id/header_select_user"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/bottom_menu_height"
+        boeryun:isVisbleAddIco="false"
+        boeryun:isVisbleBackIco="true"
+        boeryun:isVisbleFilterIco="false"
+        boeryun:titleText="选择执行人" />
+
+    <TextView
+        android:id="@+id/tv_dept_name_select_user"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:gravity="center_vertical"
+        android:padding="8dp"
+        android:text="部门名称"
+        android:textColor="@color/text_info"
+        android:textSize="18sp" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/ll_my_select_user"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <ImageView
+                    android:id="@+id/select_my_select_user"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/ic_cancle_select" />
+
+                <com.biaozhunyuan.tianyi.common.view.CircleImageView
+                    android:id="@+id/head_select_user"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="10dp"
+                    android:src="@drawable/default_head" />
+
+                <TextView
+                    android:id="@+id/name_select_user"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="20dp"
+                    android:gravity="left|center_vertical"
+                    android:text="姓名"
+                    android:textColor="@color/text_black"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/position_select_user"
+                    style="@style/style_left_text"
+                    android:gravity="left|center_vertical"
+                    android:text="职位"
+                    android:visibility="gone" />
+
+            </LinearLayout>
+
+            <View style="@style/bold_line" />
+
+            <com.biaozhunyuan.tianyi.common.view.NoScrollListView
+                android:id="@+id/lv_staff_list_select_user"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:divider="@color/dividerColor"
+                android:dividerHeight="0.1dp" />
+        </LinearLayout>
+    </ScrollView>
+
+    <View style="@style/small_line" />
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="20dp"
+            android:gravity="left|center_vertical"
+            android:text="已选择："
+            android:textColor="@color/fuzhuselan"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tv_count_select_user"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="left|center_vertical"
+            android:text="0位同事"
+            android:textColor="@color/fuzhuselan"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tv_sure_select_user"
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:background="@color/fuzhuselan"
+            android:gravity="center"
+            android:text="确定"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+</LinearLayout>

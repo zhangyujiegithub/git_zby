@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--内容字体大小和颜色-->
+    <style name="style_content" >
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/text_name</item>
+    </style>
+
+    <!--分割线细-->
+    <style name="small_line">
+        <item name="android:layout_marginLeft">16dp</item>
+        <item name="android:layout_marginRight">16dp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">0.5dp</item>
+        <item name="android:background">@color/space_divider_Color</item>
+    </style>
+
+    <!--名称字体大小和颜色-->
+    <style name="style_name">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/list_content</item>
+    </style>
+
+    <style name="pop_add">
+        <item name="android:windowEnterAnimation">@anim/pop_add_show</item>
+        <item name="android:windowExitAnimation">@anim/pop_add_hide</item>
+    </style>
+
+    <!--分割线加粗-->
+    <style name="bold_line">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">10dp</item>
+        <item name="android:background">@color/dividerColor</item>
+    </style>
+</resources>

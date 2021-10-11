@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center_vertical"
+    android:id="@+id/ll_parent"
+    android:orientation="vertical">
+
+    <View
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="8dp"
+        android:background="#FAFAFA"
+        />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:paddingTop="15dp"
+        android:paddingBottom="15dp"
+        android:layout_height="wrap_content">
+    <ImageView
+        android:id="@+id/iv_icon_new_apply"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="17dp" />
+
+    <TextView
+        android:layout_toRightOf="@id/iv_icon_new_apply"
+        android:id="@+id/tv_form_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:gravity="center_vertical"
+        android:text="团建活动申请单"
+        android:textColor="#555555"
+        android:layout_marginLeft="8dp"
+        android:textSize="14sp" />
+
+    
+    <ImageView
+        android:id="@+id/iv_right"
+        android:layout_gravity="center_vertical"
+        android:layout_width="6dp"
+        android:layout_height="10dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:src="@drawable/icon_task_new_right"
+        android:layout_marginRight="16dp"/>
+
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/small_line"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginLeft="16dp"
+        android:background="#EEEEEE"/>
+
+    <View
+        android:id="@+id/small_line1"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginLeft="16dp"
+        android:background="#f6f6f6"/>
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:orientation="horizontal"
+        android:visibility="gone">
+        <!-- 浏览器打开，暂时设置为隐藏 -->
+        <ImageView
+            android:id="@+id/iv_form_web"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center_vertical"
+            android:clickable="true"
+            android:src="@drawable/ico_ie_gray" />
+    </LinearLayout>
+
+
+</LinearLayout>

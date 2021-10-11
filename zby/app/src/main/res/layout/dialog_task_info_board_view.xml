@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/lLayout_bg"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/alert_bg"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/txt_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="10dp"
+        android:text="任务详细"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:textStyle="normal" />
+
+    <EditText
+        android:id="@+id/et_msg"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="15dp"
+        android:gravity="top"
+        android:minLines="3"
+        android:background="@drawable/activity_number_edittext"
+        android:textColor="@color/titlecolor"
+        android:textSize="16sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/icon_status_selected" />
+
+        <TextView
+            style="@style/style_left_text"
+            android:text="当前状态:" />
+
+        <TextView
+            android:id="@+id/task_info_status"
+            style="@style/style_right_text"
+            android:text="" />
+
+    </LinearLayout>
+
+    <View style="@style/style_line_horizontal_middle" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/icon_task_new_participant" />
+
+        <TextView
+            style="@style/style_left_text"
+            android:text="执行人:" />
+
+        <TextView
+            android:id="@+id/task_info_excutor"
+            style="@style/style_right_text"
+            android:text="" />
+
+    </LinearLayout>
+
+    <View style="@style/style_line_horizontal_middle" />
+
+    <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/ll_task_info_period"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_marginLeft="10dp"
+                android:src="@drawable/icon_stage_blue" />
+
+            <TextView
+                style="@style/style_left_text"
+                android:text="周期类型:" />
+
+            <TextView
+                android:id="@+id/task_info_peroid_type"
+                style="@style/style_right_text"
+                android:text="" />
+
+        </LinearLayout>
+
+        <View style="@style/style_line_horizontal_middle" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_marginLeft="10dp"
+                android:src="@drawable/icon_stage_blue" />
+
+            <TextView
+                style="@style/style_left_text"
+                android:text="周期日:" />
+
+            <TextView
+                android:id="@+id/task_info_period_date"
+                style="@style/style_right_text"
+                android:text="" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <View style="@style/style_line_horizontal_middle" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/icon_task_new_time" />
+
+        <TextView
+            android:id="@+id/tv_task_info_starttime"
+            style="@style/style_left_text"
+            android:text="开始时间:" />
+
+        <TextView
+            android:id="@+id/task_info_beginTime"
+            style="@style/style_right_text"
+            android:text="" />
+
+    </LinearLayout>
+
+
+    <View style="@style/style_line_horizontal_middle" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/icon_task_new_time" />
+
+        <TextView
+            android:id="@+id/tv_task_info_endtime"
+            style="@style/style_left_text"
+            android:text="结束时间:" />
+
+        <TextView
+            android:id="@+id/task_info_overTime"
+            style="@style/style_right_text"
+            android:text="" />
+
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/alertdialog_line" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_neg"
+            android:layout_width="wrap_content"
+            android:layout_height="43dp"
+            android:layout_weight="1"
+            android:background="@drawable/alertdialog_left_selector"
+            android:gravity="center"
+            android:text="删除卡片"
+            android:textColor="@color/actionsheet_blue"
+            android:textSize="16sp" />
+
+        <ImageView
+            android:id="@+id/img_line"
+            android:layout_width="0.5dp"
+            android:layout_height="43dp"
+            android:background="@color/alertdialog_line" />
+
+        <Button
+            android:id="@+id/btn_pos"
+            android:layout_width="wrap_content"
+            android:layout_height="43dp"
+            android:layout_weight="1"
+            android:background="@drawable/alertdialog_right_selector"
+            android:gravity="center"
+            android:text="保存"
+            android:textColor="@color/actionsheet_blue"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/transparent"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/icon_other1_9"
+        android:orientation="vertical">
+
+        <!--<TextView-->
+            <!--android:id="@+id/tv_talk_all"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:padding="10dp"-->
+            <!--android:paddingBottom="20dp"-->
+            <!--android:paddingEnd="20dp"-->
+            <!--android:paddingStart="20dp"-->
+            <!--android:paddingTop="20dp"-->
+            <!--android:text="操作泳道"-->
+            <!--android:textColor="@color/white"-->
+            <!--android:textSize="16sp" />-->
+
+        <!--<View-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="0.5dp"-->
+            <!--android:background="#000000" />-->
+
+        <TextView
+            android:id="@+id/tv_talk_only"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:paddingBottom="20dp"
+            android:paddingEnd="20dp"
+            android:paddingStart="20dp"
+            android:paddingTop="20dp"
+            android:text="删除泳道"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        ></View>
+</LinearLayout>

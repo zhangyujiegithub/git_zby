@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.biaozhunyuan.tianyi.common.view.HorizontalRecentlySelectedStaffView
+                android:id="@+id/staff_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            </com.biaozhunyuan.tianyi.common.view.HorizontalRecentlySelectedStaffView>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="#eeeeee"/>
+            <RelativeLayout
+                android:id="@+id/rl_time_header"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:id="@+id/rl_home_calander"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.loonggg.weekcalendar.view.WeekCalendar
+                        android:id="@+id/weekcalendar_task_day_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        app:cornerMarkBg="@drawable/green_oval_bg"
+                        app:daysSelectedBackground="@drawable/blue_oval_bg"
+                        app:isCornerMark="true"
+                        app:monthBackgroundColor="#ffffff"
+                        app:monthTextColor="#FF000000"
+                        app:selfmotion_selected="false"
+                        app:todayTextColor="@color/calendar_date_select"
+                        app:weekTextColor="#FF000000"
+                        app:titleDateFormat="yyyyMM"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_home_yearmonth"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/tv_current_time"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:gravity="center"
+                        android:text="2016年11月"
+                        android:textColor="#6a6867"
+                        android:textSize="14sp" />
+
+                    <ImageView
+                        android:id="@+id/iv_home_show_calander"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="10dp"
+                        android:src="@drawable/arrow_down"
+                        android:visibility="gone" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:descendantFocusability="blocksDescendants"
+                    android:id="@+id/rl_calendar_month"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp">
+
+                    <ImageView
+                        android:visibility="gone"
+                        android:id="@+id/iv_hide_calander"
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="80dp"
+                        android:src="@drawable/arrow_up" />
+
+                    <LinearLayout
+                        android:id="@+id/ll_select_time_types"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="16dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tv_all_view"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:paddingLeft="7dp"
+                            android:paddingTop="2dp"
+                            android:paddingRight="7dp"
+                            android:paddingBottom="2dp"
+                            android:text="本周"
+                            android:textColor="@color/calendar_date_select"
+                            android:textSize="14sp" />
+
+                        <ImageView
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:padding="5dp"
+                            android:src="@drawable/arrow_down" />
+                    </LinearLayout>
+                </RelativeLayout>
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/iv_hide_head_log_List"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:padding="-10dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/icon_show_head"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#eeeeee"/>
+
+</LinearLayout>

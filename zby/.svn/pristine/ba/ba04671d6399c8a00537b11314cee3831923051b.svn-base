@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?><!-- 主题果绿色UI按钮 -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <stroke
+        android:width="1dp"
+        android:color="@color/gray" />
+    <!-- 边框颜色 -->
+    <solid android:color="#00000000" />
+    <!-- 填充色 -->
+    <corners
+        android:bottomLeftRadius="@dimen/home_task_tv_corners"
+        android:bottomRightRadius="@dimen/home_task_tv_corners"
+        android:topLeftRadius="@dimen/home_task_tv_corners"
+        android:topRightRadius="@dimen/home_task_tv_corners" />
+    <!--默认白色 按下半透明效果 -->
+</shape>
+

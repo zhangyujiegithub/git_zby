@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="10dp"
+        android:paddingRight="5dp">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/tv_title_control_create_form"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="字段名称"
+                android:textColor="#a7a4a4"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2.5"
+            android:gravity="right|center_vertical"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/et_value_control_create_form"
+                style="@style/style_text_normal_black"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:paddingBottom="18dp"
+                android:paddingTop="18dp"
+                android:textSize="15sp" />
+
+            <com.biaozhunyuan.tianyi.view.MultipleAttachView
+                android:id="@+id/multi_value_control_create_form"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:numColumns="3"
+                android:padding="5dp"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/iv_img_control_create_form"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_marginLeft="5dp"
+                android:src="@drawable/ico_arrow_bottom" />
+
+            <TextView
+                android:layout_width="1dp"
+                android:layout_height="wrap_content"
+                android:visibility="invisible" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <View style="@style/small_line" />
+
+</LinearLayout>
